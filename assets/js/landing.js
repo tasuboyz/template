@@ -44,10 +44,184 @@ class TemplateLandingApp {
         document.body.classList.remove('loading');
         document.body.classList.add('loaded');
         
+        // Render templates dynamically
+        this.renderTemplates();
+        
         this.initParticleSystem();
         this.initScrollReveal();
         this.initCounters();
         this.startHeroAnimations();
+    }
+
+    /**
+     * Render templates dynamically
+     */
+    renderTemplates() {
+        const templatesGrid = document.querySelector('.templates-grid');
+        if (!templatesGrid) return;
+
+        // Clear existing content
+        templatesGrid.innerHTML = '';
+
+        // Render each template
+        this.templateData.forEach((template, templateId) => {
+            const templateCard = this.createTemplateCard(templateId, template);
+            templatesGrid.appendChild(templateCard);
+        });
+
+        // Initialize filters
+        this.initTemplateFilters();
+
+        // Update stats
+        this.updateStats();
+    }
+
+    /**
+     * Initialize template filters
+     */
+    initTemplateFilters() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const templateCards = document.querySelectorAll('.template-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                
+                templateCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        card.style.animation = 'slideInUp 0.5s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    /**
+     * Create template card element
+     */
+    createTemplateCard(templateId, template) {
+        const card = document.createElement('div');
+        card.className = 'template-card';
+        card.setAttribute('data-category', template.category);
+
+        // Generate status badges
+        const statusBadges = template.status.map(status => {
+            const badgeClass = status.toLowerCase().replace(/\s+/g, '-');
+            const badgeText = status.charAt(0).toUpperCase() + status.slice(1);
+            return `<span class="status-badge ${badgeClass}">${badgeText}</span>`;
+        }).join('');
+
+        // Generate feature tags
+        const featureTags = template.tags.map(tag => 
+            `<span class="feature-tag">${tag}</span>`
+        ).join('');
+
+        // Generate tech stack icons
+        const techIcons = template.technologies.slice(0, 3).map(tech => {
+            const iconMap = {
+                'HTML5': 'fab fa-html5',
+                'CSS3': 'fab fa-css3-alt',
+                'JavaScript ES6+': 'fab fa-js-square',
+                'PWA': 'fas fa-mobile-alt',
+                'Service Worker': 'fas fa-cog'
+            };
+            const iconClass = iconMap[tech] || 'fab fa-js-square';
+            return `<i class="${iconClass}" title="${tech}"></i>`;
+        }).join('');
+
+        // Generate rating stars
+        const ratingStars = Array(template.rating).fill().map(() => 
+            '<i class="fas fa-star"></i>'
+        ).join('');
+
+        card.innerHTML = `
+            <div class="template-preview">
+                <div class="preview-image ${template.category}-preview">
+                    <i class="${template.icon}"></i>
+                    <div class="preview-overlay">
+                        <div class="preview-actions">
+                            <a href="${template.demoUrl}" target="_blank" rel="noopener" class="btn btn-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                Demo Live
+                            </a>
+                            <button class="btn btn-info" onclick="showTemplateInfo('${templateId}')">
+                                <i class="fas fa-info-circle"></i>
+                                Dettagli
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-status">
+                    ${statusBadges}
+                </div>
+            </div>
+            
+            <div class="template-content">
+                <h3 class="template-title">${template.shortTitle}</h3>
+                <p class="template-description">
+                    ${template.shortDescription}
+                </p>
+                
+                <div class="template-features">
+                    ${featureTags}
+                </div>
+                
+                <div class="template-tech">
+                    <div class="tech-stack">
+                        ${techIcons}
+                    </div>
+                    <div class="template-rating">
+                        ${ratingStars}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        return card;
+    }
+
+    /**
+     * Update statistics based on template count
+     */
+    updateStats() {
+        const templateCount = this.templateData.size;
+        const categories = new Set();
+        
+        this.templateData.forEach(template => {
+            categories.add(template.category);
+        });
+
+        // Update hero stats
+        const statNumbers = document.querySelectorAll('.stat-number');
+        if (statNumbers[0]) statNumbers[0].setAttribute('data-count', templateCount);
+        if (statNumbers[2]) statNumbers[2].setAttribute('data-count', categories.size);
+
+        // Update footer links
+        this.updateFooterLinks();
+    }
+
+    /**
+     * Update footer template links
+     */
+    updateFooterLinks() {
+        const footerTemplateSection = document.querySelector('.footer-section:nth-child(2) ul');
+        if (!footerTemplateSection) return;
+
+        footerTemplateSection.innerHTML = '';
+        
+        this.templateData.forEach((template, templateId) => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${template.demoUrl}">${template.shortTitle}</a>`;
+            footerTemplateSection.appendChild(li);
+        });
     }
 
     /**
@@ -216,6 +390,271 @@ class TemplateLandingApp {
             demoUrl: 'real-estate-showcase/',
             github: 'https://github.com/username/template/tree/main/real-estate-showcase'
         });
+
+        // Fashion & Beauty Template
+        this.templateData.set('fashion', {
+            title: 'Fashion Elite - Beauty & Style',
+            description: 'Template elegante per brand di moda e beauty con gallery e catalogo prodotti.',
+            features: [
+                'Gallery prodotti con zoom',
+                'Lookbook interattivo',
+                'Sezione brand story',
+                'Catalogo collezioni',
+                'Instagram feed integration',
+                'Newsletter subscription',
+                'Video hero backgrounds',
+                'Animazioni eleganti'
+            ],
+            technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Video API', 'Social Integration'],
+            demoUrl: 'fashion-beauty/',
+            github: 'https://github.com/username/template/tree/main/fashion-beauty',
+            icon: 'fas fa-tshirt',
+            category: 'fashion',
+            status: ['live', 'trending'],
+            shortTitle: 'Fashion Elite',
+            shortDescription: 'Template elegante per brand di moda e beauty con gallery interattiva e catalogo prodotti.',
+            tags: ['Gallery', 'Lookbook', 'Video', 'Social'],
+            rating: 5
+        });
+
+        // Minimal One Page Template
+        this.templateData.set('minimal', {
+            title: 'Minimal Pro - One Page Clean',
+            description: 'Template minimalista one-page per professionisti e freelancer.',
+            features: [
+                'Design ultra-pulito',
+                'Navigazione smooth scroll',
+                'Portfolio con lightbox',
+                'Form contatti semplificato',
+                'Animazioni subtle',
+                'Loading veloce',
+                'Typography perfetta',
+                'Color scheme neutro'
+            ],
+            technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Smooth Scroll', 'Lightbox'],
+            demoUrl: 'minimal-onepage/',
+            github: 'https://github.com/username/template/tree/main/minimal-onepage',
+            icon: 'fas fa-circle',
+            category: 'minimal',
+            status: ['live', 'clean'],
+            shortTitle: 'Minimal Pro',
+            shortDescription: 'Template minimalista one-page per professionisti con design ultra-pulito.',
+            tags: ['Minimal', 'One Page', 'Clean', 'Portfolio'],
+            rating: 5
+        });
+
+        // Music & Entertainment Template
+        this.templateData.set('music', {
+            title: 'Music Pro - Entertainment Hub',
+            description: 'Template per artisti musicali e intrattenimento con player audio integrato.',
+            features: [
+                'Audio player personalizzato',
+                'Discografia interattiva',
+                'Tour dates e eventi',
+                'Video gallery',
+                'Social media integration',
+                'Fan subscription',
+                'Merchandise store',
+                'Press kit download'
+            ],
+            technologies: ['HTML5 Audio', 'CSS3', 'JavaScript ES6+', 'Web Audio API', 'Media Player'],
+            demoUrl: 'music-entertainment/',
+            github: 'https://github.com/username/template/tree/main/music-entertainment',
+            icon: 'fas fa-music',
+            category: 'entertainment',
+            status: ['live', 'audio'],
+            shortTitle: 'Music Pro',
+            shortDescription: 'Template per artisti musicali con player audio integrato e discografia.',
+            tags: ['Audio', 'Music', 'Events', 'Gallery'],
+            rating: 5
+        });
+
+        // Non-Profit & Charity Template
+        this.templateData.set('nonprofit', {
+            title: 'CharityHeart - Non-Profit Template',
+            description: 'Template per organizzazioni no-profit con sistema donazioni e volontariato.',
+            features: [
+                'Sistema donazioni integrate',
+                'Iscrizione volontari',
+                'Progetti e campagne',
+                'Counter donazioni real-time',
+                'Storia organizzazione',
+                'Team e testimonianze',
+                'Eventi e calendario',
+                'Newsletter e updates'
+            ],
+            technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Payment Integration', 'Forms'],
+            demoUrl: 'non-profit-charity/',
+            github: 'https://github.com/username/template/tree/main/non-profit-charity',
+            icon: 'fas fa-heart',
+            category: 'nonprofit',
+            status: ['live', 'social'],
+            shortTitle: 'CharityHeart',
+            shortDescription: 'Template per organizzazioni no-profit con sistema donazioni e volontariato.',
+            tags: ['Donazioni', 'Volontari', 'Social', 'Events'],
+            rating: 5
+        });
+
+        // Sports & Fitness Template
+        this.templateData.set('sports', {
+            title: 'FitPro - Sports & Fitness',
+            description: 'Template per palestre e centri fitness con booking e programmi allenamento.',
+            features: [
+                'Booking classi online',
+                'Programmi allenamento',
+                'Profili trainer',
+                'Orari e calendario',
+                'Membership plans',
+                'Progress tracking',
+                'Video workouts',
+                'Nutrition tips'
+            ],
+            technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Calendar API', 'Video Player'],
+            demoUrl: 'sports-fitness/',
+            github: 'https://github.com/username/template/tree/main/sports-fitness',
+            icon: 'fas fa-dumbbell',
+            category: 'fitness',
+            status: ['live', 'booking'],
+            shortTitle: 'FitPro',
+            shortDescription: 'Template per palestre con booking classi e programmi allenamento.',
+            tags: ['Booking', 'Fitness', 'Video', 'Calendar'],
+            rating: 5
+        });
+
+        // Technology & SaaS Template
+        this.templateData.set('technology', {
+            title: 'TechSaaS - Technology Solutions',
+            description: 'Template per startup tecnologiche e SaaS con dashboard e pricing.',
+            features: [
+                'Hero con animazioni tech',
+                'Pricing tables dinamiche',
+                'Feature comparison',
+                'Dashboard preview',
+                'API documentation',
+                'Customer testimonials',
+                'Integration showcase',
+                'Trial signup'
+            ],
+            technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Chart.js', 'API Integration'],
+            demoUrl: 'technology-saas/',
+            github: 'https://github.com/username/template/tree/main/technology-saas',
+            icon: 'fas fa-laptop-code',
+            category: 'technology',
+            status: ['live', 'saas'],
+            shortTitle: 'TechSaaS',
+            shortDescription: 'Template per startup tecnologiche con dashboard e pricing dinamici.',
+            tags: ['SaaS', 'Tech', 'Dashboard', 'API'],
+            rating: 5
+        });
+
+        // Travel & Tourism Template
+        this.templateData.set('travel', {
+            title: 'TravelPro - Tourism & Adventures',
+            description: 'Template per agenzie di viaggio con booking e destinazioni interattive.',
+            features: [
+                'Booking system integrato',
+                'Destinazioni interattive',
+                'Photo gallery immersiva',
+                'Travel packages',
+                'Customer reviews',
+                'Weather integration',
+                'Map exploration',
+                'Social sharing'
+            ],
+            technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Booking API', 'Maps Integration'],
+            demoUrl: 'travel-tourism/',
+            github: 'https://github.com/username/template/tree/main/travel-tourism',
+            icon: 'fas fa-plane',
+            category: 'travel',
+            status: ['live', 'booking'],
+            shortTitle: 'TravelPro',
+            shortDescription: 'Template per agenzie di viaggio con booking e destinazioni interattive.',
+            tags: ['Booking', 'Travel', 'Maps', 'Gallery'],
+            rating: 5
+        });
+
+        // Wedding & Events Template
+        this.templateData.set('wedding', {
+            title: 'WeddingBliss - Events & Celebrations',
+            description: 'Template elegante per wedding planner ed eventi con RSVP e gallery.',
+            features: [
+                'RSVP system avanzato',
+                'Timeline matrimonio',
+                'Guest management',
+                'Photo gallery romantica',
+                'Location details',
+                'Gift registry',
+                'Music playlist',
+                'Social media wall'
+            ],
+            technologies: ['HTML5', 'CSS3', 'JavaScript ES6+', 'RSVP System', 'Gallery'],
+            demoUrl: 'wedding-events/',
+            github: 'https://github.com/username/template/tree/main/wedding-events',
+            icon: 'fas fa-heart',
+            category: 'events',
+            status: ['live', 'romantic'],
+            shortTitle: 'WeddingBliss',
+            shortDescription: 'Template elegante per wedding planner con RSVP e timeline matrimonio.',
+            tags: ['RSVP', 'Wedding', 'Events', 'Gallery'],
+            rating: 5
+        });
+
+        // Aggiungi proprietà mancanti ai template esistenti
+        this.templateData.get('business').icon = 'fas fa-briefcase';
+        this.templateData.get('business').category = 'business';
+        this.templateData.get('business').status = ['live', 'new'];
+        this.templateData.get('business').shortTitle = 'Business Pro';
+        this.templateData.get('business').shortDescription = 'Template professionale per aziende con tema chiaro/scuro e PWA support.';
+        this.templateData.get('business').tags = ['PWA', 'Dark Mode', 'Responsive', 'ES6+'];
+        this.templateData.get('business').rating = 5;
+
+        this.templateData.get('creative').icon = 'fas fa-palette';
+        this.templateData.get('creative').category = 'creative';
+        this.templateData.get('creative').status = ['live', 'featured'];
+        this.templateData.get('creative').shortTitle = 'Creative Studio';
+        this.templateData.get('creative').shortDescription = 'Portfolio creativo con effetti canvas e audio manager avanzati.';
+        this.templateData.get('creative').tags = ['Canvas', 'Audio', 'Particles', 'Portfolio'];
+        this.templateData.get('creative').rating = 5;
+
+        this.templateData.get('ecommerce').icon = 'fas fa-shopping-cart';
+        this.templateData.get('ecommerce').category = 'ecommerce';
+        this.templateData.get('ecommerce').status = ['live', 'popular'];
+        this.templateData.get('ecommerce').shortTitle = 'Elite Store';
+        this.templateData.get('ecommerce').shortDescription = 'E-commerce completo con carrello funzionale e sistema notifiche.';
+        this.templateData.get('ecommerce').tags = ['Carrello', 'Filtri', 'Wishlist', 'Mobile'];
+        this.templateData.get('ecommerce').rating = 5;
+
+        this.templateData.get('restaurant').icon = 'fas fa-utensils';
+        this.templateData.get('restaurant').category = 'restaurant';
+        this.templateData.get('restaurant').status = ['live', 'new'];
+        this.templateData.get('restaurant').shortTitle = 'Bella Vista';
+        this.templateData.get('restaurant').shortDescription = 'Template elegante per ristoranti con menu interattivo e prenotazioni.';
+        this.templateData.get('restaurant').tags = ['Menu', 'Prenotazioni', 'Gallery', 'Elegante'];
+        this.templateData.get('restaurant').rating = 5;
+
+        this.templateData.get('educational').icon = 'fas fa-graduation-cap';
+        this.templateData.get('educational').category = 'educational';
+        this.templateData.get('educational').status = ['live', 'wow'];
+        this.templateData.get('educational').shortTitle = 'EduPro Academy';
+        this.templateData.get('educational').shortDescription = 'Template completo per academy con catalogo corsi e effetti WOW.';
+        this.templateData.get('educational').tags = ['Corsi', 'Docenti', 'WOW Effects', 'Particles'];
+        this.templateData.get('educational').rating = 5;
+
+        this.templateData.get('medical').icon = 'fas fa-heartbeat';
+        this.templateData.get('medical').category = 'medical';
+        this.templateData.get('medical').status = ['live', 'professional'];
+        this.templateData.get('medical').shortTitle = 'MediCare Pro';
+        this.templateData.get('medical').shortDescription = 'Template professionale per cliniche con sistema appuntamenti.';
+        this.templateData.get('medical').tags = ['Appuntamenti', 'Servizi', 'Certificazioni', 'Clean'];
+        this.templateData.get('medical').rating = 5;
+
+        this.templateData.get('realestate').icon = 'fas fa-home';
+        this.templateData.get('realestate').category = 'realestate';
+        this.templateData.get('realestate').status = ['live', 'premium'];
+        this.templateData.get('realestate').shortTitle = 'Estate Elite';
+        this.templateData.get('realestate').shortDescription = 'Template avanzato per agenzie immobiliari con virtual tour e mappe.';
+        this.templateData.get('realestate').tags = ['Ricerca', 'Virtual Tour', 'Mappe', 'Calcolatori'];
+        this.templateData.get('realestate').rating = 5;
     }
 
     /**
