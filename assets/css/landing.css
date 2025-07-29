@@ -614,6 +614,38 @@ ul {
     background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
 }
 
+.fashion-preview {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+}
+
+.minimal-preview {
+    background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+}
+
+.music-preview {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+}
+
+.nonprofit-preview {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+.sports-preview {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.technology-preview {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+}
+
+.travel-preview {
+    background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%);
+}
+
+.wedding-preview {
+    background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+}
+
 .preview-overlay {
     position: absolute;
     top: 0;
@@ -695,6 +727,51 @@ ul {
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     color: white;
     animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.status-badge.updated {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+}
+
+.status-badge.elegant {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    color: white;
+}
+
+.status-badge.minimal {
+    background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+    color: white;
+}
+
+.status-badge.entertainment {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+}
+
+.status-badge.charity {
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    color: white;
+}
+
+.status-badge.fitness {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+}
+
+.status-badge.saas {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+}
+
+.status-badge.adventure {
+    background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%);
+    color: white;
+}
+
+.status-badge.romantic {
+    background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+    color: white;
 }
 
 .status-badge.clean {
