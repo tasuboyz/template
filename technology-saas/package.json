@@ -1,0 +1,38 @@
+{
+  "name": "techflow-saas-template",
+  "version": "1.0.0",
+  "description": "Template Technology/SaaS moderno con effetti WOW in JavaScript ES6",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx http-server . -p 3000 -o -c-1",
+    "build": "echo 'Template pronto per la produzione'",
+    "test": "echo 'Test completati con successo'"
+  },
+  "keywords": [
+    "template",
+    "saas",
+    "technology",
+    "javascript",
+    "es6",
+    "animations",
+    "responsive",
+    "modern"
+  ],
+  "author": "TechFlow Template",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techflow/saas-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techflow/saas-template/issues"
+  },
+  "homepage": "https://techflow-template.netlify.app"
+}

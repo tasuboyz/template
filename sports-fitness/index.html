@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone Pro - Il Tuo Fitness Center</title>
+    <meta name="description" content="FitZone Pro - Centro fitness moderno con personal trainer qualificati, attrezzature all'avanguardia e programmi personalizzati">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>FitZone</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Preparando il tuo allenamento...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>FitZone Pro</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Chi Siamo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Servizi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#trainers" class="nav-link">Trainers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#schedule" class="nav-link">Orari</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#pricing" class="nav-link">Prezzi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contatti</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <canvas id="particles-canvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Trasforma</span>
+                    <span class="title-line">Il Tuo</span>
+                    <span class="title-line highlight">Corpo</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Raggiungi i tuoi obiettivi fitness con i nostri personal trainer certificati
+                    e attrezzature all'avanguardia
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="start-journey">
+                        <span>Inizia il Viaggio</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary" id="watch-video">
+                        <i class="fas fa-play"></i>
+                        <span>Guarda Video</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Membri Attivi</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Trainers Esperti</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="8">0</div>
+                    <div class="stat-label">Anni di Esperienza</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Chi Siamo</h2>
+                <p class="section-subtitle">La tua destinazione per il fitness di eccellenza</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Benvenuto in FitZone Pro</h3>
+                    <p>
+                        Da oltre 8 anni siamo il punto di riferimento per il fitness nella nostra città. 
+                        La nostra missione è aiutarti a raggiungere i tuoi obiettivi attraverso programmi 
+                        personalizzati e un supporto costante.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Attrezzature moderne e sicure</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personal trainer certificati</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Programmi personalizzati</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ambiente motivante e positivo</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Scopri di Più</button>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image-container">
+                        <div class="about-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-element" data-speed="0.5">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="floating-element" data-speed="0.3">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="floating-element" data-speed="0.7">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">I Nostri Servizi</h2>
+                <p class="section-subtitle">Soluzioni complete per ogni esigenza fitness</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="service-title">Personal Training</h3>
+                    <p class="service-description">
+                        Allenamenti personalizzati one-to-one con i nostri trainer certificati
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Programma Personalizzato</span>
+                        <span class="feature-tag">Risultati Garantiti</span>
+                    </div>
+                    <button class="service-btn">Prenota Sessione</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-title">Corsi di Gruppo</h3>
+                    <p class="service-description">
+                        Lezioni dinamiche e motivanti per allenarti insieme ad altri
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Yoga & Pilates</span>
+                        <span class="feature-tag">HIIT & Cardio</span>
+                    </div>
+                    <button class="service-btn">Vedi Orari</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-title">Cardio Zone</h3>
+                    <p class="service-description">
+                        Area dedicata al cardio con attrezzature all'avanguardia
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Tapis Roulant</span>
+                        <span class="feature-tag">Cyclette</span>
+                    </div>
+                    <button class="service-btn">Esplora Area</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3 class="service-title">Sala Pesi</h3>
+                    <p class="service-description">
+                        Attrezzature professionali per il potenziamento muscolare
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Pesi Liberi</span>
+                        <span class="feature-tag">Macchine Isotoniche</span>
+                    </div>
+                    <button class="service-btn">Prenota Tour</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="service-title">Area Relax</h3>
+                    <p class="service-description">
+                        Spazio dedicato al recupero e al benessere post-allenamento
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Sauna</span>
+                        <span class="feature-tag">Massaggi</span>
+                    </div>
+                    <button class="service-btn">Scopri Area</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="service-title">Consulenza Nutrizionale</h3>
+                    <p class="service-description">
+                        Piani alimentari personalizzati per ottimizzare i risultati
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Dieta Personalizzata</span>
+                        <span class="feature-tag">Follow-up</span>
+                    </div>
+                    <button class="service-btn">Prenota Consulto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="trainers section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">I Nostri Trainers</h2>
+                <p class="section-subtitle">Professionisti esperti al tuo servizio</p>
+            </div>
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="trainer-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h4 class="trainer-name">Marco Rossi</h4>
+                        <p class="trainer-specialty">Personal Trainer & Nutritionist</p>
+                        <div class="trainer-experience">
+                            <span class="experience-badge">5+ anni</span>
+                        </div>
+                        <p class="trainer-description">
+                            Specializzato in trasformazione corporea e nutrizione sportiva
+                        </p>
+                        <button class="trainer-btn">Prenota Sessione</button>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="trainer-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h4 class="trainer-name">Sofia Bianchi</h4>
+                        <p class="trainer-specialty">Yoga & Pilates Instructor</p>
+                        <div class="trainer-experience">
+                            <span class="experience-badge">7+ anni</span>
+                        </div>
+                        <p class="trainer-description">
+                            Esperta in discipline olistiche e benessere mentale
+                        </p>
+                        <button class="trainer-btn">Prenota Sessione</button>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="trainer-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h4 class="trainer-name">Alessandro Verde</h4>
+                        <p class="trainer-specialty">Strength & Conditioning Coach</p>
+                        <div class="trainer-experience">
+                            <span class="experience-badge">6+ anni</span>
+                        </div>
+                        <p class="trainer-description">
+                            Specializzato in forza atletica e performance sportive
+                        </p>
+                        <button class="trainer-btn">Prenota Sessione</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Orari Lezioni</h2>
+                <p class="section-subtitle">Trova il corso perfetto per te</p>
+            </div>
+            <div class="schedule-container">
+                <div class="schedule-filters">
+                    <button class="filter-btn active" data-filter="all">Tutti i Corsi</button>
+                    <button class="filter-btn" data-filter="yoga">Yoga</button>
+                    <button class="filter-btn" data-filter="hiit">HIIT</button>
+                    <button class="filter-btn" data-filter="strength">Strength</button>
+                    <button class="filter-btn" data-filter="cardio">Cardio</button>
+                </div>
+                <div class="schedule-grid">
+                    <div class="day-column">
+                        <h4 class="day-title">Lunedì</h4>
+                        <div class="class-item" data-category="yoga">
+                            <div class="class-time">09:00</div>
+                            <div class="class-info">
+                                <div class="class-name">Yoga Mattutino</div>
+                                <div class="class-trainer">Sofia Bianchi</div>
+                            </div>
+                            <div class="class-spots">8/12</div>
+                        </div>
+                        <div class="class-item" data-category="hiit">
+                            <div class="class-time">18:00</div>
+                            <div class="class-info">
+                                <div class="class-name">HIIT Intenso</div>
+                                <div class="class-trainer">Marco Rossi</div>
+                            </div>
+                            <div class="class-spots">12/15</div>
+                        </div>
+                    </div>
+
+                    <div class="day-column">
+                        <h4 class="day-title">Martedì</h4>
+                        <div class="class-item" data-category="strength">
+                            <div class="class-time">10:00</div>
+                            <div class="class-info">
+                                <div class="class-name">Strength Training</div>
+                                <div class="class-trainer">Alessandro Verde</div>
+                            </div>
+                            <div class="class-spots">6/10</div>
+                        </div>
+                        <div class="class-item" data-category="yoga">
+                            <div class="class-time">19:30</div>
+                            <div class="class-info">
+                                <div class="class-name">Pilates Serale</div>
+                                <div class="class-trainer">Sofia Bianchi</div>
+                            </div>
+                            <div class="class-spots">10/12</div>
+                        </div>
+                    </div>
+
+                    <div class="day-column">
+                        <h4 class="day-title">Mercoledì</h4>
+                        <div class="class-item" data-category="cardio">
+                            <div class="class-time">08:30</div>
+                            <div class="class-info">
+                                <div class="class-name">Cardio Blast</div>
+                                <div class="class-trainer">Marco Rossi</div>
+                            </div>
+                            <div class="class-spots">5/15</div>
+                        </div>
+                        <div class="class-item" data-category="hiit">
+                            <div class="class-time">17:00</div>
+                            <div class="class-info">
+                                <div class="class-name">Functional HIIT</div>
+                                <div class="class-trainer">Alessandro Verde</div>
+                            </div>
+                            <div class="class-spots">8/12</div>
+                        </div>
+                    </div>
+
+                    <div class="day-column">
+                        <h4 class="day-title">Giovedì</h4>
+                        <div class="class-item" data-category="yoga">
+                            <div class="class-time">09:30</div>
+                            <div class="class-info">
+                                <div class="class-name">Hatha Yoga</div>
+                                <div class="class-trainer">Sofia Bianchi</div>
+                            </div>
+                            <div class="class-spots">7/10</div>
+                        </div>
+                        <div class="class-item" data-category="strength">
+                            <div class="class-time">18:30</div>
+                            <div class="class-info">
+                                <div class="class-name">Power Lifting</div>
+                                <div class="class-trainer">Alessandro Verde</div>
+                            </div>
+                            <div class="class-spots">4/8</div>
+                        </div>
+                    </div>
+
+                    <div class="day-column">
+                        <h4 class="day-title">Venerdì</h4>
+                        <div class="class-item" data-category="cardio">
+                            <div class="class-time">10:30</div>
+                            <div class="class-info">
+                                <div class="class-name">Zumba Fitness</div>
+                                <div class="class-trainer">Marco Rossi</div>
+                            </div>
+                            <div class="class-spots">15/20</div>
+                        </div>
+                        <div class="class-item" data-category="hiit">
+                            <div class="class-time">19:00</div>
+                            <div class="class-info">
+                                <div class="class-name">Bootcamp</div>
+                                <div class="class-trainer">Alessandro Verde</div>
+                            </div>
+                            <div class="class-spots">10/15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Piani e Prezzi</h2>
+                <p class="section-subtitle">Scegli il piano perfetto per te</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Basic</h3>
+                        <div class="plan-price">
+                            <span class="currency">€</span>
+                            <span class="amount">39</span>
+                            <span class="period">/mese</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Accesso illimitato alla palestra</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>2 corsi di gruppo al mese</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Accesso area cardio</span>
+                        </div>
+                        <div class="feature-item disabled">
+                            <i class="fas fa-times"></i>
+                            <span>Personal trainer</span>
+                        </div>
+                        <div class="feature-item disabled">
+                            <i class="fas fa-times"></i>
+                            <span>Consulenza nutrizionale</span>
+                        </div>
+                    </div>
+                    <button class="pricing-btn">Scegli Basic</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Più Popolare</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Premium</h3>
+                        <div class="plan-price">
+                            <span class="currency">€</span>
+                            <span class="amount">69</span>
+                            <span class="period">/mese</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Accesso illimitato alla palestra</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Corsi di gruppo illimitati</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Tutte le aree fitness</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>2 sessioni personal trainer</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Consulenza nutrizionale base</span>
+                        </div>
+                    </div>
+                    <button class="pricing-btn">Scegli Premium</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Elite</h3>
+                        <div class="plan-price">
+                            <span class="currency">€</span>
+                            <span class="amount">99</span>
+                            <span class="period">/mese</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Accesso illimitato alla palestra</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Corsi di gruppo illimitati</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Tutte le aree + VIP lounge</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Personal trainer illimitato</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Consulenza nutrizionale completa</span>
+                        </div>
+                    </div>
+                    <button class="pricing-btn">Scegli Elite</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contattaci</h2>
+                <p class="section-subtitle">Siamo qui per aiutarti a iniziare il tuo percorso</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Indirizzo</h4>
+                            <p>Via del Fitness, 123<br>20123 Milano, Italia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefono</h4>
+                            <p>+39 02 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@fitzonepro.it</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Orari</h4>
+                            <p>Lun-Ven: 06:00-23:00<br>Sab-Dom: 08:00-20:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Nome Completo</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Telefono</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Seleziona un servizio</option>
+                                <option value="personal-training">Personal Training</option>
+                                <option value="group-classes">Corsi di Gruppo</option>
+                                <option value="nutrition">Consulenza Nutrizionale</option>
+                                <option value="membership">Abbonamento</option>
+                                <option value="other">Altro</option>
+                            </select>
+                            <label for="service">Servizio di Interesse</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Messaggio</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Invia Messaggio</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>FitZone Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        Il tuo partner per un stile di vita sano e attivo. 
+                        Raggiungi i tuoi obiettivi con noi.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Link Utili</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Chi Siamo</a></li>
+                        <li><a href="#services">Servizi</a></li>
+                        <li><a href="#trainers">Trainers</a></li>
+                        <li><a href="#pricing">Prezzi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Servizi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Personal Training</a></li>
+                        <li><a href="#">Corsi di Gruppo</a></li>
+                        <li><a href="#">Consulenza Nutrizionale</a></li>
+                        <li><a href="#">Area Relax</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contatti</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Via del Fitness, 123 Milano</p>
+                        <p><i class="fas fa-phone"></i> +39 02 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> info@fitzonepro.it</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FitZone Pro. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Prenota la Tua Sessione</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="booking-name">Nome</label>
+                        <input type="text" id="booking-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-email">Email</label>
+                        <input type="email" id="booking-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-service">Servizio</label>
+                        <select id="booking-service" required>
+                            <option value="">Seleziona servizio</option>
+                            <option value="personal">Personal Training</option>
+                            <option value="group">Corso di Gruppo</option>
+                            <option value="nutrition">Consulenza Nutrizionale</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-date">Data Preferita</label>
+                        <input type="date" id="booking-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-time">Orario Preferito</label>
+                        <select id="booking-time" required>
+                            <option value="">Seleziona orario</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="modal-btn">Conferma Prenotazione</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Tracker Modal -->
+    <div id="progress-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Il Tuo Progresso</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="progress-stats">
+                    <div class="progress-item">
+                        <div class="progress-circle" data-progress="75">
+                            <span class="progress-value">75%</span>
+                        </div>
+                        <h4>Obiettivo Peso</h4>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-circle" data-progress="60">
+                            <span class="progress-value">60%</span>
+                        </div>
+                        <h4>Forza Muscolare</h4>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-circle" data-progress="85">
+                            <span class="progress-value">85%</span>
+                        </div>
+                        <h4>Resistenza</h4>
+                    </div>
+                </div>
+                <div class="workout-log">
+                    <h4>Ultimi Allenamenti</h4>
+                    <div class="workout-item">
+                        <span class="workout-date">Oggi</span>
+                        <span class="workout-type">HIIT Intenso</span>
+                        <span class="workout-duration">45 min</span>
+                    </div>
+                    <div class="workout-item">
+                        <span class="workout-date">Ieri</span>
+                        <span class="workout-type">Strength Training</span>
+                        <span class="workout-duration">60 min</span>
+                    </div>
+                    <div class="workout-item">
+                        <span class="workout-date">2 giorni fa</span>
+                        <span class="workout-type">Yoga</span>
+                        <span class="workout-duration">30 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab" id="main-fab">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="fab-options">
+            <button class="fab-option" data-action="booking">
+                <i class="fas fa-calendar-plus"></i>
+                <span>Prenota</span>
+            </button>
+            <button class="fab-option" data-action="progress">
+                <i class="fas fa-chart-line"></i>
+                <span>Progressi</span>
+            </button>
+            <button class="fab-option" data-action="contact">
+                <i class="fas fa-phone"></i>
+                <span>Chiama</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>

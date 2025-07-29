@@ -1,0 +1,57 @@
+{
+  "name": "bella-vista-restaurant",
+  "version": "1.0.0",
+  "description": "Modern Restaurant Website Template with WOW Effects - Template 4",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "build": "npm run minify:css && npm run minify:js",
+    "minify:css": "npx clean-css-cli -o css/main.min.css css/main.css css/animations.css",
+    "minify:js": "npx uglify-js js/app.js -o js/app.min.js",
+    "serve": "npx http-server -p 8080 -o",
+    "dev": "npx live-server --port=3000 --watch=css,js --open=/index.html"
+  },
+  "keywords": [
+    "restaurant",
+    "template",
+    "website",
+    "italian",
+    "food",
+    "booking",
+    "menu",
+    "responsive",
+    "modern",
+    "javascript",
+    "es6",
+    "css3",
+    "html5",
+    "wow-effects",
+    "animations",
+    "showcase"
+  ],
+  "author": "Bella Vista Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "uglify-js": "^3.17.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bellavista/restaurant-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bellavista/restaurant-template/issues"
+  },
+  "homepage": "https://bellavista-restaurant.netlify.app",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

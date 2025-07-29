@@ -1,0 +1,43 @@
+{
+  "name": "minimal-onepage-template",
+  "version": "1.0.0",
+  "description": "Template Minimal One Page con effetti WOW in JavaScript ES6",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --host=localhost --open=/",
+    "dev": "live-server --port=3000 --host=localhost --open=/ --watch=css,js,index.html",
+    "build": "echo 'Template pronto per il deployment'",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "template",
+    "minimal",
+    "onepage",
+    "javascript",
+    "es6",
+    "wow",
+    "animations",
+    "responsive",
+    "html5",
+    "css3"
+  ],
+  "author": "Minimal Design",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minimal-design/onepage-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/minimal-design/onepage-template/issues"
+  },
+  "homepage": "https://minimal-design.github.io/onepage-template/",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

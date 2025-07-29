@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Minimal - Effetto WOW</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MINIMAL</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Chi Siamo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Servizi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contatti</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content wow-fade-in">
+                <h1 class="hero-title">
+                    <span class="text-gradient">Design Minimal</span>
+                    <br>
+                    <span class="typewriter" data-text="Soluzioni Creative,Innovazione Digitale,Esperienza Unica"></span>
+                </h1>
+                <p class="hero-description">
+                    Creiamo esperienze digitali straordinarie con un approccio minimal e moderno. 
+                    Ogni pixel ha un significato, ogni animazione racconta una storia.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary ripple-effect" onclick="scrollToSection('portfolio')">
+                        <span>Scopri di più</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-outline ripple-effect" onclick="scrollToSection('contact')">
+                        <span>Contattaci</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header wow-slide-up">
+                <h2 class="section-title">Chi Siamo</h2>
+                <p class="section-subtitle">Un team di creativi appassionati di design e tecnologia</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text wow-slide-left">
+                    <h3>La nostra filosofia</h3>
+                    <p>
+                        Crediamo che la semplicità sia la forma più sofisticata di complessità. 
+                        Il nostro approccio minimal non significa meno funzionalità, ma più focus 
+                        su ciò che veramente conta per i nostri clienti.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number counter" data-target="150">0</span>
+                            <span class="stat-label">Progetti Completati</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number counter" data-target="98">0</span>
+                            <span class="stat-label">% Soddisfazione</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number counter" data-target="5">0</span>
+                            <span class="stat-label">Anni di Esperienza</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual wow-slide-right">
+                    <div class="image-stack">
+                        <div class="image-card image-card-1">
+                            <div class="image-placeholder">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                        </div>
+                        <div class="image-card image-card-2">
+                            <div class="image-placeholder">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="image-card image-card-3">
+                            <div class="image-placeholder">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header wow-slide-up">
+                <h2 class="section-title">I Nostri Servizi</h2>
+                <p class="section-subtitle">Soluzioni complete per la tua presenza digitale</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card wow-scale-up" data-delay="0.1">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Design moderni e responsive che si adattano a ogni dispositivo e catturano l'attenzione del tuo pubblico.</p>
+                    <div class="service-features">
+                        <span>Responsive</span>
+                        <span>Modern</span>
+                        <span>SEO Ready</span>
+                    </div>
+                </div>
+                
+                <div class="service-card wow-scale-up" data-delay="0.2">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App</h3>
+                    <p>Applicazioni mobile native e ibride per iOS e Android con un'esperienza utente eccezionale.</p>
+                    <div class="service-features">
+                        <span>iOS</span>
+                        <span>Android</span>
+                        <span>Cross Platform</span>
+                    </div>
+                </div>
+                
+                <div class="service-card wow-scale-up" data-delay="0.3">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Strategie di marketing digitale per aumentare la tua visibilità online e raggiungere nuovi clienti.</p>
+                    <div class="service-features">
+                        <span>SEO</span>
+                        <span>Social Media</span>
+                        <span>Analytics</span>
+                    </div>
+                </div>
+                
+                <div class="service-card wow-scale-up" data-delay="0.4">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Sviluppo Custom</h3>
+                    <p>Soluzioni software personalizzate per le specifiche esigenze del tuo business.</p>
+                    <div class="service-features">
+                        <span>Custom</span>
+                        <span>Scalable</span>
+                        <span>Secure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header wow-slide-up">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">I nostri lavori più recenti</p>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Tutti</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile App</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item wow-scale-up" data-category="web" data-delay="0.1">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>E-commerce Platform</h4>
+                                <p>Web Design</p>
+                                <button class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item wow-scale-up" data-category="mobile" data-delay="0.2">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Fitness App</h4>
+                                <p>Mobile App</p>
+                                <button class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item wow-scale-up" data-category="branding" data-delay="0.3">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Brand Identity</h4>
+                                <p>Branding</p>
+                                <button class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item wow-scale-up" data-category="web" data-delay="0.4">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Corporate Website</h4>
+                                <p>Web Design</p>
+                                <button class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item wow-scale-up" data-category="mobile" data-delay="0.5">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Shopping App</h4>
+                                <p>Mobile App</p>
+                                <button class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item wow-scale-up" data-category="branding" data-delay="0.6">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Logo Design</h4>
+                                <p>Branding</p>
+                                <button class="view-project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header wow-slide-up">
+                <h2 class="section-title">Contattaci</h2>
+                <p class="section-subtitle">Pronto a iniziare il tuo progetto?</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info wow-slide-left">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Indirizzo</h4>
+                            <p>Via Roma 123, 20121 Milano, Italia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefono</h4>
+                            <p>+39 02 1234 5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@minimal.design</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form wow-slide-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+                            <label for="name">Nome</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="La tua email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Oggetto" required>
+                            <label for="subject">Oggetto</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Il tuo messaggio" rows="5" required></textarea>
+                            <label for="message">Messaggio</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary ripple-effect">
+                            <span>Invia Messaggio</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">MINIMAL</span>
+                    <p>Design che fa la differenza</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">Chi Siamo</a>
+                    <a href="#services">Servizi</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contatti</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Minimal Design. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

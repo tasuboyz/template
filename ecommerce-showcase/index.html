@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Store - E-commerce Showcase</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Elite Store</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Elite Store</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#products" class="nav-link">Prodotti</a></li>
+                    <li class="nav-item"><a href="#categories" class="nav-link">Categorie</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Chi Siamo</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contatti</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Scopri la</span>
+                    <span class="hero-title-line highlight">Collezione 2025</span>
+                </h1>
+                <p class="hero-description">Prodotti esclusivi per uno stile unico e raffinato</p>
+                <button class="cta-button" onclick="scrollToSection('products')">
+                    Esplora Ora
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-product">
+                    <div class="product-card-3d">
+                        <div class="product-image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-particles"></div>
+    </section>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cerca prodotti..." class="search-input">
+            <button class="search-close" onclick="closeSearch()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Categorie Popolari</h2>
+                <p class="section-subtitle">Trova quello che cerchi</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-category="electronics">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Elettronica</h3>
+                    <p>Dispositivi all'avanguardia</p>
+                </div>
+                <div class="category-card" data-category="fashion">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Moda</h3>
+                    <p>Stile e tendenze</p>
+                </div>
+                <div class="category-card" data-category="home">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Casa</h3>
+                    <p>Arredamento e design</p>
+                </div>
+                <div class="category-card" data-category="sports">
+                    <div class="category-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Sport</h3>
+                    <p>Attrezzatura sportiva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Prodotti in Evidenza</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tutti</button>
+                    <button class="filter-btn" data-filter="electronics">Elettronica</button>
+                    <button class="filter-btn" data-filter="fashion">Moda</button>
+                    <button class="filter-btn" data-filter="home">Casa</button>
+                    <button class="filter-btn" data-filter="sports">Sport</button>
+                </div>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Product Modal -->
+    <div id="product-modal" class="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-product-image" src="" alt="">
+                    <div class="image-zoom-indicator">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-product-title"></h2>
+                    <div class="modal-rating">
+                        <div class="stars" id="modal-stars"></div>
+                        <span id="modal-reviews"></span>
+                    </div>
+                    <div class="modal-price">
+                        <span class="current-price" id="modal-current-price"></span>
+                        <span class="old-price" id="modal-old-price"></span>
+                        <span class="discount" id="modal-discount"></span>
+                    </div>
+                    <p class="modal-description" id="modal-description"></p>
+                    <div class="modal-options">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="qty-input">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCartFromModal()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Aggiungi al Carrello
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div id="shopping-cart" class="shopping-cart">
+        <div class="cart-header">
+            <h3>Carrello</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically generated -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Totale: €<span id="cart-total">0.00</span></span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                Procedi al Checkout
+                <i class="fas fa-credit-card"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Chi Siamo</h2>
+                    <p>Elite Store è il tuo partner di fiducia per prodotti di alta qualità. 
+                       Offriamo una selezione curata dei migliori brand mondiali con 
+                       un'esperienza di shopping online senza pari.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <h4>Spedizione Veloce</h4>
+                                <p>Consegna in 24-48 ore</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Garanzia Qualità</h4>
+                                <p>Prodotti certificati</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>Supporto 24/7</h4>
+                                <p>Assistenza sempre disponibile</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10000">0</span>
+                            <span class="stat-label">Clienti Soddisfatti</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">Prodotti</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="99">0</span>
+                            <span class="stat-label">% Soddisfazione</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Resta Aggiornato</h2>
+                <p>Iscriviti alla newsletter per ricevere offerte esclusive e novità</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="La tua email" required>
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Iscriviti
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Elite Store</h3>
+                    <p>Il tuo negozio online di fiducia per prodotti di qualità superiore.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Link Rapidi</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Prodotti</a></li>
+                        <li><a href="#categories">Categorie</a></li>
+                        <li><a href="#about">Chi Siamo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servizio Clienti</h4>
+                    <ul>
+                        <li><a href="#">Spedizioni</a></li>
+                        <li><a href="#">Resi</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Supporto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +39 123 456 789</p>
+                        <p><i class="fas fa-envelope"></i> info@elitestore.it</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Milano, Italia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elite Store. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="notification-icon"></i>
+            <span class="notification-text"></span>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

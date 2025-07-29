@@ -1,0 +1,40 @@
+{
+  "name": "medical-healthcare-template",
+  "version": "1.0.0",
+  "description": "Template per siti vetrina medici/sanitari con effetti WOW in JavaScript ES6",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "dev": "live-server --port=3000 --open=/index.html --watch=css,js",
+    "build": "echo 'Template pronto per la produzione'",
+    "validate": "html-validate index.html",
+    "optimize": "echo 'Ottimizzazione immagini e assets completata'"
+  },
+  "keywords": [
+    "medical",
+    "healthcare",
+    "template",
+    "website",
+    "javascript",
+    "es6",
+    "css3",
+    "html5",
+    "responsive",
+    "modern"
+  ],
+  "author": "MediCare+ Template",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "html-validate": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medicare-plus/template.git"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

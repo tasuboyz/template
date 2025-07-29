@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPro Academy - Formazione del Futuro</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">EduPro Academy</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduPro Academy</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link">Corsi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Chi Siamo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#instructors" class="nav-link">Docenti</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Recensioni</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link login-btn">Accedi</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particle-container" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Trasforma il tuo</span>
+                    <span class="title-line highlight">Futuro</span>
+                    <span class="title-line">con la Formazione</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Scopri i nostri corsi innovativi e raggiungi i tuoi obiettivi professionali
+                    con l'aiuto dei migliori esperti del settore.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary cta-btn">
+                        <span>Inizia Ora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary play-btn">
+                        <i class="fas fa-play"></i>
+                        <span>Guarda il Video</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5000">0</span>
+                        <span class="stat-label">Studenti</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">Corsi</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Docenti</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-code"></i>
+                        <span>Programmazione</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Marketing</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scorri verso il basso</span>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">I Nostri Corsi</h2>
+                <p class="section-subtitle">Scegli tra una vasta gamma di corsi progettati per il successo</p>
+            </div>
+            
+            <div class="course-filters">
+                <button class="filter-btn active" data-filter="all">Tutti</button>
+                <button class="filter-btn" data-filter="programming">Programmazione</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+            </div>
+
+            <div class="courses-grid" id="courses-grid">
+                <div class="course-card" data-category="programming">
+                    <div class="course-image">
+                        <div class="course-level">Principiante</div>
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>40 ore</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Programmazione</span>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>(4.9)</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">JavaScript Moderno e ES6+</h3>
+                        <p class="course-description">
+                            Impara JavaScript da zero fino ai concetti avanzati con progetti pratici
+                        </p>
+                        <div class="course-instructor">
+                            <div class="instructor-avatar">JS</div>
+                            <span class="instructor-name">Marco Rossi</span>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="old-price">€199</span>
+                                <span class="current-price">€149</span>
+                            </div>
+                            <button class="btn btn-primary course-btn">Iscriviti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="design">
+                    <div class="course-image">
+                        <div class="course-level">Intermedio</div>
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>60 ore</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Design</span>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>(4.8)</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">UI/UX Design Completo</h3>
+                        <p class="course-description">
+                            Crea interfacce utente straordinarie e esperienze coinvolgenti
+                        </p>
+                        <div class="course-instructor">
+                            <div class="instructor-avatar">UX</div>
+                            <span class="instructor-name">Laura Bianchi</span>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="old-price">€299</span>
+                                <span class="current-price">€249</span>
+                            </div>
+                            <button class="btn btn-primary course-btn">Iscriviti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="marketing">
+                    <div class="course-image">
+                        <div class="course-level">Principiante</div>
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>30 ore</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Marketing</span>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>(4.7)</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Digital Marketing Strategico</h3>
+                        <p class="course-description">
+                            Strategie di marketing digitale per far crescere il tuo business online
+                        </p>
+                        <div class="course-instructor">
+                            <div class="instructor-avatar">DM</div>
+                            <span class="instructor-name">Andrea Verdi</span>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="old-price">€179</span>
+                                <span class="current-price">€129</span>
+                            </div>
+                            <button class="btn btn-primary course-btn">Iscriviti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="business">
+                    <div class="course-image">
+                        <div class="course-level">Avanzato</div>
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>80 ore</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-category">Business</span>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>(4.9)</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Leadership & Management</h3>
+                        <p class="course-description">
+                            Sviluppa competenze di leadership per guidare team di successo
+                        </p>
+                        <div class="course-instructor">
+                            <div class="instructor-avatar">LM</div>
+                            <span class="instructor-name">Giulia Neri</span>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="old-price">€399</span>
+                                <span class="current-price">€349</span>
+                            </div>
+                            <button class="btn btn-primary course-btn">Iscriviti</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Perché Scegliere EduPro Academy?</h2>
+                    <p class="about-description">
+                        Da oltre 10 anni formiamo professionisti di successo con metodologie innovative
+                        e tecnologie all'avanguardia. La nostra missione è trasformare la passione
+                        in competenza professionale.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Certificazioni Riconosciute</h3>
+                                <p>Ottieni certificazioni valide nel mondo del lavoro</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Supporto Personalizzato</h3>
+                                <p>Tutoraggio individuale per ogni studente</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Progetti Reali</h3>
+                                <p>Lavora su progetti concreti e costruisci il tuo portfolio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="stats-dashboard">
+                        <div class="dashboard-header">
+                            <h3>I Nostri Risultati</h3>
+                        </div>
+                        <div class="progress-bars">
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Tasso di Successo</span>
+                                    <span class="progress-value">95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Soddisfazione Studenti</span>
+                                    <span class="progress-value">98%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="98"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Placement Lavorativo</span>
+                                    <span class="progress-value">92%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section id="instructors" class="instructors-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">I Nostri Docenti</h2>
+                <p class="section-subtitle">Esperti del settore con anni di esperienza pratica</p>
+            </div>
+            <div class="instructors-grid">
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <div class="instructor-photo">MR</div>
+                        <div class="instructor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="instructor-info">
+                        <h3 class="instructor-name">Marco Rossi</h3>
+                        <p class="instructor-role">Senior Full-Stack Developer</p>
+                        <p class="instructor-bio">
+                            10+ anni di esperienza in sviluppo web, specializzato in JavaScript e React
+                        </p>
+                        <div class="instructor-stats">
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Corsi</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">1,200+</span>
+                                <span class="stat-label">Studenti</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <div class="instructor-photo">LB</div>
+                        <div class="instructor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                    <div class="instructor-info">
+                        <h3 class="instructor-name">Laura Bianchi</h3>
+                        <p class="instructor-role">Lead UX/UI Designer</p>
+                        <p class="instructor-bio">
+                            Esperta in design thinking e user experience per startup e grandi aziende
+                        </p>
+                        <div class="instructor-stats">
+                            <div class="stat">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-label">Corsi</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">800+</span>
+                                <span class="stat-label">Studenti</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <div class="instructor-photo">AV</div>
+                        <div class="instructor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="instructor-info">
+                        <h3 class="instructor-name">Andrea Verdi</h3>
+                        <p class="instructor-role">Digital Marketing Strategist</p>
+                        <p class="instructor-bio">
+                            Consulente marketing per brand internazionali, specializzato in growth hacking
+                        </p>
+                        <div class="instructor-stats">
+                            <div class="stat">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Corsi</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">950+</span>
+                                <span class="stat-label">Studenti</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cosa Dicono i Nostri Studenti</h2>
+                <p class="section-subtitle">Storie di successo dai nostri alumni</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Grazie al corso di JavaScript sono riuscito a trovare lavoro come developer
+                            in una startup tecnologica. I docenti sono fantastici e il supporto è sempre presente."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">GP</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Giuseppe Pellegrino</h4>
+                                <p class="author-role">Frontend Developer @ TechStart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Il corso di UX Design mi ha aperto un mondo nuovo. Ora lavoro come designer
+                            freelance e ho clienti in tutto il mondo. Consiglio vivamente EduPro Academy!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SF</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Sara Ferrari</h4>
+                                <p class="author-role">UX Designer Freelance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Il corso di Digital Marketing mi ha dato gli strumenti per far crescere
+                            la mia azienda online. ROI incredibile!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LM</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Luca Martinelli</h4>
+                                <p class="author-role">E-commerce Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Inizia il Tuo Percorso</h2>
+                    <p class="contact-description">
+                        Hai domande sui nostri corsi? Il nostro team è qui per aiutarti
+                        a scegliere il percorso formativo più adatto alle tue esigenze.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Telefono</h3>
+                                <p>+39 02 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>info@eduproacademy.it</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Indirizzo</h3>
+                                <p>Via Roma 123, 20121 Milano</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form" class="form">
+                        <div class="form-group">
+                            <label for="name">Nome e Cognome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Corso di Interesse</label>
+                            <select id="course" name="course" required>
+                                <option value="">Seleziona un corso</option>
+                                <option value="javascript">JavaScript Moderno</option>
+                                <option value="ux-design">UI/UX Design</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="leadership">Leadership & Management</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-btn">
+                            <span>Invia Richiesta</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduPro Academy</span>
+                    </div>
+                    <p class="footer-description">
+                        Trasformiamo la passione in competenza professionale attraverso
+                        corsi innovativi e formazione di qualità.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Corsi</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Programmazione</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Data Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Risorse</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinar</a></li>
+                        <li><a href="#">Ebook Gratuiti</a></li>
+                        <li><a href="#">Certificazioni</a></li>
+                        <li><a href="#">Career Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Supporto</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contatti</a></li>
+                        <li><a href="#">Supporto Tecnico</a></li>
+                        <li><a href="#">Termini di Servizio</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EduPro Academy. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>

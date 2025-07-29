@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE Beauty - Fashion & Beauty Showcase</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-animation">
+            <div class="luxury-loader">
+                <div class="loader-text">LUXE</div>
+                <div class="loader-sparkle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-inner">
+            <div class="cursor-sparkle"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1 class="logo-text">LUXE</h1>
+                <div class="logo-sparkle"></div>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#collections" class="nav-link">Collections</a></li>
+                <li class="nav-item"><a href="#lookbook" class="nav-link">Lookbook</a></li>
+                <li class="nav-item"><a href="#beauty" class="nav-link">Beauty</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-social">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line" data-text="ELEVATE">ELEVATE</span>
+                    <span class="title-line" data-text="YOUR">YOUR</span>
+                    <span class="title-line highlight" data-text="BEAUTY">BEAUTY</span>
+                </h1>
+                <p class="hero-subtitle">Discover the ultimate fashion and beauty experience with our exclusive collections</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary sparkle-btn">
+                        Explore Collection
+                        <div class="btn-sparkles"></div>
+                    </button>
+                    <button class="btn-secondary">Watch Story</button>
+                </div>
+            </div>
+            
+            <div class="hero-showcase">
+                <div class="showcase-item main-item" data-bg="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=800&fit=crop&crop=face">
+                    <div class="item-overlay">
+                        <h3>Spring Collection</h3>
+                        <p>New Arrivals</p>
+                    </div>
+                </div>
+                <div class="showcase-item" data-bg="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop&crop=face">
+                    <div class="item-overlay">
+                        <h3>Beauty Essentials</h3>
+                    </div>
+                </div>
+                <div class="showcase-item" data-bg="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=400&h=600&fit=crop&crop=face">
+                    <div class="item-overlay">
+                        <h3>Luxury Accessories</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Collections</span>
+                <h2 class="section-title">Featured Collections</h2>
+                <p class="section-subtitle">Curated pieces that define modern elegance</p>
+            </div>
+
+            <div class="collections-grid">
+                <div class="collection-card" data-category="fashion">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500&h=600&fit=crop" alt="Summer Vibes">
+                        <div class="card-overlay">
+                            <button class="card-btn">View Collection</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Summer Vibes</h3>
+                        <p>Lightweight fabrics and vibrant colors</p>
+                        <span class="price">From €89</span>
+                    </div>
+                </div>
+
+                <div class="collection-card" data-category="beauty">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&h=600&fit=crop" alt="Glow Essentials">
+                        <div class="card-overlay">
+                            <button class="card-btn">View Collection</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Glow Essentials</h3>
+                        <p>Radiant skincare for every day</p>
+                        <span class="price">From €45</span>
+                    </div>
+                </div>
+
+                <div class="collection-card" data-category="accessories">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=600&fit=crop" alt="Luxury Accessories">
+                        <div class="card-overlay">
+                            <button class="card-btn">View Collection</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Luxury Accessories</h3>
+                        <p>Statement pieces for every occasion</p>
+                        <span class="price">From €120</span>
+                    </div>
+                </div>
+
+                <div class="collection-card" data-category="fashion">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&h=600&fit=crop" alt="Evening Elegance">
+                        <div class="card-overlay">
+                            <button class="card-btn">View Collection</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Evening Elegance</h3>
+                        <p>Sophisticated looks for special moments</p>
+                        <span class="price">From €200</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collection-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+                <button class="filter-btn" data-filter="beauty">Beauty</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lookbook Section -->
+    <section id="lookbook" class="lookbook">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Lookbook</span>
+                <h2 class="section-title">Style Inspiration</h2>
+            </div>
+
+            <div class="lookbook-gallery">
+                <div class="gallery-main">
+                    <div class="main-image">
+                        <img id="main-lookbook-img" src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=800&h=1000&fit=crop" alt="Main Look">
+                        <div class="image-info">
+                            <h3 id="look-title">Minimal Chic</h3>
+                            <p id="look-description">Effortless elegance meets modern sophistication</p>
+                            <button class="shop-look-btn">Shop This Look</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-thumbs">
+                    <div class="thumb-item active" data-img="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=800&h=1000&fit=crop" data-title="Minimal Chic" data-desc="Effortless elegance meets modern sophistication">
+                        <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=200&h=250&fit=crop" alt="Look 1">
+                    </div>
+                    <div class="thumb-item" data-img="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&h=1000&fit=crop" data-title="Bohemian Dreams" data-desc="Free-spirited style with artistic flair">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=250&fit=crop" alt="Look 2">
+                    </div>
+                    <div class="thumb-item" data-img="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=800&h=1000&fit=crop" data-title="Urban Edge" data-desc="Street style meets high fashion">
+                        <img src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=200&h=250&fit=crop" alt="Look 3">
+                    </div>
+                    <div class="thumb-item" data-img="https://images.unsplash.com/photo-1583292650898-7d22cd27ca6f?w=800&h=1000&fit=crop" data-title="Classic Grace" data-desc="Timeless beauty with contemporary touches">
+                        <img src="https://images.unsplash.com/photo-1583292650898-7d22cd27ca6f?w=200&h=250&fit=crop" alt="Look 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beauty Section -->
+    <section id="beauty" class="beauty">
+        <div class="container">
+            <div class="beauty-content">
+                <div class="beauty-text">
+                    <span class="section-tag">Beauty</span>
+                    <h2 class="section-title">Beauty Revolution</h2>
+                    <p class="beauty-description">Transform your beauty routine with our curated selection of premium products. From skincare essentials to makeup must-haves, discover the perfect products for your unique style.</p>
+                    
+                    <div class="beauty-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Natural Ingredients</h4>
+                                <p>Organic and sustainable formulations</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Award Winning</h4>
+                                <p>Recognized by beauty industry experts</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Cruelty Free</h4>
+                                <p>Ethical beauty that cares</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary">Explore Beauty Line</button>
+                </div>
+                
+                <div class="beauty-showcase">
+                    <div class="product-carousel">
+                        <div class="product-slide active">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" alt="Skincare Essentials">
+                            </div>
+                            <div class="product-info">
+                                <h3>Radiance Serum</h3>
+                                <p>Vitamin C brightening formula</p>
+                                <span class="price">€65</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-slide">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=500&fit=crop" alt="Luxury Lipstick">
+                            </div>
+                            <div class="product-info">
+                                <h3>Luxury Lipstick</h3>
+                                <p>Long-lasting matte finish</p>
+                                <span class="price">€32</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-slide">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=500&fit=crop" alt="Face Mask">
+                            </div>
+                            <div class="product-info">
+                                <h3>Hydrating Mask</h3>
+                                <p>Intensive moisture treatment</p>
+                                <span class="price">€45</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2 class="section-title">Let's Create Something Beautiful</h2>
+                    <p>Ready to elevate your style? Get in touch with our style consultants for personalized recommendations.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Visit Our Boutique</h4>
+                                <p>Via della Moda 123, Milano, Italy</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+39 02 1234 5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@luxebeauty.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select Service</option>
+                                <option value="styling">Personal Styling</option>
+                                <option value="consultation">Beauty Consultation</option>
+                                <option value="corporate">Corporate Events</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="service">Service</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary sparkle-btn">
+                            Send Message
+                            <div class="btn-sparkles"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="logo-text">LUXE</h3>
+                    <p>Elevating beauty and fashion since 2020</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Collections</h4>
+                        <a href="#">Fashion</a>
+                        <a href="#">Beauty</a>
+                        <a href="#">Accessories</a>
+                        <a href="#">New Arrivals</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Customer Care</h4>
+                        <a href="#">Size Guide</a>
+                        <a href="#">Shipping Info</a>
+                        <a href="#">Returns</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>About</h4>
+                        <a href="#">Our Story</a>
+                        <a href="#">Sustainability</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 LUXE Beauty. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

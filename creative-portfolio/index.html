@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Studio - Portfolio Artistico</title>
+    <meta name="description" content="Portfolio creativo con effetti visivi spettacolari e design artistico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/effects.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <span class="logo-letter">C</span>
+                <span class="logo-letter">R</span>
+                <span class="logo-letter">E</span>
+                <span class="logo-letter">A</span>
+                <span class="logo-letter">T</span>
+                <span class="logo-letter">I</span>
+                <span class="logo-letter">V</span>
+                <span class="logo-letter">E</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-text">Caricando la magia...</div>
+        </div>
+        <canvas id="loading-canvas"></canvas>
+    </div>
+
+    <!-- Cursor Custom -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1 class="logo-text">Creative</h1>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                <li><a href="#portfolio" class="nav-link" data-text="Portfolio">Portfolio</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="menu-toggle" id="menu-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-intro">
+                    <span class="hero-greeting">Ciao, sono</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Creative</span>
+                    <span class="title-line">Designer</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <p class="typing-text"></p>
+                </div>
+                <div class="hero-actions">
+                    <button class="cta-button primary-cta" data-text="Scopri il mio lavoro">
+                        <span>Scopri il mio lavoro</span>
+                    </button>
+                    <button class="cta-button secondary-cta" data-text="Contattami">
+                        <span>Contattami</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scorri</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Chi Sono</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3 class="about-heading">Passione per il Design</h3>
+                        <p class="about-description">
+                            Sono un designer creativo con oltre 5 anni di esperienza nella creazione 
+                            di esperienze digitali uniche. La mia passione è trasformare idee in 
+                            realtà visive che emozionano e coinvolgono.
+                        </p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3 class="about-heading">Approccio Innovativo</h3>
+                        <p class="about-description">
+                            Combino creatività artistica con competenze tecniche avanzate per 
+                            creare progetti che non solo colpiscono visivamente, ma funzionano 
+                            perfettamente su ogni dispositivo.
+                        </p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item" data-count="50">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Progetti Completati</span>
+                        </div>
+                        <div class="stat-item" data-count="25">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Clienti Soddisfatti</span>
+                        </div>
+                        <div class="stat-item" data-count="5">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Anni di Esperienza</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="image-gallery">
+                        <div class="gallery-item main-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                        <div class="gallery-item secondary-image">
+                            <div class="image-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Portfolio</h2>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Tutti</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="illustration">Illustration</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3 class="project-title">E-commerce Platform</h3>
+                                <p class="project-category">Web Design</p>
+                                <button class="view-project-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="branding">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3 class="project-title">Brand Identity</h3>
+                                <p class="project-category">Branding</p>
+                                <button class="view-project-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="illustration">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3 class="project-title">Digital Art</h3>
+                                <p class="project-category">Illustration</p>
+                                <button class="view-project-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3 class="project-title">Mobile App UI</h3>
+                                <p class="project-category">Web Design</p>
+                                <button class="view-project-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="branding">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3 class="project-title">Logo Design</h3>
+                                <p class="project-category">Branding</p>
+                                <button class="view-project-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="illustration">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3 class="project-title">Character Design</h3>
+                                <p class="project-category">Illustration</p>
+                                <button class="view-project-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Skills & Tools</h2>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title">Design</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Adobe Photoshop</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Adobe Illustrator</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Figma</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">Development</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span class="skill-name">HTML/CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">React</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tools-showcase">
+                    <div class="tool-icon" data-tool="photoshop">
+                        <i class="fab fa-adobe"></i>
+                    </div>
+                    <div class="tool-icon" data-tool="figma">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <div class="tool-icon" data-tool="sketch">
+                        <i class="fab fa-sketch"></i>
+                    </div>
+                    <div class="tool-icon" data-tool="javascript">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="tool-icon" data-tool="react">
+                        <i class="fab fa-react"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Mettiamoci in Contatto</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Hai un progetto in mente?</h3>
+                    <p class="contact-description">
+                        Sono sempre interessato a nuove opportunità creative. 
+                        Parliamo del tuo prossimo progetto!
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">hello@creative-studio.com</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Telefono</span>
+                                <span class="contact-value">+39 123 456 7890</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Località</span>
+                                <span class="contact-value">Milano, Italia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-social="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" data-social="dribbble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link" data-social="behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" class="social-link" data-social="linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Nome</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Oggetto</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Messaggio</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Invia Messaggio</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 Creative Studio. Progettato con ❤️ e molta creatività.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

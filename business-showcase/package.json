@@ -1,0 +1,69 @@
+{
+  "name": "businesspro-showcase",
+  "version": "1.0.0",
+  "description": "Sito vetrina BusinessPro con JavaScript ES6, effetti WOW e tema scuro/chiaro",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
+    "build": "node build.js",
+    "test": "npm run test:lint && npm run test:perf",
+    "test:lint": "npx eslint js/**/*.js",
+    "test:perf": "npx lighthouse http://localhost:3000 --output=html --output-path=./reports/lighthouse.html",
+    "deploy": "npm run build && npm run deploy:netlify",
+    "deploy:netlify": "npx netlify deploy --prod --dir=dist",
+    "analyze": "npx webpack-bundle-analyzer dist/js/bundle.js",
+    "compress": "node compress.js",
+    "validate": "npx html-validate index.html",
+    "optimize": "npm run compress && npm run minify",
+    "minify": "node minify.js",
+    "watch": "npx chokidar \"**/*.{js,css,html}\" -c \"npm run build\"",
+    "serve": "npx http-server dist -p 8080 -c-1",
+    "clean": "rimraf dist reports temp",
+    "precommit": "npm run test && npm run build"
+  },
+  "keywords": [
+    "business",
+    "showcase",
+    "javascript",
+    "es6",
+    "dark-theme",
+    "light-theme",
+    "animations",
+    "wow-effects",
+    "responsive",
+    "pwa"
+  ],
+  "author": "BusinessPro Team",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "eslint": "^8.57.0",
+    "html-minifier": "^4.0.0",
+    "http-server": "^14.1.1",
+    "lighthouse": "^11.4.0",
+    "live-server": "^1.2.2",
+    "rimraf": "^5.0.5",
+    "terser": "^5.26.0",
+    "cssnano": "^6.0.2",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/businesspro/showcase.git"
+  },
+  "bugs": {
+    "url": "https://github.com/businesspro/showcase/issues"
+  },
+  "homepage": "https://businesspro-showcase.netlify.app"
+}

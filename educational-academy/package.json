@@ -1,0 +1,33 @@
+{
+  "name": "educational-academy-template",
+  "version": "1.0.0",
+  "description": "Template moderno per Academy/Educational con effetti WOW in JavaScript ES6",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o css/main.min.css css/main.css css/animations.css",
+    "minify-js": "uglifyjs js/app.js -o js/app.min.js"
+  },
+  "keywords": [
+    "educational",
+    "academy",
+    "template",
+    "javascript",
+    "es6",
+    "responsive",
+    "animations"
+  ],
+  "author": "EduPro Academy",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

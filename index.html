@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Siti Vetrina - Showcase Professionale</title>
+    <meta name="description" content="Collezione di template professionali per siti vetrina: Business, Creative, E-commerce, Restaurant e molto altro. Demo live e codice pronto per l'uso.">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Template Siti Vetrina - Showcase Professionale">
+    <meta property="og:description" content="Collezione di template professionali per siti vetrina con demo live">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://username.github.io/template/">
+    <meta property="og:image" content="https://username.github.io/template/assets/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Template Siti Vetrina - Showcase Professionale">
+    <meta name="twitter:description" content="Collezione di template professionali per siti vetrina con demo live">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/landing.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GitHub Pages Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>Template Showcase</h1>
+                    <span>Siti Vetrina Professionali</span>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#templates" class="nav-link">Template</a></li>
+                    <li><a href="#features" class="nav-link">Caratteristiche</a></li>
+                    <li><a href="#about" class="nav-link">Info</a></li>
+                    <li><a href="#contact" class="nav-link">Contatti</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="https://github.com/username/template" class="btn btn-outline" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <button class="mobile-toggle" id="mobile-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Template Professionali per
+                    <span class="highlight">Siti Vetrina</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Collezione curata di template moderni e responsive, pronti per l'uso con 
+                    effetti WOW, animazioni fluide e codice ES6+ ottimizzato.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="7">0</span>
+                        <span class="stat-label">Template Disponibili</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-label">% Responsive</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Categorie Business</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#templates" class="btn btn-primary">
+                        <i class="fas fa-eye"></i>
+                        Esplora Template
+                    </a>
+                    <a href="https://github.com/username/template" class="btn btn-secondary" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                        Codice Sorgente
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scorri per esplorare</span>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section id="templates" class="templates-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Template Disponibili</h2>
+                <p class="section-subtitle">
+                    Ogni template è progettato per specifiche esigenze business, 
+                    con codice pulito e documentazione completa.
+                </p>
+            </div>
+            
+            <div class="templates-grid">
+                <!-- Business/Corporate Template -->
+                <div class="template-card" data-category="business">
+                    <div class="template-preview">
+                        <div class="preview-image business-preview">
+                            <i class="fas fa-briefcase"></i>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <a href="business-showcase/" target="_blank" rel="noopener" class="btn btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Demo Live
+                                    </a>
+                                    <button class="btn btn-info" onclick="showTemplateInfo('business')">
+                                        <i class="fas fa-info-circle"></i>
+                                        Dettagli
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-status">
+                            <span class="status-badge live">Live</span>
+                            <span class="status-badge new">Nuovo</span>
+                        </div>
+                    </div>
+                    
+                    <div class="template-content">
+                        <h3 class="template-title">Business Pro</h3>
+                        <p class="template-description">
+                            Template professionale per aziende e studi legali con tema chiaro/scuro, 
+                            PWA support e animazioni avanzate.
+                        </p>
+                        
+                        <div class="template-features">
+                            <span class="feature-tag">PWA</span>
+                            <span class="feature-tag">Dark Mode</span>
+                            <span class="feature-tag">Responsive</span>
+                            <span class="feature-tag">ES6+</span>
+                        </div>
+                        
+                        <div class="template-tech">
+                            <div class="tech-stack">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js-square" title="JavaScript ES6+"></i>
+                            </div>
+                            <div class="template-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative/Portfolio Template -->
+                <div class="template-card" data-category="creative">
+                    <div class="template-preview">
+                        <div class="preview-image creative-preview">
+                            <i class="fas fa-palette"></i>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <a href="creative-portfolio/" target="_blank" rel="noopener" class="btn btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Demo Live
+                                    </a>
+                                    <button class="btn btn-info" onclick="showTemplateInfo('creative')">
+                                        <i class="fas fa-info-circle"></i>
+                                        Dettagli
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-status">
+                            <span class="status-badge live">Live</span>
+                            <span class="status-badge featured">In Evidenza</span>
+                        </div>
+                    </div>
+                    
+                    <div class="template-content">
+                        <h3 class="template-title">Creative Studio</h3>
+                        <p class="template-description">
+                            Portfolio creativo per designer e artisti con effetti canvas, 
+                            audio manager e animazioni particellari avanzate.
+                        </p>
+                        
+                        <div class="template-features">
+                            <span class="feature-tag">Canvas</span>
+                            <span class="feature-tag">Audio</span>
+                            <span class="feature-tag">Particles</span>
+                            <span class="feature-tag">Portfolio</span>
+                        </div>
+                        
+                        <div class="template-tech">
+                            <div class="tech-stack">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js-square" title="JavaScript ES6+"></i>
+                            </div>
+                            <div class="template-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Template -->
+                <div class="template-card" data-category="ecommerce">
+                    <div class="template-preview">
+                        <div class="preview-image ecommerce-preview">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <a href="ecommerce-showcase/" target="_blank" rel="noopener" class="btn btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Demo Live
+                                    </a>
+                                    <button class="btn btn-info" onclick="showTemplateInfo('ecommerce')">
+                                        <i class="fas fa-info-circle"></i>
+                                        Dettagli
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-status">
+                            <span class="status-badge live">Live</span>
+                            <span class="status-badge popular">Popolare</span>
+                        </div>
+                    </div>
+                    
+                    <div class="template-content">
+                        <h3 class="template-title">Elite Store</h3>
+                        <p class="template-description">
+                            E-commerce completo con carrello funzionale, filtri avanzati, 
+                            wishlist e sistema di notifiche real-time.
+                        </p>
+                        
+                        <div class="template-features">
+                            <span class="feature-tag">Carrello</span>
+                            <span class="feature-tag">Filtri</span>
+                            <span class="feature-tag">Wishlist</span>
+                            <span class="feature-tag">Mobile</span>
+                        </div>
+                        
+                        <div class="template-tech">
+                            <div class="tech-stack">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js-square" title="JavaScript ES6+"></i>
+                            </div>
+                            <div class="template-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Template -->
+                <div class="template-card" data-category="restaurant">
+                    <div class="template-preview">
+                        <div class="preview-image restaurant-preview">
+                            <i class="fas fa-utensils"></i>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <a href="restaurant-showcase/" target="_blank" rel="noopener" class="btn btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Demo Live
+                                    </a>
+                                    <button class="btn btn-info" onclick="showTemplateInfo('restaurant')">
+                                        <i class="fas fa-info-circle"></i>
+                                        Dettagli
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-status">
+                            <span class="status-badge live">Live</span>
+                            <span class="status-badge new">Nuovo</span>
+                        </div>
+                    </div>
+                    
+                    <div class="template-content">
+                        <h3 class="template-title">Bella Vista</h3>
+                        <p class="template-description">
+                            Template elegante per ristoranti italiani con menu interattivo, 
+                            sistema prenotazioni e galleria fotografica.
+                        </p>
+                        
+                        <div class="template-features">
+                            <span class="feature-tag">Menu</span>
+                            <span class="feature-tag">Prenotazioni</span>
+                            <span class="feature-tag">Gallery</span>
+                            <span class="feature-tag">Elegante</span>
+                        </div>
+                        
+                        <div class="template-tech">
+                            <div class="tech-stack">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js-square" title="JavaScript ES6+"></i>
+                            </div>
+                            <div class="template-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational/Academy Template -->
+                <div class="template-card" data-category="educational">
+                    <div class="template-preview">
+                        <div class="preview-image educational-preview">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <a href="educational-academy/" target="_blank" rel="noopener" class="btn btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Demo Live
+                                    </a>
+                                    <button class="btn btn-info" onclick="showTemplateInfo('educational')">
+                                        <i class="fas fa-info-circle"></i>
+                                        Dettagli
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-status">
+                            <span class="status-badge live">Live</span>
+                            <span class="status-badge wow">WOW Effects</span>
+                        </div>
+                    </div>
+                    
+                    <div class="template-content">
+                        <h3 class="template-title">EduPro Academy</h3>
+                        <p class="template-description">
+                            Template completo per academy e formazione con catalogo corsi, 
+                            sistema di iscrizioni, docenti e effetti WOW avanzati.
+                        </p>
+                        
+                        <div class="template-features">
+                            <span class="feature-tag">Corsi</span>
+                            <span class="feature-tag">Docenti</span>
+                            <span class="feature-tag">WOW Effects</span>
+                            <span class="feature-tag">Particles</span>
+                        </div>
+                        
+                        <div class="template-tech">
+                            <div class="tech-stack">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js-square" title="JavaScript ES6+"></i>
+                            </div>
+                            <div class="template-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical/Healthcare Template -->
+                <div class="template-card" data-category="medical">
+                    <div class="template-preview">
+                        <div class="preview-image medical-preview">
+                            <i class="fas fa-heartbeat"></i>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <a href="medical-healthcare/" target="_blank" rel="noopener" class="btn btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Demo Live
+                                    </a>
+                                    <button class="btn btn-info" onclick="showTemplateInfo('medical')">
+                                        <i class="fas fa-info-circle"></i>
+                                        Dettagli
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-status">
+                            <span class="status-badge live">Live</span>
+                            <span class="status-badge professional">Professional</span>
+                        </div>
+                    </div>
+                    
+                    <div class="template-content">
+                        <h3 class="template-title">MediCare Pro</h3>
+                        <p class="template-description">
+                            Template professionale per cliniche e studi medici con sistema 
+                            appuntamenti, servizi sanitari e design rassicurante.
+                        </p>
+                        
+                        <div class="template-features">
+                            <span class="feature-tag">Appuntamenti</span>
+                            <span class="feature-tag">Servizi</span>
+                            <span class="feature-tag">Certificazioni</span>
+                            <span class="feature-tag">Clean</span>
+                        </div>
+                        
+                        <div class="template-tech">
+                            <div class="tech-stack">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js-square" title="JavaScript ES6+"></i>
+                            </div>
+                            <div class="template-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Estate Template -->
+                <div class="template-card" data-category="realestate">
+                    <div class="template-preview">
+                        <div class="preview-image realestate-preview">
+                            <i class="fas fa-home"></i>
+                            <div class="preview-overlay">
+                                <div class="preview-actions">
+                                    <a href="real-estate-showcase/" target="_blank" rel="noopener" class="btn btn-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Demo Live
+                                    </a>
+                                    <button class="btn btn-info" onclick="showTemplateInfo('realestate')">
+                                        <i class="fas fa-info-circle"></i>
+                                        Dettagli
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="template-status">
+                            <span class="status-badge live">Live</span>
+                            <span class="status-badge premium">Premium</span>
+                        </div>
+                    </div>
+                    
+                    <div class="template-content">
+                        <h3 class="template-title">Estate Elite</h3>
+                        <p class="template-description">
+                            Template avanzato per agenzie immobiliari con ricerca proprietà, 
+                            virtual tour, mappe interattive e calcolatori mutui.
+                        </p>
+                        
+                        <div class="template-features">
+                            <span class="feature-tag">Ricerca</span>
+                            <span class="feature-tag">Virtual Tour</span>
+                            <span class="feature-tag">Mappe</span>
+                            <span class="feature-tag">Calcolatori</span>
+                        </div>
+                        
+                        <div class="template-tech">
+                            <div class="tech-stack">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js-square" title="JavaScript ES6+"></i>
+                            </div>
+                            <div class="template-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perché Scegliere i Nostri Template?</h2>
+                <p class="section-subtitle">
+                    Ogni template è costruito con le migliori pratiche del web development moderno
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Codice Pulito</h3>
+                    <p>JavaScript ES6+, CSS moderno con variabili, HTML5 semantico e architettura modulare.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>100% Responsive</h3>
+                    <p>Design mobile-first con breakpoint ottimizzati per tutti i dispositivi e schermi.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>Ottimizzazioni per Core Web Vitals, lazy loading e bundle size ridotto.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <h3>Accessibilità</h3>
+                    <p>WCAG 2.1 compliant con supporto screen reader e navigazione da tastiera.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimized</h3>
+                    <p>Meta tags ottimizzati, schema markup e struttura semantica per i motori di ricerca.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Personalizzabile</h3>
+                    <p>Variabili CSS, documentazione completa e struttura modulare per facile customizzazione.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Informazioni sul Progetto</h2>
+                    <p class="about-description">
+                        Questa collezione di template nasce dall'esperienza nello sviluppo di siti vetrina 
+                        professionali. Ogni template rappresenta una soluzione completa per specifiche 
+                        esigenze business, dal corporate al creative, dall'e-commerce al restaurant.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Open Source</h4>
+                                <p>Codice completamente gratuito e open source su GitHub</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Documentazione</h4>
+                                <p>Guide complete per installazione e personalizzazione</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Community</h4>
+                                <p>Supporto attivo della community di sviluppatori</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="tech-showcase">
+                        <h3>Stack Tecnologico</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>ES6+</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Responsive</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contatti e Supporto</h2>
+                <p class="section-subtitle">
+                    Hai domande sui template o vuoi contribuire al progetto?
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub Repository</h3>
+                    <p>Codice sorgente, issues e discussioni</p>
+                    <a href="https://github.com/username/template" target="_blank" rel="noopener" class="contact-link">
+                        Visita Repository <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Bug Reports</h3>
+                    <p>Segnala problemi o richiedi nuove funzionalità</p>
+                    <a href="https://github.com/username/template/issues" target="_blank" rel="noopener" class="contact-link">
+                        Apri Issue <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Discussioni</h3>
+                    <p>Community e supporto tra sviluppatori</p>
+                    <a href="https://github.com/username/template/discussions" target="_blank" rel="noopener" class="contact-link">
+                        Partecipa <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Template Showcase</h3>
+                    <p>Collezione di template professionali per siti vetrina, completamente gratuiti e open source.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/username/template" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Template</h4>
+                    <ul>
+                        <li><a href="business-showcase/">Business Pro</a></li>
+                        <li><a href="creative-portfolio/">Creative Studio</a></li>
+                        <li><a href="ecommerce-showcase/">Elite Store</a></li>
+                        <li><a href="restaurant-showcase/">Bella Vista</a></li>
+                        <li><a href="educational-academy/">EduPro Academy</a></li>
+                        <li><a href="medical-healthcare/">MediCare Pro</a></li>
+                        <li><a href="real-estate-showcase/">Estate Elite</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Risorse</h4>
+                    <ul>
+                        <li><a href="https://github.com/username/template" target="_blank" rel="noopener">Codice Sorgente</a></li>
+                        <li><a href="https://github.com/username/template/blob/main/README.md" target="_blank" rel="noopener">Documentazione</a></li>
+                        <li><a href="https://github.com/username/template/issues" target="_blank" rel="noopener">Bug Reports</a></li>
+                        <li><a href="https://github.com/username/template/discussions" target="_blank" rel="noopener">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Informazioni</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Caratteristiche</a></li>
+                        <li><a href="#contact">Contatti</a></li>
+                        <li><a href="https://github.com/username/template/blob/main/LICENSE" target="_blank" rel="noopener">Licenza MIT</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Template Showcase. Open Source sotto licenza MIT.</p>
+                <p>
+                    <a href="https://github.com/username/template" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> Contribuisci su GitHub
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Template Info Modal -->
+    <div id="template-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Template Info</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Chiudi</button>
+                <a id="modal-demo-link" href="#" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Vedi Demo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/landing.js"></script>
+    
+    <!-- GitHub Pages Analytics (optional) -->
+    <!-- Google Analytics or GitHub insights can be added here -->
+</body>
+</html>

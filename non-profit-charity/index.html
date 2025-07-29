@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insieme per un Futuro Migliore - Fondazione Speranza</title>
+    <meta name="description" content="Unisciti a noi nella lotta contro la povertà e per un futuro migliore. Dona, fai volontariato e cambia il mondo insieme a noi.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="heart-loader">
+                <div class="heart"></div>
+            </div>
+            <h2>Caricando la speranza...</h2>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heart"></i>
+                <span>Fondazione Speranza</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#mission" class="nav-link">La Nostra Missione</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Progetti</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#impact" class="nav-link">Il Nostro Impatto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#volunteer" class="nav-link">Volontariato</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contatti</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-donate" id="donate-btn">
+                    <i class="fas fa-heart"></i>
+                    Dona Ora
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-video-container">
+                <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"></div>
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-wow="fadeInUp">
+                    <h1 class="hero-title">
+                        <span class="title-line">Insieme per un</span>
+                        <span class="title-line highlight">Futuro Migliore</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Ogni gesto conta. Ogni donazione cambia una vita. 
+                        Unisciti a noi nella lotta contro la povertà e per un mondo più giusto.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large" id="hero-donate">
+                            <i class="fas fa-heart"></i>
+                            Dona Ora
+                        </button>
+                        <button class="btn btn-outline btn-large" id="learn-more">
+                            <i class="fas fa-play"></i>
+                            Scopri di più
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-stats" data-wow="fadeInUp" data-wow-delay="0.3s">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15000">0</div>
+                        <div class="stat-label">Vite Cambiate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="250">0</div>
+                        <div class="stat-label">Progetti Attivi</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="89">0</div>
+                        <div class="stat-label">Paesi Raggiunti</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="mission-section">
+        <div class="container">
+            <div class="section-header" data-wow="fadeInUp">
+                <h2 class="section-title">La Nostra Missione</h2>
+                <p class="section-subtitle">
+                    Crediamo in un mondo dove ogni persona abbia l'opportunità di vivere con dignità e speranza
+                </p>
+            </div>
+
+            <div class="mission-content">
+                <div class="mission-story" data-wow="fadeInLeft">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="La nostra storia">
+                        <div class="story-overlay">
+                            <button class="play-btn" id="story-video">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-text" data-wow="fadeInRight">
+                    <h3>Una Storia di Speranza</h3>
+                    <p>
+                        Fondata nel 2010, la Fondazione Speranza è nata dal sogno di Maria Rossi, 
+                        una donna che ha dedicato la sua vita ad aiutare i più bisognosi. 
+                        Dopo aver lavorato per anni in zone di guerra e povertà estrema, 
+                        Maria ha capito che il cambiamento reale nasce dalla collaborazione.
+                    </p>
+                    <p>
+                        Oggi, grazie al supporto di migliaia di donatori e volontari, 
+                        abbiamo costruito scuole, fornito acqua potabile, 
+                        offerto cure mediche e restituito dignità a comunità intere.
+                    </p>
+
+                    <div class="mission-values">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>Solidarietà</h4>
+                                <p>Crediamo nella forza della comunità</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>Trasparenza</h4>
+                                <p>Ogni euro donato è tracciabile</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>Innovazione</h4>
+                                <p>Soluzioni creative per problemi complessi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header" data-wow="fadeInUp">
+                <h2 class="section-title">I Nostri Progetti</h2>
+                <p class="section-subtitle">
+                    Ogni progetto è un passo verso un futuro migliore
+                </p>
+            </div>
+
+            <div class="projects-filter" data-wow="fadeInUp" data-wow-delay="0.2s">
+                <button class="filter-btn active" data-filter="all">Tutti</button>
+                <button class="filter-btn" data-filter="education">Educazione</button>
+                <button class="filter-btn" data-filter="health">Salute</button>
+                <button class="filter-btn" data-filter="water">Acqua</button>
+                <button class="filter-btn" data-filter="emergency">Emergenze</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="education" data-wow="fadeInUp" data-wow-delay="0.1s">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Scuole in Africa">
+                        <div class="project-overlay">
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="75"></div>
+                                </div>
+                                <span class="progress-text">75% completato</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Educazione</div>
+                        <h3 class="project-title">Scuole per l'Africa</h3>
+                        <p class="project-description">
+                            Costruzione di 50 scuole in villaggi rurali dell'Africa subsahariana, 
+                            garantendo educazione a oltre 10.000 bambini.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">€180.000</span>
+                                <span class="stat-label">raccolti</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">€240.000</span>
+                                <span class="stat-label">obiettivo</span>
+                            </div>
+                        </div>
+                        <button class="project-donate-btn">
+                            <i class="fas fa-heart"></i>
+                            Dona per questo progetto
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="health" data-wow="fadeInUp" data-wow-delay="0.2s">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cliniche mobili">
+                        <div class="project-overlay">
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="90"></div>
+                                </div>
+                                <span class="progress-text">90% completato</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Salute</div>
+                        <h3 class="project-title">Cliniche Mobili</h3>
+                        <p class="project-description">
+                            Portare cure mediche di base nelle zone più remote, 
+                            con un focus particolare sulla salute materno-infantile.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">€135.000</span>
+                                <span class="stat-label">raccolti</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">€150.000</span>
+                                <span class="stat-label">obiettivo</span>
+                            </div>
+                        </div>
+                        <button class="project-donate-btn">
+                            <i class="fas fa-heart"></i>
+                            Dona per questo progetto
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="water" data-wow="fadeInUp" data-wow-delay="0.3s">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1541840031508-326b77c9a17e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pozzi d'acqua">
+                        <div class="project-overlay">
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="45"></div>
+                                </div>
+                                <span class="progress-text">45% completato</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Acqua</div>
+                        <h3 class="project-title">Pozzi di Vita</h3>
+                        <p class="project-description">
+                            Scavare pozzi per fornire acqua potabile a comunità che ne sono prive, 
+                            migliorando la salute e la qualità della vita.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">€90.000</span>
+                                <span class="stat-label">raccolti</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">€200.000</span>
+                                <span class="stat-label">obiettivo</span>
+                            </div>
+                        </div>
+                        <button class="project-donate-btn">
+                            <i class="fas fa-heart"></i>
+                            Dona per questo progetto
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="emergency" data-wow="fadeInUp" data-wow-delay="0.4s">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aiuti di emergenza">
+                        <div class="project-overlay">
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="100"></div>
+                                </div>
+                                <span class="progress-text">Completato</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Emergenze</div>
+                        <h3 class="project-title">Aiuti Terremoto Turchia</h3>
+                        <p class="project-description">
+                            Sostegno immediato alle famiglie colpite dal terremoto, 
+                            con fornitura di cibo, acqua, medicinali e alloggi temporanei.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">€500.000</span>
+                                <span class="stat-label">raccolti</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">€500.000</span>
+                                <span class="stat-label">obiettivo</span>
+                            </div>
+                        </div>
+                        <button class="project-donate-btn completed">
+                            <i class="fas fa-check"></i>
+                            Progetto Completato
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact-section">
+        <div class="container">
+            <div class="section-header" data-wow="fadeInUp">
+                <h2 class="section-title">Il Nostro Impatto</h2>
+                <p class="section-subtitle">
+                    I numeri raccontano la storia del cambiamento che stiamo creando insieme
+                </p>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card" data-wow="fadeInUp" data-wow-delay="0.1s">
+                    <div class="impact-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="impact-number" data-count="15000">0</div>
+                    <div class="impact-label">Bambini Educati</div>
+                    <div class="impact-description">
+                        Garantito accesso all'educazione primaria e secondaria
+                    </div>
+                </div>
+
+                <div class="impact-card" data-wow="fadeInUp" data-wow-delay="0.2s">
+                    <div class="impact-icon">
+                        <i class="fas fa-medkit"></i>
+                    </div>
+                    <div class="impact-number" data-count="50000">0</div>
+                    <div class="impact-label">Persone Curate</div>
+                    <div class="impact-description">
+                        Fornite cure mediche di base e specialistiche
+                    </div>
+                </div>
+
+                <div class="impact-card" data-wow="fadeInUp" data-wow-delay="0.3s">
+                    <div class="impact-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="impact-number" data-count="125">0</div>
+                    <div class="impact-label">Pozzi Scavati</div>
+                    <div class="impact-description">
+                        Garantito accesso ad acqua potabile pulita
+                    </div>
+                </div>
+
+                <div class="impact-card" data-wow="fadeInUp" data-wow-delay="0.4s">
+                    <div class="impact-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="impact-number" data-count="2500">0</div>
+                    <div class="impact-label">Famiglie Aiutate</div>
+                    <div class="impact-description">
+                        Sostegno economico e sociale a famiglie in difficoltà
+                    </div>
+                </div>
+            </div>
+
+            <div class="impact-stories">
+                <h3 class="stories-title" data-wow="fadeInUp">Storie di Successo</h3>
+                <div class="stories-slider" data-wow="fadeInUp" data-wow-delay="0.2s">
+                    <div class="story-slide active">
+                        <div class="story-content">
+                            <div class="story-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ahmed">
+                            </div>
+                            <div class="story-text">
+                                <h4>La Storia di Ahmed</h4>
+                                <p>
+                                    "Grazie alla Fondazione Speranza, sono riuscito a finire la scuola 
+                                    e ora studio ingegneria all'università. Il mio sogno è costruire 
+                                    ponti per connettere il mio villaggio al mondo."
+                                </p>
+                                <div class="story-author">
+                                    <strong>Ahmed Hassan</strong>
+                                    <span>Sudan, Progetto Scuole per l'Africa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-slide">
+                        <div class="story-content">
+                            <div class="story-image">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616c02c4ef3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Maria">
+                            </div>
+                            <div class="story-text">
+                                <h4>La Storia di Maria</h4>
+                                <p>
+                                    "Le cliniche mobili hanno salvato la vita di mio figlio. 
+                                    Ora posso prendermi cura della mia famiglia sapendo che 
+                                    c'è sempre qualcuno pronto ad aiutarci."
+                                </p>
+                                <div class="story-author">
+                                    <strong>Maria Santos</strong>
+                                    <span>Guatemala, Progetto Cliniche Mobili</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-slide">
+                        <div class="story-content">
+                            <div class="story-image">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="James">
+                            </div>
+                            <div class="story-text">
+                                <h4>La Storia di James</h4>
+                                <p>
+                                    "Il pozzo nel nostro villaggio ha cambiato tutto. 
+                                    Non dobbiamo più camminare per ore per trovare acqua, 
+                                    e i nostri bambini possono andare a scuola."
+                                </p>
+                                <div class="story-author">
+                                    <strong>James Kimani</strong>
+                                    <span>Kenya, Progetto Pozzi di Vita</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stories-navigation">
+                    <button class="story-nav prev" id="story-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="story-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="story-nav next" id="story-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section id="volunteer" class="volunteer-section">
+        <div class="container">
+            <div class="section-header" data-wow="fadeInUp">
+                <h2 class="section-title">Diventa Volontario</h2>
+                <p class="section-subtitle">
+                    Il tuo tempo e le tue competenze possono fare la differenza
+                </p>
+            </div>
+
+            <div class="volunteer-content">
+                <div class="volunteer-info" data-wow="fadeInLeft">
+                    <h3>Perché Fare Volontariato?</h3>
+                    <p>
+                        Il volontariato non è solo un modo per aiutare gli altri, 
+                        ma anche un'opportunità di crescita personale, 
+                        di acquisire nuove competenze e di creare connessioni significative.
+                    </p>
+
+                    <div class="volunteer-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Fai la differenza nella vita delle persone</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-users"></i>
+                            <span>Incontra persone che condividono i tuoi valori</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Sviluppa nuove competenze e abilità</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Amplia la tua visione del mondo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="volunteer-opportunities" data-wow="fadeInRight">
+                    <h3>Opportunità di Volontariato</h3>
+                    <div class="opportunities-grid">
+                        <div class="opportunity-card">
+                            <div class="opportunity-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h4>Volontariato Online</h4>
+                            <p>Supporto amministrativo, traduzione, design grafico, social media</p>
+                            <span class="time-commitment">2-5 ore/settimana</span>
+                        </div>
+
+                        <div class="opportunity-card">
+                            <div class="opportunity-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h4>Progetti Locali</h4>
+                            <p>Assistenza a famiglie in difficoltà, eventi di raccolta fondi</p>
+                            <span class="time-commitment">1-2 giorni/mese</span>
+                        </div>
+
+                        <div class="opportunity-card">
+                            <div class="opportunity-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <h4>Missioni Internazionali</h4>
+                            <p>Partecipazione diretta ai progetti nei paesi in via di sviluppo</p>
+                            <span class="time-commitment">2-4 settimane</span>
+                        </div>
+
+                        <div class="opportunity-card">
+                            <div class="opportunity-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Educazione e Formazione</h4>
+                            <p>Insegnamento, tutoraggio, sviluppo di programmi educativi</p>
+                            <span class="time-commitment">3-6 ore/settimana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volunteer-form-section" data-wow="fadeInUp">
+                <div class="form-container">
+                    <h3>Candidati Come Volontario</h3>
+                    <form class="volunteer-form" id="volunteer-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="vol-name">Nome Completo</label>
+                                <input type="text" id="vol-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vol-email">Email</label>
+                                <input type="email" id="vol-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="vol-phone">Telefono</label>
+                                <input type="tel" id="vol-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="vol-age">Età</label>
+                                <select id="vol-age" name="age" required>
+                                    <option value="">Seleziona età</option>
+                                    <option value="18-25">18-25 anni</option>
+                                    <option value="26-35">26-35 anni</option>
+                                    <option value="36-50">36-50 anni</option>
+                                    <option value="51+">51+ anni</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vol-skills">Competenze e Esperienze</label>
+                            <textarea id="vol-skills" name="skills" rows="3" placeholder="Descrivi le tue competenze, esperienze lavorative o altre abilità che potrebbero essere utili..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tipo di Volontariato Preferito</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="volunteer-type" value="online">
+                                    <span class="checkmark"></span>
+                                    Volontariato Online
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="volunteer-type" value="local">
+                                    <span class="checkmark"></span>
+                                    Progetti Locali
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="volunteer-type" value="international">
+                                    <span class="checkmark"></span>
+                                    Missioni Internazionali
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="volunteer-type" value="education">
+                                    <span class="checkmark"></span>
+                                    Educazione e Formazione
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vol-message">Motivazione</label>
+                            <textarea id="vol-message" name="message" rows="4" placeholder="Raccontaci perché vuoi diventare volontario e cosa speri di ottenere da questa esperienza..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Invia Candidatura
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Modal -->
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Fai una Donazione</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="donation-amounts">
+                    <h4>Scegli l'importo</h4>
+                    <div class="amount-buttons">
+                        <button class="amount-btn" data-amount="25">€25</button>
+                        <button class="amount-btn" data-amount="50">€50</button>
+                        <button class="amount-btn" data-amount="100">€100</button>
+                        <button class="amount-btn" data-amount="250">€250</button>
+                        <button class="amount-btn custom-amount">Altro</button>
+                    </div>
+
+                    <div class="custom-amount-input" style="display: none;">
+                        <label for="custom-amount">Importo personalizzato</label>
+                        <input type="number" id="custom-amount" min="5" placeholder="Inserisci importo">
+                    </div>
+                </div>
+
+                <div class="donation-impact">
+                    <h4>Il tuo impatto</h4>
+                    <div class="impact-description" id="impact-description">
+                        Con €25 puoi fornire materiale scolastico a 5 bambini per un mese
+                    </div>
+                </div>
+
+                <div class="donation-type">
+                    <h4>Tipo di donazione</h4>
+                    <div class="type-buttons">
+                        <button class="type-btn active" data-type="one-time">Donazione Singola</button>
+                        <button class="type-btn" data-type="monthly">Donazione Mensile</button>
+                    </div>
+                </div>
+
+                <form class="donation-form" id="donation-form">
+                    <div class="form-group">
+                        <label for="donor-name">Nome Completo</label>
+                        <input type="text" id="donor-name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donor-email">Email</label>
+                        <input type="email" id="donor-email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="newsletter" checked>
+                            Iscrivimi alla newsletter per ricevere aggiornamenti sui progetti
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="anonymous">
+                            Donazione anonima
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large btn-block">
+                        <i class="fas fa-heart"></i>
+                        Dona Ora €<span id="selected-amount">25</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-wow="fadeInUp">
+                <h2 class="section-title">Contattaci</h2>
+                <p class="section-subtitle">
+                    Hai domande o vuoi saperne di più? Siamo qui per aiutarti
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-wow="fadeInLeft">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Indirizzo</h4>
+                            <p>Via della Speranza, 123<br>00100 Roma, Italia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefono</h4>
+                            <p>+39 06 1234567<br>Lun-Ven: 9:00-18:00</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@fondazionesperanza.org<br>volontariato@fondazionesperanza.org</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Seguici sui Social</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" data-wow="fadeInRight">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Nome</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Oggetto</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">Seleziona oggetto</option>
+                                <option value="general">Informazioni Generali</option>
+                                <option value="volunteer">Volontariato</option>
+                                <option value="donation">Donazioni</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="press">Ufficio Stampa</option>
+                                <option value="other">Altro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Messaggio</label>
+                            <textarea id="contact-message" name="message" rows="5" required placeholder="Scrivi il tuo messaggio qui..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span class="checkmark"></span>
+                                Accetto la <a href="#" target="_blank">privacy policy</a> e autorizzo il trattamento dei dati personali
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Invia Messaggio
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heart"></i>
+                        <span>Fondazione Speranza</span>
+                    </div>
+                    <p class="footer-description">
+                        Insieme per un futuro migliore. 
+                        Ogni gesto conta, ogni donazione cambia una vita.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>La Nostra Missione</h4>
+                    <ul class="footer-links">
+                        <li><a href="#mission">Chi Siamo</a></li>
+                        <li><a href="#projects">I Nostri Progetti</a></li>
+                        <li><a href="#impact">Il Nostro Impatto</a></li>
+                        <li><a href="#">Report Annuali</a></li>
+                        <li><a href="#">Trasparenza</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Come Aiutare</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" id="footer-donate">Fai una Donazione</a></li>
+                        <li><a href="#volunteer">Diventa Volontario</a></li>
+                        <li><a href="#">Organizza una Raccolta Fondi</a></li>
+                        <li><a href="#">Partnership Aziendali</a></li>
+                        <li><a href="#">Lasciti Testamentari</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Informazioni</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contatti</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Termini di Servizio</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 Fondazione Speranza. Tutti i diritti riservati.</p>
+                    </div>
+                    <div class="footer-certifications">
+                        <span>Certificazioni:</span>
+                        <img src="https://via.placeholder.com/60x30/666/fff?text=ISO" alt="ISO Certification">
+                        <img src="https://via.placeholder.com/60x30/666/fff?text=GS" alt="GuideStar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Success Message -->
+    <div id="success-message" class="success-message">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="success-text">Messaggio inviato con successo!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

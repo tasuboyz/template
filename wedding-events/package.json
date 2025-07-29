@@ -1,0 +1,37 @@
+{
+  "name": "wedding-events-template",
+  "version": "1.0.0",
+  "description": "Template elegante per matrimoni ed eventi con effetti JavaScript ES6 avanzati",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
+    "build": "echo 'Template pronto per il deployment'",
+    "preview": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "wedding",
+    "events",
+    "template",
+    "romantic",
+    "javascript",
+    "es6",
+    "responsive",
+    "animation"
+  ],
+  "author": "Wedding Template Pro",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/wedding-events-template.git"
+  },
+  "homepage": "https://yourusername.github.io/wedding-events-template",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

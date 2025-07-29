@@ -1,0 +1,39 @@
+{
+  "name": "real-estate-showcase",
+  "version": "1.0.0",
+  "description": "Template immobiliare premium con effetti WOW e funzionalità avanzate",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --host=localhost --port=3000 --open=/index.html",
+    "build": "node build.js",
+    "dev": "live-server --host=localhost --port=3000 --open=/index.html --watch=css,js",
+    "preview": "live-server --host=localhost --port=3000 --open=/index.html --no-browser"
+  },
+  "keywords": [
+    "real-estate",
+    "immobiliare",
+    "template",
+    "javascript",
+    "es6",
+    "responsive",
+    "animations"
+  ],
+  "author": "EliteEstates Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "eslint": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliteestates/real-estate-showcase.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

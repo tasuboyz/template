@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma & Marco - Il Nostro Matrimonio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="heart-loading">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="loading-text">Emma & Marco</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>E&M</h3>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#story" class="nav-link">La Nostra Storia</a></li>
+                <li><a href="#gallery" class="nav-link">Galleria</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+                <li><a href="#registry" class="nav-link">Lista Nozze</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="floating-hearts"></div>
+            <div class="particle-system"></div>
+        </div>
+        <div class="hero-content">
+            <div class="couple-names">
+                <h1 class="bride-name" data-aos="fade-right">Emma</h1>
+                <div class="heart-divider" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h1 class="groom-name" data-aos="fade-left" data-aos-delay="600">Marco</h1>
+            </div>
+            <p class="wedding-date" data-aos="fade-up" data-aos-delay="900">15 Settembre 2025</p>
+            <p class="wedding-location" data-aos="fade-up" data-aos-delay="1200">Villa San Martino, Firenze</p>
+            <div class="countdown-timer" id="countdown" data-aos="fade-up" data-aos-delay="1500">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Giorni</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Ore</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minuti</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Secondi</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-aos="bounce" data-aos-delay="2000">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">La Nostra Storia</h2>
+            <div class="story-timeline">
+                <div class="story-item" data-aos="fade-right">
+                    <div class="story-date">2019</div>
+                    <div class="story-content">
+                        <h3>Il Primo Incontro</h3>
+                        <p>Ci siamo conosciuti durante una cena tra amici. È stato amore a prima vista!</p>
+                    </div>
+                </div>
+                <div class="story-item" data-aos="fade-left">
+                    <div class="story-date">2021</div>
+                    <div class="story-content">
+                        <h3>Convivenza</h3>
+                        <p>Abbiamo deciso di iniziare a vivere insieme, costruendo il nostro futuro passo dopo passo.</p>
+                    </div>
+                </div>
+                <div class="story-item" data-aos="fade-right">
+                    <div class="story-date">2024</div>
+                    <div class="story-content">
+                        <h3>La Proposta</h3>
+                        <p>Durante un tramonto sulla spiaggia di Santorini, Marco ha fatto la proposta più romantica di sempre!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">I Nostri Momenti</h2>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Le immagini verranno generate dinamicamente -->
+            </div>
+            <div class="gallery-modal" id="gallery-modal">
+                <span class="close-modal">&times;</span>
+                <img class="modal-image" id="modal-image" src="" alt="">
+                <div class="modal-nav">
+                    <button class="modal-prev" id="modal-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="modal-next" id="modal-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Programma del Matrimonio</h2>
+            <div class="wedding-timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-time">14:30</div>
+                    <div class="timeline-content">
+                        <h3>Cerimonia Civile</h3>
+                        <p>Villa San Martino - Giardino delle Rose</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-time">15:30</div>
+                    <div class="timeline-content">
+                        <h3>Aperitivo</h3>
+                        <p>Cocktail di benvenuto nel giardino</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-content">
+                        <h3>Sessione Fotografica</h3>
+                        <p>Con gli sposi e gli ospiti</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="timeline-time">19:30</div>
+                    <div class="timeline-content">
+                        <h3>Cena</h3>
+                        <p>Menu degustazione con prodotti locali</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
+                    <div class="timeline-time">22:00</div>
+                    <div class="timeline-content">
+                        <h3>Festa e Balli</h3>
+                        <p>Musica dal vivo e DJ set</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Conferma la tua Presenza</h2>
+            <form class="rsvp-form" id="rsvp-form" data-aos="fade-up" data-aos-delay="300">
+                <div class="form-group">
+                    <input type="text" id="guest-name" placeholder="Il tuo nome completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="guest-email" placeholder="La tua email" required>
+                </div>
+                <div class="form-group">
+                    <select id="attendance" required>
+                        <option value="">Parteciperò...</option>
+                        <option value="yes">Sì, sarò presente!</option>
+                        <option value="no">Purtroppo non potrò esserci</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="guest-count">
+                        <option value="1">1 persona</option>
+                        <option value="2">2 persone</option>
+                        <option value="3">3 persone</option>
+                        <option value="4">4 persone</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="dietary-requirements" placeholder="Allergie alimentari o richieste particolari..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Invia RSVP</span>
+                    <i class="fas fa-heart"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Gift Registry Section -->
+    <section id="registry" class="registry-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Lista Nozze</h2>
+            <p class="registry-intro" data-aos="fade-up" data-aos-delay="300">
+                La vostra presenza è il regalo più grande che potremmo desiderare. 
+                Se volete contribuire al nostro futuro insieme, ecco alcune idee:
+            </p>
+            <div class="registry-grid">
+                <div class="registry-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-home"></i>
+                    <h3>Casa Nuova</h3>
+                    <p>Contributo per la nostra prima casa insieme</p>
+                    <button class="gift-btn" data-gift="house">Contribuisci</button>
+                </div>
+                <div class="registry-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-plane"></i>
+                    <h3>Luna di Miele</h3>
+                    <p>Aiutaci a vivere il viaggio dei nostri sogni</p>
+                    <button class="gift-btn" data-gift="honeymoon">Contribuisci</button>
+                </div>
+                <div class="registry-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Lista Tradizionale</h3>
+                    <p>Articoli per la casa su Amazon</p>
+                    <button class="gift-btn" data-gift="traditional">Visualizza Lista</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="couple-initials">E & M</div>
+                <p>Grazie per essere parte del nostro giorno speciale!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="footer-date">15 Settembre 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gift Modal -->
+    <div class="gift-modal" id="gift-modal">
+        <div class="gift-modal-content">
+            <span class="close-gift-modal">&times;</span>
+            <h3 id="gift-modal-title">Contributo Regalo</h3>
+            <p id="gift-modal-text">Grazie per il tuo pensiero!</p>
+            <div class="gift-amounts">
+                <button class="amount-btn" data-amount="50">€50</button>
+                <button class="amount-btn" data-amount="100">€100</button>
+                <button class="amount-btn" data-amount="150">€150</button>
+                <button class="amount-btn" data-amount="200">€200</button>
+                <input type="number" placeholder="Altro importo" id="custom-amount">
+            </div>
+            <button class="proceed-gift-btn">Procedi al Pagamento</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>

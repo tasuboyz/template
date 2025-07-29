@@ -1,0 +1,39 @@
+{
+  "name": "creative-portfolio-wow",
+  "version": "1.0.0",
+  "description": "Portfolio creativo con effetti WOW e animazioni spettacolari in JavaScript ES6",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3001 --open=/index.html --watch=.",
+    "build": "node build.js",
+    "test": "npm run test:lint",
+    "test:lint": "npx eslint js/**/*.js",
+    "serve": "npx http-server . -p 8081 -c-1",
+    "clean": "rimraf dist",
+    "watch": "npx chokidar \"**/*.{js,css,html}\" -c \"echo 'File changed, reloading...'\""
+  },
+  "keywords": [
+    "creative",
+    "portfolio",
+    "javascript",
+    "es6",
+    "animations",
+    "wow-effects",
+    "three.js",
+    "gsap",
+    "artistic",
+    "interactive"
+  ],
+  "author": "Creative Studio",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "eslint": "^8.57.0",
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "three": "^0.160.0",
+    "gsap": "^3.12.5"
+  }
+}

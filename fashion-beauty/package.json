@@ -1,0 +1,39 @@
+{
+  "name": "fashion-beauty-template",
+  "version": "1.0.0",
+  "description": "A stunning Fashion & Beauty showcase template with modern effects and animations",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "build": "echo 'No build process needed for this template'",
+    "preview": "npx http-server . -p 8080"
+  },
+  "keywords": [
+    "fashion",
+    "beauty",
+    "template",
+    "showcase",
+    "portfolio",
+    "responsive",
+    "modern",
+    "animations",
+    "javascript",
+    "css3",
+    "html5"
+  ],
+  "author": "Fashion Beauty Template",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fashion-beauty/template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fashion-beauty/template/issues"
+  },
+  "homepage": "https://fashion-beauty.github.io/template"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "sports-fitness-template",
+  "version": "1.0.0",
+  "description": "Template moderno per centri fitness e palestre con effetti WOW in JavaScript ES6",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o css/main.min.css css/main.css css/animations.css",
+    "minify-js": "uglifyjs js/app.js -o js/app.min.js -c -m",
+    "serve": "python -m http.server 8000",
+    "lint": "eslint js/*.js",
+    "format": "prettier --write \"**/*.{html,css,js}\"",
+    "validate": "html-validate index.html",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "fitness",
+    "gym",
+    "sports",
+    "template",
+    "website",
+    "responsive",
+    "javascript",
+    "es6",
+    "animations",
+    "wow",
+    "landing-page"
+  ],
+  "author": {
+    "name": "FitZone Development Team",
+    "email": "dev@fitzonepro.it"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fitzone/sports-fitness-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fitzone/sports-fitness-template/issues"
+  },
+  "homepage": "https://fitzone.github.io/sports-fitness-template",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "eslint": "^8.50.0",
+    "html-validate": "^8.5.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.3",
+    "uglify-js": "^3.17.4"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "config": {
+    "port": 3000
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-unused-vars": "error",
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2
+  }
+}

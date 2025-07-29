@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare+ | Centro Medico di Eccellenza</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="medical-cross">
+                <div class="cross-vertical"></div>
+                <div class="cross-horizontal"></div>
+            </div>
+            <div class="loading-text">MediCare+</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>MediCare+</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Servizi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#team" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#testimonials" class="nav-link">Testimonianze</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contatti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#appointment" class="nav-link appointment-btn">Prenota Visita</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-particles"></div>
+            <div class="pulse-circles">
+                <div class="pulse-circle pulse-1"></div>
+                <div class="pulse-circle pulse-2"></div>
+                <div class="pulse-circle pulse-3"></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">La tua salute è</span>
+                    <span class="title-line highlight">la nostra priorità</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Centro medico di eccellenza con oltre 20 anni di esperienza 
+                    nel fornire cure mediche all'avanguardia con un approccio umano e personalizzato.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary pulse-btn">
+                        <i class="fas fa-calendar-plus"></i>
+                        Prenota Ora
+                    </button>
+                    <button class="btn btn-secondary" id="play-video">
+                        <i class="fas fa-play"></i>
+                        Guarda il Video
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item" data-counter="15000">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Pazienti Curati</span>
+                    </div>
+                    <div class="stat-item" data-counter="25">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Specialisti</span>
+                    </div>
+                    <div class="stat-item" data-counter="98">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">% Soddisfazione</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <div class="floating-icon icon-1"><i class="fas fa-stethoscope"></i></div>
+                    <div class="floating-icon icon-2"><i class="fas fa-heartbeat"></i></div>
+                    <div class="floating-icon icon-3"><i class="fas fa-user-md"></i></div>
+                    <div class="floating-icon icon-4"><i class="fas fa-pills"></i></div>
+                    <div class="doctor-silhouette"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">I Nostri Servizi</span>
+                <h2 class="section-title">Cure Mediche Complete</h2>
+                <p class="section-description">
+                    Offriamo una gamma completa di servizi medici specialistici 
+                    con tecnologie all'avanguardia e personale altamente qualificato.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="cardiology">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Cardiologia</h3>
+                    <p class="service-description">
+                        Diagnosi e trattamento delle malattie cardiovascolari 
+                        con tecnologie di ultima generazione.
+                    </p>
+                    <ul class="service-features">
+                        <li>ECG e Ecocardiogramma</li>
+                        <li>Test da sforzo</li>
+                        <li>Holter cardiaco</li>
+                    </ul>
+                    <button class="service-btn">Scopri di più</button>
+                </div>
+
+                <div class="service-card" data-service="neurology">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Neurologia</h3>
+                    <p class="service-description">
+                        Specialisti in disturbi del sistema nervoso 
+                        centrale e periferico.
+                    </p>
+                    <ul class="service-features">
+                        <li>Elettroencefalogramma</li>
+                        <li>Risonanza magnetica</li>
+                        <li>Consulti specialistici</li>
+                    </ul>
+                    <button class="service-btn">Scopri di più</button>
+                </div>
+
+                <div class="service-card" data-service="orthopedics">
+                    <div class="service-icon">
+                        <i class="fas fa-bone"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Ortopedia</h3>
+                    <p class="service-description">
+                        Trattamento di lesioni e disturbi del sistema 
+                        muscolo-scheletrico.
+                    </p>
+                    <ul class="service-features">
+                        <li>Radiografie digitali</li>
+                        <li>Fisioterapia</li>
+                        <li>Chirurgia mini-invasiva</li>
+                    </ul>
+                    <button class="service-btn">Scopri di più</button>
+                </div>
+
+                <div class="service-card" data-service="pediatrics">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Pediatria</h3>
+                    <p class="service-description">
+                        Cure mediche specializzate per neonati, 
+                        bambini e adolescenti.
+                    </p>
+                    <ul class="service-features">
+                        <li>Controlli di routine</li>
+                        <li>Vaccinazioni</li>
+                        <li>Consulenza nutrizionale</li>
+                    </ul>
+                    <button class="service-btn">Scopri di più</button>
+                </div>
+
+                <div class="service-card" data-service="dermatology">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-paper"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Dermatologia</h3>
+                    <p class="service-description">
+                        Diagnosi e trattamento delle malattie della pelle 
+                        e degli annessi cutanei.
+                    </p>
+                    <ul class="service-features">
+                        <li>Mappatura nei</li>
+                        <li>Laser terapia</li>
+                        <li>Medicina estetica</li>
+                    </ul>
+                    <button class="service-btn">Scopri di più</button>
+                </div>
+
+                <div class="service-card" data-service="emergency">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3 class="service-title">Pronto Soccorso</h3>
+                    <p class="service-description">
+                        Servizio di emergenza 24/7 con personale 
+                        medico sempre disponibile.
+                    </p>
+                    <ul class="service-features">
+                        <li>Servizio H24</li>
+                        <li>Ambulanza</li>
+                        <li>Terapia intensiva</li>
+                    </ul>
+                    <button class="service-btn">Scopri di più</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Il Nostro Team</span>
+                <h2 class="section-title">Medici Specialisti</h2>
+                <p class="section-description">
+                    Un team di professionisti altamente qualificati e specializzati 
+                    al vostro servizio per garantire le migliori cure possibili.
+                </p>
+            </div>
+            <div class="team-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-overlay">
+                            <div class="doctor-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Marco Rossi</h3>
+                        <p class="doctor-specialty">Cardiologo</p>
+                        <p class="doctor-description">
+                            Specialista in cardiologia con oltre 15 anni di esperienza 
+                            in cardiochirurgia e medicina interventistica.
+                        </p>
+                        <div class="doctor-credentials">
+                            <span class="credential">Università di Milano</span>
+                            <span class="credential">Board Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-overlay">
+                            <div class="doctor-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr.ssa Anna Bianchi</h3>
+                        <p class="doctor-specialty">Neurologa</p>
+                        <p class="doctor-description">
+                            Esperta in neurologia clinica e malattie neurodegenerative 
+                            con specializzazione in epilessia e disturbi del movimento.
+                        </p>
+                        <div class="doctor-credentials">
+                            <span class="credential">Università di Roma</span>
+                            <span class="credential">Fellowship Harvard</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-overlay">
+                            <div class="doctor-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Giuseppe Verdi</h3>
+                        <p class="doctor-specialty">Ortopedico</p>
+                        <p class="doctor-description">
+                            Chirurgo ortopedico specializzato in chirurgia della spalla, 
+                            ginocchio e medicina sportiva.
+                        </p>
+                        <div class="doctor-credentials">
+                            <span class="credential">Università di Napoli</span>
+                            <span class="credential">Chirurgia Mini-Invasiva</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Testimonianze</span>
+                <h2 class="section-title">Cosa Dicono i Nostri Pazienti</h2>
+            </div>
+            <div class="testimonials-carousel">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Il Dr. Rossi e tutto il suo team sono stati eccezionali. 
+                            La professionalità e l'umanità dimostrate durante il mio 
+                            ricovero sono state straordinarie. Consiglio vivamente!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Maria Giulia</h4>
+                                <p class="author-location">Milano</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Centro medico all'avanguardia con tecnologie moderne. 
+                            Il personale è sempre disponibile e cortese. Mi sono 
+                            sentito in ottime mani dall'inizio alla fine."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Francesco L.</h4>
+                                <p class="author-location">Roma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Dopo anni di problemi al ginocchio, grazie al Dr. Verdi 
+                            sono tornato a camminare senza dolore. Intervento perfetto 
+                            e recupero più veloce del previsto."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Antonio R.</h4>
+                                <p class="author-location">Napoli</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-controls">
+                <button class="testimonial-btn prev-btn" id="prev-testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonials-dots"></div>
+                <button class="testimonial-btn next-btn" id="next-testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment">
+        <div class="container">
+            <div class="appointment-container">
+                <div class="appointment-info">
+                    <h2 class="appointment-title">Prenota la Tua Visita</h2>
+                    <p class="appointment-description">
+                        Compila il modulo e ti contatteremo entro 24 ore per 
+                        confermare il tuo appuntamento. Il nostro staff è a 
+                        tua disposizione per qualsiasi informazione.
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <h4>Telefono</h4>
+                                <p>+39 02 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>info@medicare-plus.it</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <h4>Indirizzo</h4>
+                                <p>Via Roma 123, 20121 Milano</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="contact-details">
+                                <h4>Orari</h4>
+                                <p>Lun-Ven: 8:00-20:00<br>Sab: 8:00-14:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="appointment-form-container">
+                    <form class="appointment-form" id="appointment-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefono</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialty">Specialità</label>
+                            <select id="specialty" name="specialty" required>
+                                <option value="">Seleziona una specialità</option>
+                                <option value="cardiology">Cardiologia</option>
+                                <option value="neurology">Neurologia</option>
+                                <option value="orthopedics">Ortopedia</option>
+                                <option value="pediatrics">Pediatria</option>
+                                <option value="dermatology">Dermatologia</option>
+                                <option value="emergency">Pronto Soccorso</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Data Preferita</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Orario Preferito</label>
+                            <select id="time" name="time" required>
+                                <option value="">Seleziona un orario</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Note aggiuntive</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-calendar-check"></i>
+                            Prenota Appuntamento
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Contattaci</span>
+                <h2 class="section-title">Come Raggiungerci</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Mappa Interattiva</p>
+                        <small>Via Roma 123, 20121 Milano</small>
+                    </div>
+                </div>
+                <div class="contact-emergency">
+                    <h3>Emergenze 24/7</h3>
+                    <div class="emergency-number">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+39 02 EMERGENZA</span>
+                    </div>
+                    <p>Per emergenze mediche chiamare immediatamente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare+</span>
+                    </div>
+                    <p class="footer-description">
+                        Centro medico di eccellenza che offre cure personalizzate 
+                        con tecnologie all'avanguardia e un approccio umano.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Servizi</h4>
+                    <ul>
+                        <li><a href="#services">Cardiologia</a></li>
+                        <li><a href="#services">Neurologia</a></li>
+                        <li><a href="#services">Ortopedia</a></li>
+                        <li><a href="#services">Pediatria</a></li>
+                        <li><a href="#services">Dermatologia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Informazioni</h4>
+                    <ul>
+                        <li><a href="#team">Il Nostro Team</a></li>
+                        <li><a href="#testimonials">Testimonianze</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Termini di Servizio</a></li>
+                        <li><a href="#">Certificazioni</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Via Roma 123, 20121 Milano</p>
+                        <p><i class="fas fa-phone"></i> +39 02 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> info@medicare-plus.it</p>
+                        <p><i class="fas fa-clock"></i> Lun-Ven: 8:00-20:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediCare+. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Appuntamento Prenotato!</h3>
+            <p>Ti contatteremo entro 24 ore per confermare la tua prenotazione.</p>
+            <button class="modal-btn" onclick="closeModal()">Chiudi</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>

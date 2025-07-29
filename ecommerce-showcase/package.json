@@ -1,0 +1,39 @@
+{
+  "name": "ecommerce-showcase",
+  "version": "1.0.0",
+  "description": "Template E-commerce/Product Showcase con effetti WOW in JavaScript ES6",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000",
+    "build": "node build.js",
+    "serve": "npx http-server dist -p 3000 -o"
+  },
+  "keywords": [
+    "ecommerce",
+    "showcase",
+    "template",
+    "javascript",
+    "es6",
+    "wow-effects",
+    "responsive",
+    "modern"
+  ],
+  "author": "Elite Store Template",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/ecommerce-showcase"
+  },
+  "homepage": "https://example.github.io/ecommerce-showcase",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "music-entertainment-template",
+  "version": "1.0.0",
+  "description": "Template musicale con effetti spettacolari e player audio integrato",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'No build process required for static template'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "music",
+    "entertainment",
+    "template",
+    "audio",
+    "visualizer",
+    "effects"
+  ],
+  "author": "SoundWave Studio",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soundwave/music-entertainment-template"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

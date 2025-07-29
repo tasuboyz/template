@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderTravel - Scopri il Mondo</title>
+    <meta name="description" content="Agenzia di viaggi premium - Scopri destinazioni incredibili con WonderTravel">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="airplane-loader">
+                <i class="fas fa-plane"></i>
+            </div>
+            <h2>Preparando la tua avventura...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2><i class="fas fa-globe-asia"></i> WonderTravel</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#destinations" class="nav-link">Destinazioni</a></li>
+                <li><a href="#experiences" class="nav-link">Esperienze</a></li>
+                <li><a href="#reviews" class="nav-link">Recensioni</a></li>
+                <li><a href="#contact" class="nav-link">Contatti</a></li>
+                <li><a href="#booking" class="nav-link cta-btn">Prenota Ora</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video">
+            <div class="video-overlay"></div>
+            <div class="parallax-bg" id="parallaxBg"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        <span class="title-line">Scopri il</span>
+                        <span class="title-line highlight">Mondo</span>
+                        <span class="title-line">con Noi</span>
+                    </h1>
+                    <p class="hero-subtitle">Viaggi unici, esperienze indimenticabili, ricordi che durano per sempre</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" id="exploreBtn">
+                            <span>Esplora Destinazioni</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-secondary" id="watchVideoBtn">
+                            <i class="fas fa-play"></i>
+                            <span>Guarda Video</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-icon" style="--delay: 0s; --duration: 3s;">
+                <i class="fas fa-plane"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 1s; --duration: 4s;">
+                <i class="fas fa-camera"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 2s; --duration: 3.5s;">
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-text">Scorri per scoprire</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Paesi Visitati</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="25000">0</div>
+                    <div class="stat-label">Viaggiatori Felici</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">% Soddisfazione</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Anni di Esperienza</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Destinazioni da Sogno</h2>
+                <p class="section-subtitle">Scopri le mete più incredibili del pianeta</p>
+            </div>
+
+            <div class="destinations-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">Tutte</button>
+                <button class="filter-btn" data-filter="europa">Europa</button>
+                <button class="filter-btn" data-filter="asia">Asia</button>
+                <button class="filter-btn" data-filter="africa">Africa</button>
+                <button class="filter-btn" data-filter="america">America</button>
+            </div>
+
+            <div class="destinations-grid" id="destinationsGrid">
+                <!-- Destination Card 1 -->
+                <div class="destination-card" data-category="europa" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-price">€1,299</div>
+                            <div class="card-duration">7 Giorni</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Svizzera Magica</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Zurigo, Interlaken, Lucerna</p>
+                        <p class="card-description">Paesaggi alpini mozzafiato, laghi cristallini e tradizioni autentiche</p>
+                        <div class="card-features">
+                            <span class="feature"><i class="fas fa-hiking"></i> Trekking</span>
+                            <span class="feature"><i class="fas fa-camera"></i> Fotografia</span>
+                        </div>
+                        <button class="btn btn-outline explore-btn" data-destination="svizzera">Esplora</button>
+                    </div>
+                </div>
+
+                <!-- Destination Card 2 -->
+                <div class="destination-card" data-category="asia" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-torii-gate"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-price">€2,199</div>
+                            <div class="card-duration">10 Giorni</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Giappone Mistico</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Tokyo, Kyoto, Osaka</p>
+                        <p class="card-description">Cultura millenaria, tecnologia futuristica e tradizioni uniche</p>
+                        <div class="card-features">
+                            <span class="feature"><i class="fas fa-temple"></i> Templi</span>
+                            <span class="feature"><i class="fas fa-utensils"></i> Cucina</span>
+                        </div>
+                        <button class="btn btn-outline explore-btn" data-destination="giappone">Esplora</button>
+                    </div>
+                </div>
+
+                <!-- Destination Card 3 -->
+                <div class="destination-card" data-category="africa" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                            <i class="fas fa-elephant"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-price">€3,499</div>
+                            <div class="card-duration">12 Giorni</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Safari Keniota</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Masai Mara, Amboseli</p>
+                        <p class="card-description">Avventure selvagge nella savana africana tra i Big Five</p>
+                        <div class="card-features">
+                            <span class="feature"><i class="fas fa-binoculars"></i> Safari</span>
+                            <span class="feature"><i class="fas fa-sun"></i> Natura</span>
+                        </div>
+                        <button class="btn btn-outline explore-btn" data-destination="kenya">Esplora</button>
+                    </div>
+                </div>
+
+                <!-- Destination Card 4 -->
+                <div class="destination-card" data-category="america" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-price">€1,899</div>
+                            <div class="card-duration">8 Giorni</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Caraibi Paradiso</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Barbados, Martinica</p>
+                        <p class="card-description">Spiagge da sogno, acque cristalline e relax totale</p>
+                        <div class="card-features">
+                            <span class="feature"><i class="fas fa-swimmer"></i> Snorkeling</span>
+                            <span class="feature"><i class="fas fa-cocktail"></i> Relax</span>
+                        </div>
+                        <button class="btn btn-outline explore-btn" data-destination="caraibi">Esplora</button>
+                    </div>
+                </div>
+
+                <!-- Destination Card 5 -->
+                <div class="destination-card" data-category="europa" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-price">€899</div>
+                            <div class="card-duration">5 Giorni</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Grecia Antica</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Atene, Santorini, Mykonos</p>
+                        <p class="card-description">Storia millenaria, isole da sogno e tramonti indimenticabili</p>
+                        <div class="card-features">
+                            <span class="feature"><i class="fas fa-landmark"></i> Storia</span>
+                            <span class="feature"><i class="fas fa-ship"></i> Isole</span>
+                        </div>
+                        <button class="btn btn-outline explore-btn" data-destination="grecia">Esplora</button>
+                    </div>
+                </div>
+
+                <!-- Destination Card 6 -->
+                <div class="destination-card" data-category="asia" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                            <i class="fas fa-pagoda"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-price">€1,599</div>
+                            <div class="card-duration">9 Giorni</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Thailandia Esotica</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Bangkok, Phuket, Chiang Mai</p>
+                        <p class="card-description">Templi dorati, spiagge paradisiache e cucina incredibile</p>
+                        <div class="card-features">
+                            <span class="feature"><i class="fas fa-spa"></i> Wellness</span>
+                            <span class="feature"><i class="fas fa-pepper-hot"></i> Street Food</span>
+                        </div>
+                        <button class="btn btn-outline explore-btn" data-destination="thailandia">Esplora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="experiences-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Esperienze Uniche</h2>
+                <p class="section-subtitle">Vivi momenti indimenticabili con le nostre esperienze esclusive</p>
+            </div>
+
+            <div class="experiences-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="experience-card active">
+                    <div class="experience-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Adventure Tours</h3>
+                        <p>Trekking, arrampicata e avventure estreme per gli amanti dell'adrenalina</p>
+                        <ul class="experience-features">
+                            <li><i class="fas fa-check"></i> Guide esperte certificate</li>
+                            <li><i class="fas fa-check"></i> Attrezzatura professionale inclusa</li>
+                            <li><i class="fas fa-check"></i> Piccoli gruppi (max 8 persone)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Food & Wine Tours</h3>
+                        <p>Scopri i sapori autentici con tour gastronomici e degustazioni esclusive</p>
+                        <ul class="experience-features">
+                            <li><i class="fas fa-check"></i> Chef locali e sommelier</li>
+                            <li><i class="fas fa-check"></i> Mercati tradizionali</li>
+                            <li><i class="fas fa-check"></i> Cooking class private</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-bg" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Photography Tours</h3>
+                        <p>Cattura i momenti più belli con workshop fotografici in location esclusive</p>
+                        <ul class="experience-features">
+                            <li><i class="fas fa-check"></i> Fotografi professionisti</li>
+                            <li><i class="fas fa-check"></i> Accesso a location esclusive</li>
+                            <li><i class="fas fa-check"></i> Editing workshop incluso</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-controls">
+                <button class="exp-prev" id="expPrev"><i class="fas fa-chevron-left"></i></button>
+                <div class="exp-indicators" id="expIndicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="exp-next" id="expNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Cosa Dicono i Nostri Viaggiatori</h2>
+                <p class="section-subtitle">Testimonianze autentiche dalle nostre avventure</p>
+            </div>
+
+            <div class="reviews-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Un'esperienza incredibile! Il viaggio in Giappone è stato organizzato nei minimi dettagli. Guide fantastiche e luoghi da sogno."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiM2NjdlZWEiLz4KPHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDEwQzEyLjIzODYgMTAgMTAgMTIuMjM4NiAxMCAxNUMxMCAxNy43NjE0IDEyLjIzODYgMjAgMTUgMjBDMTcuNzYxNCAyMCAyMCAxNy43NjE0IDIwIDE1QzIwIDEyLjIzODYgMTcuNzYxNCAxMCAxNSAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNSAyMkM5LjQ3NzE1IDIyIDUgMjQuNDc3MSA1IDI3LjVWMzBIMjVWMjcuNUMyNSAyNC40NzcxIDIwLjUyMjkgMjIgMTUgMjJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPC9zdmc+" alt="Marco R.">
+                        </div>
+                        <div class="reviewer-info">
+                            <h4>Marco R.</h4>
+                            <span>Tokyo & Kyoto Tour</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Il safari in Kenya è stata l'avventura della mia vita! Abbiamo visto tutti i Big Five e le guide erano incredibilmente preparate."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiNmMDkzZmIiLz4KPHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDEwQzEyLjIzODYgMTAgMTAgMTIuMjM4NiAxMCAxNUMxMCAxNy43NjE0IDEyLjIzODYgMjAgMTUgMjBDMTcuNzYxNCAyMCAyMCAxNy43NjE0IDIwIDE1QzIwIDEyLjIzODYgMTcuNzYxNCAxMCAxNSAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNSAyMkM5LjQ3NzE1IDIyIDUgMjQuNDc3MSA1IDI3LjVWMzBIMjVWMjcuNUMyNSAyNC40NzcxIDIwLjUyMjkgMjIgMTUgMjJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPC9zdmc+" alt="Sofia M.">
+                        </div>
+                        <div class="reviewer-info">
+                            <h4>Sofia M.</h4>
+                            <span>Kenya Safari Adventure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Le isole greche sono state un sogno che si avvera! Tramonti mozzafiato, cibo incredibile e un'organizzazione perfetta."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiNhOGVkZWEiLz4KPHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDEwQzEyLjIzODYgMTAgMTAgMTIuMjM4NiAxMCAxNUMxMCAxNy43NjE0IDEyLjIzODYgMjAgMTUgMjBDMTcuNzYxNCAyMCAyMCAxNy43NjE0IDIwIDE1QzIwIDEyLjIzODYgMTcuNzYxNCAxMCAxNSAxMFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNSAyMkM5LjQ3NzE1IDIyIDUgMjQuNDc3MSA1IDI3LjVWMzBIMjVWMjcuNUMyNSAyNC40NzcxIDIwLjUyMjkgMjIgMTUgMjJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPC9zdmc+" alt="Alessandro P.">
+                        </div>
+                        <div class="reviewer-info">
+                            <h4>Alessandro P.</h4>
+                            <span>Greek Islands Escape</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-info" data-aos="fade-right">
+                    <h2>Prenota la Tua Prossima Avventura</h2>
+                    <p>Compila il form e ti contatteremo entro 24 ore per creare insieme il viaggio perfetto per te.</p>
+                    
+                    <div class="booking-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Garanzia Totale</h4>
+                                <p>Protezione completa e rimborso garantito</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>Supporto 24/7</h4>
+                                <p>Assistenza continua durante tutto il viaggio</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <h4>Flessibilità</h4>
+                                <p>Modifica date e destinazioni senza costi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-container" data-aos="fade-left">
+                    <form class="booking-form" id="bookingForm">
+                        <h3>Richiedi Preventivo</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nome *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Cognome *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="destination">Destinazione</label>
+                                <select id="destination" name="destination">
+                                    <option value="">Seleziona destinazione</option>
+                                    <option value="svizzera">Svizzera Magica</option>
+                                    <option value="giappone">Giappone Mistico</option>
+                                    <option value="kenya">Safari Keniota</option>
+                                    <option value="caraibi">Caraibi Paradiso</option>
+                                    <option value="grecia">Grecia Antica</option>
+                                    <option value="thailandia">Thailandia Esotica</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="travelers">Viaggiatori</label>
+                                <select id="travelers" name="travelers">
+                                    <option value="1">1 Persona</option>
+                                    <option value="2">2 Persone</option>
+                                    <option value="3">3 Persone</option>
+                                    <option value="4">4 Persone</option>
+                                    <option value="5+">5+ Persone</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure">Data Partenza</label>
+                                <input type="date" id="departure" name="departure">
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Budget (€)</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Seleziona budget</option>
+                                    <option value="1000-2000">€1.000 - €2.000</option>
+                                    <option value="2000-5000">€2.000 - €5.000</option>
+                                    <option value="5000+">€5.000+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Raccontaci cosa stai cercando per il tuo viaggio..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Richiedi Preventivo</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Contattaci</h2>
+                <p class="section-subtitle">Siamo qui per rendere reale il tuo viaggio dei sogni</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Sede Principale</h4>
+                            <p>Via Roma 123<br>20121 Milano, Italy</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefono</h4>
+                            <p>+39 02 1234 5678<br>+39 339 123 4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@wondertravel.it<br>booking@wondertravel.it</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Orari di Apertura</h4>
+                            <p>Lun - Ven: 9:00 - 18:00<br>Sab: 9:00 - 13:00</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-map" data-aos="fade-left">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Mappa Interattiva</p>
+                        <small>Via Roma 123, Milano</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-globe-asia"></i> WonderTravel</h3>
+                    <p>Da oltre 15 anni creiamo viaggi unici e indimenticabili per esploratori come te. La tua avventura inizia qui.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Destinazioni</h4>
+                    <ul>
+                        <li><a href="#">Europa</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li><a href="#">Africa</a></li>
+                        <li><a href="#">America</a></li>
+                        <li><a href="#">Oceania</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servizi</h4>
+                    <ul>
+                        <li><a href="#">Viaggi di Gruppo</a></li>
+                        <li><a href="#">Viaggi Personalizzati</a></li>
+                        <li><a href="#">Luna di Miele</a></li>
+                        <li><a href="#">Viaggi Business</a></li>
+                        <li><a href="#">Assicurazioni Viaggio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Supporto</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contatti</a></li>
+                        <li><a href="#">Termini e Condizioni</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cancellazioni</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 WonderTravel. Tutti i diritti riservati.</p>
+                <p>Agenzia di Viaggi autorizzata - Licenza: IT-12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Destination Modal -->
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content video-modal-content">
+            <span class="close" id="closeVideoModal">&times;</span>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <i class="fas fa-play"></i>
+                    <h3>Video Presentazione</h3>
+                    <p>Scopri le meraviglie del mondo con WonderTravel</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Particle Effect -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

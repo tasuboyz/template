@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Pro - Soluzioni Innovative</title>
+    <meta name="description" content="Soluzioni business innovative per la crescita della tua azienda">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Caricamento...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">Business<span>Pro</span></h1>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#servizi" class="nav-link">Servizi</a></li>
+                    <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#contatti" class="nav-link">Contatti</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="text-reveal">Innovazione</span>
+                        <span class="text-reveal">per il tuo</span>
+                        <span class="text-reveal gradient-text">Business</span>
+                    </h1>
+                    <p class="hero-subtitle fade-in-up">
+                        Trasformiamo le tue idee in soluzioni digitali di successo con tecnologie all'avanguardia
+                    </p>
+                    <div class="hero-buttons fade-in-up">
+                        <button class="btn btn-primary btn-glow" id="cta-primary">
+                            Inizia Ora
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-outline" id="cta-secondary">
+                            <i class="fas fa-play"></i>
+                            Guarda Demo
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-card floating">
+                        <div class="card-content">
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="150">0</span>
+                                    <span class="stat-label">Progetti</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="98">0</span>
+                                    <span class="stat-label">% Soddisfazione</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="5">0</span>
+                                    <span class="stat-label">Anni Esperienza</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servizi" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">I Nostri Servizi</h2>
+                    <p class="section-subtitle">
+                        Soluzioni complete per ogni esigenza aziendale
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card" data-service="web">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Sviluppo Web</h3>
+                        <p>Siti web moderni e performanti con le ultime tecnologie</p>
+                        <ul class="service-features">
+                            <li>React & Vue.js</li>
+                            <li>Design Responsive</li>
+                            <li>Performance Ottimizzate</li>
+                        </ul>
+                        <div class="service-overlay">
+                            <button class="btn btn-light">Scopri di più</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="mobile">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>App Mobile</h3>
+                        <p>Applicazioni native e cross-platform per iOS e Android</p>
+                        <ul class="service-features">
+                            <li>React Native</li>
+                            <li>Flutter</li>
+                            <li>Native Development</li>
+                        </ul>
+                        <div class="service-overlay">
+                            <button class="btn btn-light">Scopri di più</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="consulting">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Consulenza IT</h3>
+                        <p>Strategia digitale e trasformazione tecnologica</p>
+                        <ul class="service-features">
+                            <li>Digital Strategy</li>
+                            <li>Cloud Migration</li>
+                            <li>System Architecture</li>
+                        </ul>
+                        <div class="service-overlay">
+                            <button class="btn btn-light">Scopri di più</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="chi-siamo" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Chi Siamo</h2>
+                        <p class="lead">
+                            Un team di professionisti appassionati di tecnologia e innovazione
+                        </p>
+                        <p>
+                            Da oltre 5 anni aiutiamo aziende di ogni dimensione a digitalizzare 
+                            i propri processi e raggiungere nuovi obiettivi attraverso soluzioni 
+                            tecnologiche innovative e personalizzate.
+                        </p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Team esperto e certificato</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Metodologie agili</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Supporto continuo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual">
+                        <div class="team-showcase">
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Marco Rossi</h4>
+                                    <span>Lead Developer</span>
+                                </div>
+                            </div>
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Laura Bianchi</h4>
+                                    <span>UI/UX Designer</span>
+                                </div>
+                            </div>
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Andrea Verdi</h4>
+                                    <span>Project Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Portfolio</h2>
+                    <p class="section-subtitle">
+                        Alcuni dei nostri progetti più recenti
+                    </p>
+                </div>
+                
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Tutti</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>E-commerce Platform</h3>
+                            <p>Piattaforma e-commerce completa</p>
+                            <div class="portfolio-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn btn-light">
+                                <i class="fas fa-external-link-alt"></i>
+                                Vedi Progetto
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="mobile">
+                        <div class="portfolio-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Fitness App</h3>
+                            <p>App per il fitness e benessere</p>
+                            <div class="portfolio-tech">
+                                <span>React Native</span>
+                                <span>Firebase</span>
+                                <span>Redux</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn btn-light">
+                                <i class="fas fa-external-link-alt"></i>
+                                Vedi Progetto
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Dashboard Analytics</h3>
+                            <p>Dashboard per analisi dati</p>
+                            <div class="portfolio-tech">
+                                <span>Vue.js</span>
+                                <span>D3.js</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="btn btn-light">
+                                <i class="fas fa-external-link-alt"></i>
+                                Vedi Progetto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contatti" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="section-title">Contattaci</h2>
+                        <p class="lead">
+                            Hai un progetto in mente? Parliamone insieme
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <p>info@businesspro.it</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Telefono</h4>
+                                    <p>+39 123 456 7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Indirizzo</h4>
+                                    <p>Via Roma 123, Milano</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nome *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Oggetto</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Messaggio *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Invia Messaggio
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="logo">Business<span>Pro</span></h3>
+                    <p>Innovazione digitale per il successo del tuo business</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Servizi</h4>
+                        <ul>
+                            <li><a href="#">Sviluppo Web</a></li>
+                            <li><a href="#">App Mobile</a></li>
+                            <li><a href="#">Consulenza IT</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Azienda</h4>
+                        <ul>
+                            <li><a href="#">Chi Siamo</a></li>
+                            <li><a href="#">Il Team</a></li>
+                            <li><a href="#">Carriere</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Supporto</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Documentazione</a></li>
+                            <li><a href="#">Contatti</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BusinessPro. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Torna su">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

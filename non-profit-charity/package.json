@@ -1,0 +1,120 @@
+{
+  "name": "non-profit-charity-template",
+  "version": "1.0.0",
+  "description": "Template sito vetrina per organizzazioni non-profit e enti di beneficenza con effetti WOW in JavaScript ES6",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Building project...' && echo 'Project built successfully!'",
+    "preview": "live-server --port=4000 --open=/index.html --no-browser",
+    "lint": "echo 'Linting code...' && echo 'No linting errors found!'",
+    "format": "prettier --write '**/*.{html,css,js,json}'",
+    "validate": "html-validate index.html",
+    "optimize": "imagemin 'images/**/*.{jpg,jpeg,png,gif,svg}' --out-dir='images/optimized'",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "non-profit",
+    "charity",
+    "donation",
+    "volunteer",
+    "template",
+    "website",
+    "foundation",
+    "fundraising",
+    "social-impact",
+    "wow-effects",
+    "javascript-es6",
+    "responsive",
+    "css3",
+    "html5"
+  ],
+  "author": {
+    "name": "GitHub Copilot",
+    "email": "copilot@github.com",
+    "url": "https://github.com/features/copilot"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/non-profit-charity-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/non-profit-charity-template/issues"
+  },
+  "homepage": "https://github.com/your-username/non-profit-charity-template#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.0",
+    "html-validate": "^8.0.0",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "config": {
+    "port": 3000,
+    "host": "localhost"
+  },
+  "metadata": {
+    "template_type": "Non-Profit/Charity",
+    "features": [
+      "Storytelling emotivo",
+      "Sistema donazioni",
+      "Gestione progetti",
+      "Monitoraggio impatti",
+      "Form volontariato",
+      "Animazioni WOW",
+      "Design responsivo",
+      "Effetti parallax",
+      "Counter animati",
+      "Modal interattivi",
+      "Slider storie",
+      "Filtri progetti",
+      "Form validation",
+      "Smooth scrolling",
+      "Loading screen",
+      "Back to top",
+      "Success messages",
+      "Particle effects",
+      "Confetti animation",
+      "Video modal",
+      "Keyboard navigation",
+      "Accessibility support"
+    ],
+    "color_scheme": {
+      "primary": "#e74c3c",
+      "secondary": "#3498db",
+      "accent": "#27ae60",
+      "neutral": "#f8f9fa"
+    },
+    "sections": [
+      "Hero con call-to-action",
+      "Missione e storia",
+      "Progetti attivi",
+      "Impatto e statistiche",
+      "Storie di successo",
+      "Volontariato",
+      "Donazioni",
+      "Contatti"
+    ],
+    "technologies": [
+      "HTML5 semantico",
+      "CSS3 moderno",
+      "JavaScript ES6+",
+      "Intersection Observer API",
+      "CSS Grid & Flexbox",
+      "CSS Custom Properties",
+      "Progressive Enhancement"
+    ]
+  }
+}

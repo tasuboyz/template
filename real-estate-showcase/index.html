@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteEstates - Agenzia Immobiliare Premium</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-home"></i> EliteEstates</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#properties" class="nav-link">Proprietà</a>
+                <a href="#services" class="nav-link">Servizi</a>
+                <a href="#calculator" class="nav-link">Calcolatore</a>
+                <a href="#about" class="nav-link">Chi Siamo</a>
+                <a href="#contact" class="nav-link">Contatti</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text wow fadeInUp">
+                <h1>Trova la Casa dei Tuoi Sogni</h1>
+                <p>Scopri le migliori proprietà immobiliari con tour virtuali, mappe interattive e servizi premium</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="exploreBtn">Esplora Proprietà</button>
+                    <button class="btn btn-secondary" id="virtualTourBtn">
+                        <i class="fas fa-vr-cardboard"></i> Tour Virtuale
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="hero-search wow fadeInUp" data-wow-delay="0.3s">
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="search-tab active" data-type="buy">Acquista</button>
+                    <button class="search-tab" data-type="rent">Affitta</button>
+                    <button class="search-tab" data-type="sell">Vendi</button>
+                </div>
+                <div class="search-form">
+                    <div class="search-field">
+                        <input type="text" placeholder="Città, quartiere..." id="searchLocation">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="search-field">
+                        <select id="propertyType">
+                            <option value="">Tipo Proprietà</option>
+                            <option value="apartment">Appartamento</option>
+                            <option value="house">Casa</option>
+                            <option value="villa">Villa</option>
+                            <option value="office">Ufficio</option>
+                        </select>
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="search-field">
+                        <select id="priceRange">
+                            <option value="">Fascia Prezzo</option>
+                            <option value="0-200000">€0 - €200.000</option>
+                            <option value="200000-500000">€200.000 - €500.000</option>
+                            <option value="500000-1000000">€500.000 - €1.000.000</option>
+                            <option value="1000000+">€1.000.000+</option>
+                        </select>
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                        Cerca
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item wow fadeInUp">
+                    <div class="stat-number" data-target="1250">0</div>
+                    <div class="stat-label">Proprietà Vendute</div>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="stat-number" data-target="850">0</div>
+                    <div class="stat-label">Clienti Soddisfatti</div>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Anni di Esperienza</div>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Agenti Esperti</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="properties-section" id="properties">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>Proprietà in Evidenza</h2>
+                <p>Scopri le nostre migliori proposte immobiliari</p>
+            </div>
+            
+            <!-- Property Filters -->
+            <div class="property-filters wow fadeInUp" data-wow-delay="0.2s">
+                <button class="filter-btn active" data-filter="all">Tutte</button>
+                <button class="filter-btn" data-filter="apartment">Appartamenti</button>
+                <button class="filter-btn" data-filter="house">Case</button>
+                <button class="filter-btn" data-filter="villa">Ville</button>
+                <button class="filter-btn" data-filter="office">Uffici</button>
+            </div>
+
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Le proprietà verranno generate dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>I Nostri Servizi</h2>
+                <p>Soluzioni complete per tutte le tue esigenze immobiliari</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card wow fadeInUp">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Ricerca Avanzata</h3>
+                    <p>Sistema di ricerca intelligente con filtri avanzati per trovare la proprietà perfetta</p>
+                </div>
+                <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>Tour Virtuali 360°</h3>
+                    <p>Esplora le proprietà comodamente da casa con tour virtuali immersivi</p>
+                </div>
+                <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Mappe Interattive</h3>
+                    <p>Visualizza proprietà e servizi circostanti su mappe dettagliate e interattive</p>
+                </div>
+                <div class="service-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calcolatore Mutui</h3>
+                    <p>Calcola rate e finanziamenti con il nostro strumento avanzato</p>
+                </div>
+                <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Consulenza Legale</h3>
+                    <p>Supporto legale completo per acquisti, vendite e contratti</p>
+                </div>
+                <div class="service-card wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Valutazione Immobili</h3>
+                    <p>Valutazioni accurate basate su analisi di mercato approfondite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortgage Calculator -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>Calcolatore Mutui</h2>
+                <p>Calcola la tua rata mensile e pianifica il tuo investimento</p>
+            </div>
+            <div class="calculator-container">
+                <div class="calculator-form wow fadeInLeft">
+                    <div class="form-group">
+                        <label for="loanAmount">Importo Mutuo (€)</label>
+                        <input type="number" id="loanAmount" value="300000" min="10000" max="2000000">
+                        <div class="range-slider">
+                            <input type="range" id="loanRange" min="10000" max="2000000" value="300000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="interestRate">Tasso di Interesse (%)</label>
+                        <input type="number" id="interestRate" value="3.5" min="0.1" max="10" step="0.1">
+                        <div class="range-slider">
+                            <input type="range" id="rateRange" min="0.1" max="10" value="3.5" step="0.1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loanTerm">Durata (anni)</label>
+                        <input type="number" id="loanTerm" value="25" min="5" max="40">
+                        <div class="range-slider">
+                            <input type="range" id="termRange" min="5" max="40" value="25">
+                        </div>
+                    </div>
+                    <button class="calculate-btn" id="calculateBtn">Calcola</button>
+                </div>
+                <div class="calculator-results wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="result-card">
+                        <h3>Risultati Calcolo</h3>
+                        <div class="result-item">
+                            <span class="result-label">Rata Mensile:</span>
+                            <span class="result-value" id="monthlyPayment">€ 1,234</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Totale Interessi:</span>
+                            <span class="result-value" id="totalInterest">€ 67,890</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Totale da Pagare:</span>
+                            <span class="result-value" id="totalPayment">€ 367,890</span>
+                        </div>
+                        <div class="payment-chart" id="paymentChart">
+                            <canvas id="chartCanvas" width="300" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>Esplora per Zona</h2>
+                <p>Trova proprietà nella tua zona preferita</p>
+            </div>
+            <div class="map-container wow fadeInUp" data-wow-delay="0.2s">
+                <div id="interactiveMap" class="interactive-map">
+                    <!-- Mappa interattiva placeholder -->
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Mappa Interattiva</p>
+                        <small>Clicca sui marker per vedere le proprietà disponibili</small>
+                    </div>
+                    <!-- Map markers -->
+                    <div class="map-marker" style="top: 30%; left: 25%;" data-property="1">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="marker-tooltip">
+                            <h4>Villa Moderna</h4>
+                            <p>€ 850.000</p>
+                        </div>
+                    </div>
+                    <div class="map-marker" style="top: 50%; left: 60%;" data-property="2">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="marker-tooltip">
+                            <h4>Appartamento Centro</h4>
+                            <p>€ 320.000</p>
+                        </div>
+                    </div>
+                    <div class="map-marker" style="top: 70%; left: 40%;" data-property="3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="marker-tooltip">
+                            <h4>Casa Bifamiliare</h4>
+                            <p>€ 450.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text wow fadeInLeft">
+                    <h2>Chi Siamo</h2>
+                    <p>EliteEstates è leader nel settore immobiliare da oltre 15 anni. La nostra missione è aiutare i clienti a trovare la casa perfetta attraverso tecnologie innovative e un servizio personalizzato.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-award"></i>
+                            <span>Agenzia Certificata</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>Team Esperto</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Supporto 24/7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="image-placeholder">
+                        <i class="fas fa-building"></i>
+                        <p>Sede EliteEstates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
+                <h2>Contattaci</h2>
+                <p>Siamo qui per aiutarti a realizzare i tuoi sogni immobiliari</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info wow fadeInLeft">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Indirizzo</h4>
+                            <p>Via Roma 123, 20121 Milano, Italia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefono</h4>
+                            <p>+39 02 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@eliteestates.it</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form wow fadeInRight" data-wow-delay="0.2s">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <input type="text" placeholder="Nome" required>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <input type="text" placeholder="Oggetto" required>
+                        <textarea placeholder="Messaggio" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Invia Messaggio</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-home"></i> EliteEstates</h3>
+                    <p>La tua agenzia immobiliare di fiducia per trovare la casa dei tuoi sogni.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Servizi</h4>
+                    <ul>
+                        <li><a href="#">Acquisto Casa</a></li>
+                        <li><a href="#">Vendita Immobili</a></li>
+                        <li><a href="#">Affitti</a></li>
+                        <li><a href="#">Valutazioni</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Zone</h4>
+                    <ul>
+                        <li><a href="#">Milano Centro</a></li>
+                        <li><a href="#">Brera</a></li>
+                        <li><a href="#">Navigli</a></li>
+                        <li><a href="#">Porta Nuova</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +39 02 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@eliteestates.it</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Via Roma 123, Milano</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EliteEstates. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Virtual Tour Modal -->
+    <div class="modal" id="virtualTourModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="virtual-tour-container">
+                <h3>Tour Virtuale 360°</h3>
+                <div class="tour-viewer">
+                    <div class="tour-placeholder">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <p>Esperienza VR Immersiva</p>
+                        <small>Utilizza il mouse per guardare intorno</small>
+                    </div>
+                    <div class="tour-controls">
+                        <button class="tour-btn" id="tourPrev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="tour-btn" id="tourNext"><i class="fas fa-chevron-right"></i></button>
+                        <button class="tour-btn" id="tourFullscreen"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
