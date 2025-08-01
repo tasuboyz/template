@@ -1,69 +1,65 @@
 {
-  "name": "businesspro-showcase",
+  "name": "business-showcase-template",
   "version": "1.0.0",
-  "description": "Sito vetrina BusinessPro con JavaScript ES6, effetti WOW e tema scuro/chiaro",
+  "description": "Template business showcase moderno e innovativo con effetti wow e design mobile-first",
   "main": "index.html",
   "scripts": {
-    "dev": "npx live-server --port=3000 --open=/index.html --watch=.",
-    "build": "node build.js",
-    "test": "npm run test:lint && npm run test:perf",
-    "test:lint": "npx eslint js/**/*.js",
-    "test:perf": "npx lighthouse http://localhost:3000 --output=html --output-path=./reports/lighthouse.html",
-    "deploy": "npm run build && npm run deploy:netlify",
-    "deploy:netlify": "npx netlify deploy --prod --dir=dist",
-    "analyze": "npx webpack-bundle-analyzer dist/js/bundle.js",
-    "compress": "node compress.js",
-    "validate": "npx html-validate index.html",
-    "optimize": "npm run compress && npm run minify",
-    "minify": "node minify.js",
-    "watch": "npx chokidar \"**/*.{js,css,html}\" -c \"npm run build\"",
-    "serve": "npx http-server dist -p 8080 -c-1",
-    "clean": "rimraf dist reports temp",
-    "precommit": "npm run test && npm run build"
+    "start": "live-server --port=3000 --open=/index.html",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o dist/css/style.min.css css/main.css css/animations.css",
+    "minify-js": "uglifyjs js/app.js -o dist/js/app.min.js",
+    "optimize-images": "imagemin images/*.{jpg,png,svg} --out-dir=dist/images",
+    "serve": "python -m http.server 8000",
+    "dev": "browser-sync start --server --files='**/*.html, **/*.css, **/*.js'",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
+    "validate": "html-validate index.html"
   },
   "keywords": [
     "business",
     "showcase",
-    "javascript",
-    "es6",
-    "dark-theme",
-    "light-theme",
-    "animations",
-    "wow-effects",
+    "template",
     "responsive",
-    "pwa"
+    "mobile-first",
+    "modern",
+    "creative",
+    "animation",
+    "webapp"
   ],
-  "author": "BusinessPro Team",
+  "author": "Business Showcase Team",
   "license": "MIT",
   "devDependencies": {
-    "chokidar-cli": "^3.0.0",
-    "eslint": "^8.57.0",
-    "html-minifier": "^4.0.0",
-    "http-server": "^14.1.1",
+    "browser-sync": "^2.29.3",
+    "clean-css-cli": "^5.6.2",
+    "html-validate": "^8.7.3",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
     "lighthouse": "^11.4.0",
     "live-server": "^1.2.2",
-    "rimraf": "^5.0.5",
-    "terser": "^5.26.0",
-    "cssnano": "^6.0.2",
-    "postcss": "^8.4.32",
-    "autoprefixer": "^10.4.16"
+    "uglify-js": "^3.17.4"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead",
-    "not ie 11"
+    "not ie <= 11"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/business-showcase-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/business-showcase-template/issues"
+  },
+  "homepage": "https://github.com/yourusername/business-showcase-template#readme",
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=6.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/businesspro/showcase.git"
-  },
-  "bugs": {
-    "url": "https://github.com/businesspro/showcase/issues"
-  },
-  "homepage": "https://businesspro-showcase.netlify.app"
+  "files": [
+    "index.html",
+    "css/",
+    "js/",
+    "images/",
+    "README.md"
+  ]
 }
