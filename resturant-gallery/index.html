@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Vista - Ristorante Gourmet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bella Vista</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">Chi Siamo</a></li>
+                <li><a href="#gallery" class="nav-link">Galleria</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#contact" class="nav-link">Contatti</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Benvenuti al Bella Vista</h1>
+            <p class="hero-subtitle">Un'esperienza culinaria indimenticabile nel cuore della città</p>
+            <button class="cta-button" onclick="scrollToSection('gallery')">
+                Scopri la Nostra Cucina
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>La Nostra Storia</h2>
+                    <p>Dal 1985, il Bella Vista rappresenta l'eccellenza della tradizione culinaria italiana, 
+                    unita all'innovazione e alla ricerca dei migliori ingredienti locali.</p>
+                    <p>Il nostro chef stellato crea ogni giorno piatti unici che raccontano la passione 
+                    per la gastronomia e l'amore per il territorio.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop" alt="Interno ristorante">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">La Nostra Galleria</h2>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Tutto</button>
+                <button class="filter-btn" data-filter="food">Piatti</button>
+                <button class="filter-btn" data-filter="interior">Interni</button>
+                <button class="filter-btn" data-filter="events">Eventi</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Le immagini verranno caricate dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlight -->
+    <section id="menu" class="menu-highlight">
+        <div class="container">
+            <h2 class="section-title">Specialità della Casa</h2>
+            <div class="menu-cards" id="menu-cards">
+                <!-- I piatti verranno caricati dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Prenota il Tuo Tavolo</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Via Roma 123, Milano</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+39 02 1234567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@bellavista.it</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Martedì - Domenica: 19:00 - 23:00</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="reservation-form">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Telefono" required>
+                        <input type="date" required>
+                        <input type="time" required>
+                        <select required>
+                            <option value="">Numero persone</option>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 persone</option>
+                            <option value="3">3 persone</option>
+                            <option value="4">4 persone</option>
+                            <option value="5+">5+ persone</option>
+                        </select>
+                        <button type="submit">Prenota Ora</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal per la galleria -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <div class="modal-nav">
+                <button id="prev-btn">&lt;</button>
+                <button id="next-btn">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Bella Vista</h3>
+                    <p>Ristorante Gourmet</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bella Vista. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
