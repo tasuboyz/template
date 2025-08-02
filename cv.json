@@ -1,0 +1,196 @@
+{
+  "basics": {
+    "name": "Tasuhiro Davide Kato",
+    "tagline": "IT Support & AI Developer - Turning ideas into intelligent solutions through code",
+    "email": "tasuhiro.davide@gmail.com",
+    "phone": {
+      "mobile": "+39 371-1369107",
+      "fixed": "030-2770789"
+    },
+    "profiles": {
+      "github": "tasuboyz",
+      "telegram": "tasu_Channel"
+    },
+    "location": "Via IV Novembre 15, GUSSAGO (BS), ITALIA",
+    "birth": {
+      "date": "02/08/2000",
+      "place": "Tokyo (Giappone)"
+    },
+    "nationality": "Italiana e giapponese",
+    "photo": "img/250b8d17-e73c-4c97-bd73-187dc1c7495a.jpg"
+  },
+  "work": [
+    {
+      "company": "Bonomi Industries S.R.L",
+      "position": "Tecnico Sistemista Informatico",
+      "duration": "2 anni",
+      "achievements": [
+        "Gestione dell'infrastruttura IT aziendale e supporto agli utenti (sistemi Windows)",
+        "Lettore automatico di file PRN con riconoscimento QR code e barcode",
+        "Software per la scansione dei permessi del filesystem aziendale",
+        "Interfacce user-friendly per database",
+        "Bot Telegram per monitoraggio accessi ai varchi aziendali",
+        "Software di scansione dei pc di dominio aziendale (Tool per la gestione dei PC)",
+        "Software di monitoraggio blocchi utente",
+        "Software per automatizzare i setup dei PC aziendali",
+        "Software di scansione per inventario programmi installati",
+        "Configurazione Single Board Computer (khadas, ubuntu 24.04) link: https://static.wixstatic.com/media/e24822_7f8bece78ff942baa9dc33f01d2e65d6~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e24822_7f8bece78ff942baa9dc33f01d2e65d6~mv2.jpg",
+        "Configurazione Linux Server red hat per configurare il docker con portainer. ",
+        "Configurazione glpi all'interno del container e personalizzazione plugin",
+        "Configurazione n8n in locale per automazione anche con IA"
+      ]
+    },
+    {
+      "company": "Asonext S.P.A",
+      "position": "Tecnico IT - Apprendista",
+      "duration": "1 anno e mezzo",
+      "achievements": [
+        "Helpdesk e supporto utenti (sistemi Windows)",
+        "Configurazione pannelli HMI per produzione",
+        "Sviluppo di strumenti interni (Visual Studio Code, Visual Studio, DevExpress)",
+        "Programmazione PLC (KOP, AWL, SCL)"
+      ]
+    },
+    {
+      "company": "Asonext S.P.A",
+      "position": "Stagista Programmazione PLC",
+      "duration": "5 mesi",
+      "achievements": [
+        "Formazione su linguaggi di programmazione PLC",
+        "Supporto allo sviluppo di sistemi di automazione industriale"
+      ]
+    },
+    {
+      "company": "Casa dello Studente (Gussago)",
+      "position": "Aiuto compiti",
+      "duration": "",
+      "achievements": [
+        "Assistenza allo studio per bambini della scuola primaria"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Diploma di Specializzazione Tecnica Superiore in Meccatronica",
+      "institution": "ITS - Istituto di Istruzione Superiore Luigi Cerebotani, Lonato (BS)"
+    },
+    {
+      "degree": "Diploma Liceo Scienze Umane - Opzione Economico Sociale",
+      "institution": "Istituto Marco Polo, Brescia, 2019"
+    }
+  ],
+  "skills": {
+    "ai": [
+      "Machine Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Hugging Face",
+      "LLM Integration",
+      "n8n",
+      "vector database"
+    ],
+    "programming": {
+      "advanced": [
+        "C#",
+        "Python",
+        "Batch",
+        "Powershell",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "intermediate": [
+        "Typescript"
+      ],
+      "basic": [
+        "VBA"
+      ]
+    },
+    "industrialAutomation": [
+      "PLC (KOP",
+      "AWL",
+      "SCL)",
+      "HMI Configuration"
+    ],
+    "systems": {
+      "windows": "Advanced Management & Troubleshooting",
+      "linux": "Server Configuration & Hosting"
+    },
+    "software": [
+      "Visual Studio",
+      "DevExpress",
+      "Microsoft Office",
+      "GitHub",
+      "Visual Studio Code",
+      "Git",
+      "Github Copilot",
+      "AuditPlus",
+      "VSphire",
+      "Veeam",
+      "Acronis",
+      "UltraVNC",
+      "Keepass",
+      "Glpi",
+      "Ollama",
+      "LibraEsva",
+      "n8n"
+    ],
+    "devOps": [
+      "Git",
+      "GitHub",
+      "SQL",
+      "MySQL",
+      "SQLite",
+      "Docker"
+    ]
+  },
+  "languages": [
+    {
+      "language": "Italiano",
+      "level": "Madrelingua"
+    },
+    {
+      "language": "Inglese",
+      "level": "B1-B2 (Discreto)"
+    },
+    {
+      "language": "Giapponese",
+      "level": "Eccellente comprensione e parlato, Buona lettura, Discreta scrittura"
+    }
+  ],
+  "digitalSkills": [
+    {
+      "skill": "Elaborazione delle informazioni",
+      "level": "Eccellente"
+    },
+    {
+      "skill": "Comunicazione",
+      "level": "Buono"
+    },
+    {
+      "skill": "Creazione di contenuti",
+      "level": "Molto Buono"
+    },
+    {
+      "skill": "Sicurezza",
+      "level": "Buono"
+    },
+    {
+      "skill": "Risoluzione di problemi",
+      "level": "Modestamente Buono"
+    }
+  ],
+  "other": {
+    "drivingLicense": "B",
+    "hobbies": [
+      "Sviluppo per hobby",
+      "Implementazione di progetti personali con modelli AI generativi"
+    ],
+    "qualities": [
+      "Educato",
+      "Rispettoso",
+      "Innovativo",
+      "Problem Solver"
+    ]
+  }
+}

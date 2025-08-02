@@ -1,0 +1,68 @@
+<!-- SVG Placeholder for Leonardo AI Bot -->
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC143C;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#FF69B4;stop-opacity:0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  
+  <!-- Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  
+  <!-- Central AI Brain -->
+  <circle cx="400" cy="225" r="80" fill="url(#aiGlow)" opacity="0.8"/>
+  <circle cx="400" cy="225" r="60" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <circle cx="400" cy="225" r="40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  
+  <!-- Neural Network Nodes -->
+  <circle cx="300" cy="150" r="15" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="320" cy="200" r="12" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="280" cy="250" r="10" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="500" cy="150" r="15" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="480" cy="200" r="12" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="520" cy="250" r="10" fill="rgba(255,255,255,0.5)"/>
+  
+  <!-- Connection Lines -->
+  <line x1="300" y1="150" x2="400" y2="225" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="320" y1="200" x2="400" y2="225" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="280" y1="250" x2="400" y2="225" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="500" y1="150" x2="400" y2="225" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="480" y1="200" x2="400" y2="225" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="520" y1="250" x2="400" y2="225" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  
+  <!-- Telegram Logo -->
+  <circle cx="200" cy="100" r="30" fill="rgba(0,136,204,0.8)"/>
+  <path d="M 185 95 L 205 105 L 195 115 L 185 105 Z" fill="white"/>
+  
+  <!-- Leonardo AI Symbol -->
+  <rect x="570" y="70" width="60" height="60" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <text x="600" y="105" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">AI</text>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="bold">Leonardo AI Telegram Bot</text>
+  <text x="400" y="400" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="16">Integrazione completa Leonardo AI + Telegram</text>
+  
+  <!-- Animated Particles -->
+  <circle cx="150" cy="200" r="3" fill="rgba(255,255,255,0.6)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="300" r="3" fill="rgba(255,255,255,0.6)">
+    <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="350" r="2" fill="rgba(255,255,255,0.4)">
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>
