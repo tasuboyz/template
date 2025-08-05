@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodGallery - Immersive Culinary Experience</title>
+    <link rel="stylesheet" href="gallery-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h1>FoodGallery</h1>
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar-gallery" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>Food<span>Gallery</span></h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#chef" class="nav-link">Chef</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="nav-cta">
+                <a href="#contact" class="btn-reserve">Prenota</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-immersive" id="home">
+        <div class="hero-backgrounds">
+            <div class="hero-bg active" style="background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=1920&h=1080&fit=crop')"></div>
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop')"></div>
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1920&h=1080&fit=crop')"></div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="word" data-delay="0">Culinary</span>
+                    <span class="word" data-delay="200">Art</span>
+                    <span class="word" data-delay="400">Experience</span>
+                </h1>
+                <p class="hero-subtitle">Dove ogni piatto racconta una storia di passione e creatività culinaria</p>
+                <div class="hero-buttons">
+                    <button class="btn-hero btn-primary">Scopri l'Esperienza</button>
+                    <button class="btn-hero btn-outline">Prenota Tavolo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <span>Scorri per esplorare</span>
+        </div>
+    </section>
+
+    <!-- Gallery Immersiva -->
+    <section class="gallery-immersive" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Visual Journey</h2>
+                <p class="section-subtitle">Un viaggio attraverso i sapori e le emozioni</p>
+            </div>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Tutto</button>
+                <button class="filter-btn" data-filter="dishes">Piatti</button>
+                <button class="filter-btn" data-filter="drinks">Cocktails</button>
+                <button class="filter-btn" data-filter="desserts">Dolci</button>
+                <button class="filter-btn" data-filter="atmosphere">Atmosfera</button>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Generato dinamicamente -->
+            </div>
+        </div>
+
+        <!-- Modal Gallery -->
+        <div class="gallery-modal" id="gallery-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-image-container">
+                    <img class="modal-image" id="modal-image" src="" alt="">
+                    <div class="modal-info">
+                        <h3 class="modal-title" id="modal-title"></h3>
+                        <p class="modal-description" id="modal-description"></p>
+                    </div>
+                </div>
+                <div class="modal-navigation">
+                    <button class="modal-nav prev" id="modal-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="modal-nav next" id="modal-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Showcase -->
+    <section class="menu-showcase" id="menu">
+        <div class="menu-background">
+            <div class="menu-pattern"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Signature Menu</h2>
+                <p class="section-subtitle">Creazioni uniche del nostro chef stellato</p>
+            </div>
+
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Tutto</button>
+                <button class="category-btn" data-category="antipasti">Antipasti</button>
+                <button class="category-btn" data-category="primi">Primi</button>
+                <button class="category-btn" data-category="secondi">Secondi</button>
+                <button class="category-btn" data-category="dolci">Dolci</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Generato dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef Story -->
+    <section class="chef-story" id="chef">
+        <div class="chef-container">
+            <div class="chef-image-section">
+                <div class="chef-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=800&fit=crop" alt="Chef" class="chef-image">
+                    <div class="chef-decorative"></div>
+                </div>
+            </div>
+            
+            <div class="chef-content">
+                <div class="chef-text">
+                    <span class="chef-label">Maestro Culinario</span>
+                    <h2 class="chef-name">Alessandro Rossi</h2>
+                    <p class="chef-bio">
+                        Con oltre 15 anni di esperienza nei più prestigiosi ristoranti d'Europa, 
+                        il Chef Alessandro porta una visione unica che fonde tradizione italiana 
+                        e tecniche moderne. Ogni piatto è un'opera d'arte che celebra la bellezza 
+                        degli ingredienti e la passione per l'eccellenza culinaria.
+                    </p>
+                    
+                    <div class="chef-achievements">
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="achievement-text">
+                                <h4>Michelin Star</h4>
+                                <p>2023 - 2025</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="achievement-text">
+                                <h4>Best Chef Italy</h4>
+                                <p>2022 - 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-chef">Scopri la Storia</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dining Experience</h2>
+                <p class="section-subtitle">Un viaggio sensoriale in 5 momenti magici</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item" data-step="1">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Accoglienza</h3>
+                        <p>Un benvenuto caloroso in un'atmosfera raffinata che ti fa sentire a casa</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-step="2">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Aperitivo</h3>
+                        <p>Cocktail signature creati per risvegliare i sensi e preparare il palato</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-step="3">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>Degustazione</h3>
+                        <p>Un percorso culinario di sapori unici che racconta la nostra filosofia</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-step="4">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Dolce Finale</h3>
+                        <p>Il gran finale dolce che completa perfettamente l'esperienza gustativa</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-step="5">
+                    <div class="timeline-number">05</div>
+                    <div class="timeline-content">
+                        <h3>Ricordo</h3>
+                        <p>Un'esperienza indimenticabile che rimane nel cuore e nella memoria</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Gallery -->
+    <section class="instagram-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Follow Our Journey</h2>
+                <p class="section-subtitle">@foodgallery_official</p>
+            </div>
+
+            <div class="instagram-grid" id="instagram-grid">
+                <!-- Generato dinamicamente -->
+            </div>
+            
+            <div class="instagram-cta">
+                <a href="#" class="btn-instagram">
+                    <i class="fab fa-instagram"></i>
+                    Seguici su Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Reservation -->
+    <section class="contact-section" id="contact">
+        <div class="contact-background">
+            <div class="contact-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="contact-title">Prenota la tua Esperienza</h2>
+                    <p class="contact-subtitle">Lasciati trasportare in un viaggio culinario indimenticabile</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Indirizzo</h4>
+                                <p>Via Gourmet 123, Milano</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefono</h4>
+                                <p>+39 02 1234 5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Orari</h4>
+                                <p>Mar-Dom 19:00-24:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@foodgallery.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reservation-form">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nome" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Cognome" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Telefono" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Numero persone</option>
+                                <option value="2">2 persone</option>
+                                <option value="4">4 persone</option>
+                                <option value="6">6 persone</option>
+                                <option value="8">8+ persone</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Note speciali o richieste alimentari" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <span>Prenota Esperienza</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gallery">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Food<span>Gallery</span></h3>
+                    <p>Where Art Meets Taste</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Menu</h4>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#chef">Chef</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Info</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Allergens</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Social</h4>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FoodGallery. All rights reserved. Made with ❤️ for food lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="gallery-app.js"></script>
+</body>
+</html>

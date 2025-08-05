@@ -147,6 +147,28 @@ const portfolioData = {
       tags: ['Gallery', 'Food', 'Photography', 'Menu']
     },
     {
+      id: 'gusto-vivo-restaurant',
+      title: 'Gusto Vivo',
+      category: 'restaurant',
+      description: 'Esperienza gallery immersiva per ristoranti con 300+ immagini gestite dinamicamente',
+      path: 'Gusto Vivo - Ristorant Gallery Experience/',
+      icon: 'fas fa-utensils',
+      color: '#d4af37',
+      image: 'assets/img/gusto-vivo-restaurant.svg',
+      tags: ['Restaurant', 'Gallery', 'Immersive', 'Fine Dining']
+    },
+    {
+      id: 'restaurant-gallery-2',
+      title: 'FoodGallery Pro',
+      category: 'restaurant',
+      description: 'Template immersivo per ristoranti con design gallery unico ed effetti WOW',
+      path: 'resturant-gallery-2/',
+      icon: 'fas fa-camera',
+      color: '#8b4513',
+      image: 'assets/img/restaurant-gallery-2.svg',
+      tags: ['Gallery', 'Immersive', 'WOW Effects', 'Culinary']
+    },
+    {
       id: 'technology-saas',
       title: 'Tech Innovation',
       category: 'technology',
@@ -490,8 +512,8 @@ function createTemplateCard(item) {
   return `
     <div class="template-card ${cardType}" data-category="${item.category}">
       <div class="card-image">
-        ${isProject ? 
-          `<img src="${item.image}" alt="${item.title}" loading="lazy">` :
+        ${isProject || item.image ? 
+          `<img src="${isProject ? item.image : item.image}" alt="${item.title}" loading="lazy">` :
           `<div class="template-icon" style="background: linear-gradient(135deg, ${item.color}22, ${item.color}44);">
             <i class="${item.icon}" style="color: ${item.color}; font-size: 3rem;"></i>
           </div>`

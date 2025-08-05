@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#8b4513;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d4af37" />
+      <stop offset="100%" style="stop-color:#ff6b35" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg)" stroke="#d4af37" stroke-width="2"/>
+  
+  <!-- Main Restaurant Icon -->
+  <circle cx="200" cy="120" r="40" fill="url(#accent)" opacity="0.8"/>
+  <path d="M180 105 h40 l-5 15 h-30 z" fill="white"/>
+  <path d="M185 120 h30 v20 h-30 z" fill="white"/>
+  <path d="M190 140 h20 v8 h-20 z" fill="white"/>
+  
+  <!-- Gallery Icons -->
+  <rect x="120" y="180" width="35" height="25" fill="#d4af37" opacity="0.6" rx="3"/>
+  <rect x="165" y="180" width="35" height="25" fill="#d4af37" opacity="0.7" rx="3"/>
+  <rect x="210" y="180" width="35" height="25" fill="#d4af37" opacity="0.8" rx="3"/>
+  <rect x="255" y="180" width="35" height="25" fill="#d4af37" opacity="0.6" rx="3"/>
+  
+  <!-- Food Items -->
+  <circle cx="150" cy="90" r="12" fill="#ff6b35" opacity="0.7"/>
+  <circle cx="250" cy="90" r="12" fill="#ff6b35" opacity="0.7"/>
+  <circle cx="200" cy="70" r="8" fill="#d4af37" opacity="0.8"/>
+  
+  <!-- Text -->
+  <text x="200" y="240" text-anchor="middle" fill="#d4af37" font-family="serif" font-size="18" font-weight="bold">
+    GUSTO VIVO
+  </text>
+  <text x="200" y="260" text-anchor="middle" fill="#8b4513" font-family="sans-serif" font-size="12">
+    Gallery Experience
+  </text>
+  <text x="200" y="280" text-anchor="middle" fill="#666" font-family="sans-serif" font-size="10">
+    300+ Images • Fine Dining
+  </text>
+</svg>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante La Tavola d'Oro - Cucina Autentica dal 1985</title>
+    <meta name="description" content="Ristorante La Tavola d'Oro - Cucina italiana autentica nel cuore di Roma. Prenota il tuo tavolo e scopri i nostri piatti tradizionali.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="restaurant-header">
+        <nav class="food-navigation">
+            <div class="logo-restaurant">
+                <img src="images/logo.png" alt="La Tavola d'Oro" class="brand-logo">
+                <span class="restaurant-name">La Tavola d'Oro</span>
+            </div>
+            <ul class="nav-menu-food">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#location">Dove Siamo</a></li>
+                <li><a href="#reviews">Recensioni</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+            <button class="order-online-btn primary-cta">
+                <i class="fas fa-shopping-cart"></i> Ordina Online
+            </button>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="restaurant-content">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-food-section">
+            <div class="hero-image-container">
+                <img src="images/hero/signature-dish.jpg" alt="Piatto signature del ristorante" class="hero-food-image">
+            </div>
+            <div class="hero-text-overlay">
+                <h1 class="restaurant-title">Benvenuti alla Tavola d'Oro</h1>
+                <p class="restaurant-tagline">Cucina autentica italiana dal 1985</p>
+                <div class="hero-cta-group">
+                    <button class="btn-reservation primary" onclick="openReservationModal()">
+                        <i class="fas fa-calendar-alt"></i> Prenota Tavolo
+                    </button>
+                    <button class="btn-menu secondary" onclick="scrollToSection('menu')">
+                        <i class="fas fa-utensils"></i> Vedi Menu
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Preview -->
+        <section id="menu" class="menu-preview">
+            <div class="container">
+                <h2 class="section-title">I Nostri Piatti Speciali</h2>
+                <div class="menu-filters">
+                    <button class="menu-filter active" data-category="all">Tutti</button>
+                    <button class="menu-filter" data-category="antipasti">Antipasti</button>
+                    <button class="menu-filter" data-category="primi">Primi</button>
+                    <button class="menu-filter" data-category="secondi">Secondi</button>
+                    <button class="menu-filter" data-category="dolci">Dolci</button>
+                </div>
+                <div class="dishes-grid">
+                    <div class="dish-card featured" data-category="antipasti">
+                        <img src="images/dishes/antipasto-misto.jpg" alt="Antipasto Misto della Casa" class="dish-image">
+                        <div class="dish-info">
+                            <h3 class="dish-name">Antipasto Misto della Casa</h3>
+                            <p class="dish-description">Selezione di salumi e formaggi locali, olive marinate e bruschette</p>
+                            <span class="dish-price">€18.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card" data-category="primi">
+                        <img src="images/dishes/carbonara.jpg" alt="Spaghetti alla Carbonara" class="dish-image">
+                        <div class="dish-info">
+                            <h3 class="dish-name">Spaghetti alla Carbonara</h3>
+                            <p class="dish-description">La ricetta tradizionale romana con guanciale, pecorino e uova</p>
+                            <span class="dish-price">€16.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card" data-category="primi">
+                        <img src="images/dishes/cacio-pepe.jpg" alt="Tonnarelli Cacio e Pepe" class="dish-image">
+                        <div class="dish-info">
+                            <h3 class="dish-name">Tonnarelli Cacio e Pepe</h3>
+                            <p class="dish-description">Pasta fresca con pecorino romano DOP e pepe nero</p>
+                            <span class="dish-price">€15.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card" data-category="secondi">
+                        <img src="images/dishes/saltimbocca.jpg" alt="Saltimbocca alla Romana" class="dish-image">
+                        <div class="dish-info">
+                            <h3 class="dish-name">Saltimbocca alla Romana</h3>
+                            <p class="dish-description">Scaloppine di vitello con prosciutto crudo e salvia</p>
+                            <span class="dish-price">€24.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card" data-category="secondi">
+                        <img src="images/dishes/branzino.jpg" alt="Branzino in Crosta di Sale" class="dish-image">
+                        <div class="dish-info">
+                            <h3 class="dish-name">Branzino in Crosta di Sale</h3>
+                            <p class="dish-description">Pesce fresco del giorno cotto in crosta di sale marino</p>
+                            <span class="dish-price">€28.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card" data-category="dolci">
+                        <img src="images/dishes/tiramisu.jpg" alt="Tiramisù della Casa" class="dish-image">
+                        <div class="dish-info">
+                            <h3 class="dish-name">Tiramisù della Casa</h3>
+                            <p class="dish-description">La ricetta della nonna con savoiardi e mascarpone</p>
+                            <span class="dish-price">€8.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-cta">
+                    <button class="btn-full-menu">
+                        <i class="fas fa-file-pdf"></i> Scarica Menu Completo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">La Nostra Gallery</h2>
+                <p class="section-description">Scopri l'atmosfera del nostro ristorante e i nostri piatti</p>
+                
+                <!-- Gallery Filters -->
+                <div class="gallery-filters">
+                    <button class="gallery-filter active" data-filter="all">
+                        <i class="fas fa-th"></i> Tutte
+                    </button>
+                    <button class="gallery-filter" data-filter="dishes">
+                        <i class="fas fa-utensils"></i> Piatti
+                    </button>
+                    <button class="gallery-filter" data-filter="interior">
+                        <i class="fas fa-home"></i> Interni
+                    </button>
+                    <button class="gallery-filter" data-filter="atmosphere">
+                        <i class="fas fa-wine-glass"></i> Atmosfera
+                    </button>
+                    <button class="gallery-filter" data-filter="events">
+                        <i class="fas fa-birthday-cake"></i> Eventi
+                    </button>
+                </div>
+
+                <!-- Image Counter -->
+                <div class="image-counter">
+                    <span id="showing-count">12</span> di <span id="total-count">300</span> immagini
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Le immagini verranno caricate dinamicamente tramite JavaScript -->
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button id="loadMoreBtn" class="btn-load-more">
+                        <i class="fas fa-plus"></i> Carica Altre Immagini
+                    </button>
+                </div>
+
+                <!-- Gallery Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <span class="lightbox-close">&times;</span>
+                        <button class="lightbox-nav prev" onclick="changeLightboxImage(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <img id="lightboxImage" src="" alt="">
+                        <button class="lightbox-nav next" onclick="changeLightboxImage(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="lightbox-info">
+                            <h3 id="lightboxTitle">Titolo Immagine</h3>
+                            <p id="lightboxDescription">Descrizione dell'immagine</p>
+                            <span id="lightboxCounter">1 / 300</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurant Info -->
+        <section id="location" class="restaurant-info">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="location-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Dove Siamo</h3>
+                        <address>
+                            Via del Corso 123<br>
+                            00186 Roma (RM)<br>
+                            Italia
+                        </address>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.1!2d12.4814!3d41.9028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU0JzEwLjEiTiAxMsKwMjgnNTMuMCJF!5e0!3m2!1sit!2sit!4v1234567890" 
+                                class="restaurant-map" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="hours-card">
+                        <h3><i class="fas fa-clock"></i> Orari di Apertura</h3>
+                        <ul class="opening-hours">
+                            <li><strong>Lunedì - Venerdì:</strong> 12:00-15:00, 19:00-23:00</li>
+                            <li><strong>Sabato - Domenica:</strong> 12:00-23:00</li>
+                            <li><strong>Chiuso:</strong> Martedì sera</li>
+                        </ul>
+                        <div class="contact-info">
+                            <h4><i class="fas fa-phone"></i> Contatti</h4>
+                            <p><strong>Telefono:</strong> <a href="tel:+390612345678">+39 06 1234 5678</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:info@latavoladoro.it">info@latavoladoro.it</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="social-proof">
+            <div class="container">
+                <h2 class="section-title">Cosa Dicono i Nostri Clienti</h2>
+                <div class="reviews-carousel">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Cibo eccezionale e servizio impeccabile! La carbonara è la migliore che abbia mai assaggiato."</p>
+                        <cite class="reviewer-name">- Maria Rossi</cite>
+                        <small class="review-platform">Google Reviews</small>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Atmosfera accogliente e piatti della tradizione preparati con maestria. Consigliatissimo!"</p>
+                        <cite class="reviewer-name">- Giuseppe Bianchi</cite>
+                        <small class="review-platform">TripAdvisor</small>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★☆</div>
+                        <p class="review-text">"Ottima cucina romana, personale gentile e prezzi onesti. Torneremo sicuramente!"</p>
+                        <cite class="reviewer-name">- Laura Verdi</cite>
+                        <small class="review-platform">The Fork</small>
+                    </div>
+                </div>
+                <div class="review-platforms">
+                    <div class="platform-rating">
+                        <img src="images/icons/google.png" alt="Google">
+                        <span>4.8/5</span>
+                    </div>
+                    <div class="platform-rating">
+                        <img src="images/icons/tripadvisor.png" alt="TripAdvisor">
+                        <span>4.5/5</span>
+                    </div>
+                    <div class="platform-rating">
+                        <img src="images/icons/thefork.png" alt="The Fork">
+                        <span>4.7/5</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Prenota il Tuo Tavolo</h2>
+                <div class="contact-content">
+                    <div class="reservation-form">
+                        <form id="reservationForm">
+                            <div class="form-group">
+                                <label for="date">Data</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Orario</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Seleziona orario</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Numero ospiti</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">Seleziona</option>
+                                    <option value="1">1 persona</option>
+                                    <option value="2">2 persone</option>
+                                    <option value="3">3 persone</option>
+                                    <option value="4">4 persone</option>
+                                    <option value="5">5 persone</option>
+                                    <option value="6+">6+ persone</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefono</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="notes">Note aggiuntive</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Allergie, occasioni speciali, ecc."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-calendar-check"></i> Prenota Ora
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-info-detailed">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefono</h4>
+                                <p>+39 06 1234 5678</p>
+                                <small>Lun-Dom: 11:00-23:00</small>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@latavoladoro.it</p>
+                                <small>Risposta entro 24h</small>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Indirizzo</h4>
+                                <p>Via del Corso 123<br>00186 Roma (RM)</p>
+                                <small>Metro: Spagna (Linea A)</small>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <h4>Seguici sui Social</h4>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                                <a href="#"><i class="fab fa-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="restaurant-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>La Tavola d'Oro</h4>
+                    <p>Tradizione culinaria italiana dal 1985</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Orari</h4>
+                    <p>Lun-Ven: 12:00-15:00, 19:00-23:00</p>
+                    <p>Sab-Dom: 12:00-23:00</p>
+                    <p>Chiuso: Martedì sera</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <p>+39 06 1234 5678</p>
+                    <p>info@latavoladoro.it</p>
+                    <p>Via del Corso 123, Roma</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Tavola d'Oro. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reservation Modal -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Prenota il Tuo Tavolo</h2>
+            <div id="reservationFormContainer">
+                <!-- Form di prenotazione veloce -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

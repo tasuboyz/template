@@ -69,6 +69,8 @@ Collezione di template professionali progettati per specifiche esigenze business
 - **🎨 Creative Studio** - Portfolio per designer e artisti
 - **🛒 Elite Store** - E-commerce moderno e accattivante
 - **🍽️ Bella Vista** - Ristoranti e locali food
+- **🍝 Gusto Vivo** - Gallery experience immersiva per ristoranti (300+ immagini)
+- **📸 FoodGallery Pro** - Template immersivo con effetti WOW per ristorazione
 - **💻 Tech Innovation** - Startup tech e SaaS
 - **🏥 MediCare Pro** - Cliniche e servizi medici
 - **🎓 EduPro Academy** - Piattaforme educative
