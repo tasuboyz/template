@@ -305,17 +305,48 @@ function setupEventListeners() {
   // Navigation links
   elements.navLinks.forEach(link => {
     link.addEventListener('click', handleNavClick);
+    // Add navigation tracking
+    link.addEventListener('click', (e) => {
+      const section = e.target.getAttribute('href').replace('#', '');
+      if (window.portfolioAnalytics) {
+        window.portfolioAnalytics.trackNavigation(section);
+      }
+    });
   });
 
   // Filter buttons
   elements.filterButtons.forEach(button => {
     button.addEventListener('click', handleFilterClick);
+    // Add filter tracking
+    button.addEventListener('click', (e) => {
+      const filter = e.target.dataset.filter;
+      if (window.portfolioAnalytics) {
+        window.portfolioAnalytics.trackTemplateFilter('category', filter);
+      }
+    });
   });
 
   // Back to top button
   if (elements.backToTop) {
     elements.backToTop.addEventListener('click', scrollToTop);
   }
+
+  // Contact method tracking
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.contact-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = e.target.getAttribute('href');
+        const method = href.startsWith('mailto') ? 'email' : 
+                      href.startsWith('tel') ? 'phone' : 
+                      href.includes('github') ? 'github' : 
+                      href.includes('telegram') ? 'telegram' : 'other';
+        
+        if (window.portfolioAnalytics) {
+          window.portfolioAnalytics.trackContactMethod(method, href);
+        }
+      });
+    });
+  });
 
   // Close modal on escape
   document.addEventListener('keydown', (e) => {
@@ -605,15 +636,36 @@ function showTemplateModal(itemId) {
   
   const isProject = portfolioData.projects.includes(item);
   
+  // Track template/project view
+  if (window.portfolioAnalytics) {
+    if (isProject) {
+      window.portfolioAnalytics.trackProjectView(itemId, item.title, item.category);
+    } else {
+      window.portfolioAnalytics.trackTemplateView(itemId, item.title, item.category);
+    }
+  }
+  
   elements.modalTitle.textContent = item.title;
   elements.modalBody.innerHTML = createModalContent(item, isProject);
   
   if (isProject) {
     elements.modalDemoLink.href = item.github;
     elements.modalDemoLink.innerHTML = '<i class="fab fa-github"></i> Vedi su GitHub';
+    // Track GitHub click
+    elements.modalDemoLink.onclick = () => {
+      if (window.portfolioAnalytics) {
+        window.portfolioAnalytics.trackProjectGithub(itemId, item.title, item.github);
+      }
+    };
   } else {
     elements.modalDemoLink.href = item.path;
     elements.modalDemoLink.innerHTML = '<i class="fas fa-external-link-alt"></i> Vedi Demo';
+    // Track demo click
+    elements.modalDemoLink.onclick = () => {
+      if (window.portfolioAnalytics) {
+        window.portfolioAnalytics.trackTemplateDemo(itemId, item.title, item.path);
+      }
+    };
   }
   
   elements.modal.classList.add('active');

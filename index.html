@@ -731,10 +731,34 @@
         </div>
     </div>
 
+    <!-- Google Analytics 4 - Enhanced Implementation -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2HZHLLH99"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Enhanced configuration
+      gtag('config', 'G-P2HZHLLH99', {
+        page_title: 'Tasuhiro Davide Kato - Portfolio & Template Showcase',
+        page_location: window.location.href,
+        send_page_view: true,
+        cookie_flags: 'SameSite=None;Secure',
+        anonymize_ip: true
+      });
+
+      // Enhanced ecommerce for template tracking
+      gtag('config', 'G-P2HZHLLH99', {
+        custom_map: {
+          'custom_parameter_1': 'template_category',
+          'custom_parameter_2': 'template_name'
+        }
+      });
+    </script>
+
     <!-- JavaScript -->
+    <script src="assets/js/analytics.js"></script>
     <script src="assets/js/landing.js"></script>
-    
-    <!-- GitHub Pages Analytics (optional) -->
-    <!-- Google Analytics or GitHub insights can be added here -->
 </body>
 </html>
