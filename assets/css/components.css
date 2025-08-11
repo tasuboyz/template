@@ -836,6 +836,105 @@ section {
 }
 
 /* ========================================
+   ANALYTICS NOTICE
+   ======================================== */
+
+.analytics-notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-modal);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(100%);
+  transition: transform var(--transition-normal);
+  backdrop-filter: blur(20px);
+}
+
+.analytics-notice.show {
+  transform: translateY(0);
+}
+
+.analytics-notice-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analytics-notice-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.analytics-notice-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.analytics-notice-text h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.analytics-notice-text p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.analytics-notice-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 768px) {
+  .analytics-notice-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+  
+  .analytics-notice-text {
+    order: -1;
+  }
+  
+  .analytics-notice-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .analytics-notice-actions .btn {
+    flex: 1;
+    max-width: 120px;
+  }
+}
+
+/* ========================================
    BACK TO TOP BUTTON
    ======================================== */
 

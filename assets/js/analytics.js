@@ -1,16 +1,119 @@
 /**
  * Advanced Analytics System for Portfolio & Template Showcase
  * Tracks user interactions, template views, and engagement metrics
+ * GDPR Compliant with user consent management
  */
 class AdvancedAnalytics {
     constructor() {
         this.isGtagLoaded = false;
         this.eventQueue = [];
         this.sessionStart = Date.now();
+        this.hasConsent = false;
+        this.consentChecked = false;
         this.init();
     }
 
     init() {
+        this.checkConsent();
+        this.setupConsentHandlers();
+    }
+
+    checkConsent() {
+        // Check if user has already given consent
+        const consent = localStorage.getItem('analytics_consent');
+        if (consent === 'accepted') {
+            this.hasConsent = true;
+            this.consentChecked = true;
+            this.initializeAnalytics();
+        } else if (consent === 'declined') {
+            this.hasConsent = false;
+            this.consentChecked = true;
+            console.log('📊 Analytics: Consenso rifiutato dall\'utente');
+        } else {
+            // Show consent banner
+            this.showConsentBanner();
+        }
+    }
+
+    showConsentBanner() {
+        const banner = document.getElementById('analytics-notice');
+        if (banner) {
+            setTimeout(() => {
+                banner.classList.add('show');
+            }, 2000); // Show after 2 seconds
+        }
+    }
+
+    hideConsentBanner() {
+        const banner = document.getElementById('analytics-notice');
+        if (banner) {
+            banner.classList.remove('show');
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 300);
+        }
+    }
+
+    setupConsentHandlers() {
+        document.addEventListener('DOMContentLoaded', () => {
+            const acceptBtn = document.getElementById('accept-analytics');
+            const declineBtn = document.getElementById('decline-analytics');
+
+            if (acceptBtn) {
+                acceptBtn.addEventListener('click', () => {
+                    this.acceptConsent();
+                });
+            }
+
+            if (declineBtn) {
+                declineBtn.addEventListener('click', () => {
+                    this.declineConsent();
+                });
+            }
+        });
+    }
+
+    acceptConsent() {
+        localStorage.setItem('analytics_consent', 'accepted');
+        this.hasConsent = true;
+        this.consentChecked = true;
+        this.hideConsentBanner();
+        
+        // Update Google Analytics consent
+        if (typeof window.updateAnalyticsConsent === 'function') {
+            window.updateAnalyticsConsent(true);
+        }
+        
+        this.initializeAnalytics();
+        
+        // Track consent acceptance
+        setTimeout(() => {
+            this.sendEvent('consent_granted', {
+                consent_type: 'analytics',
+                event_category: 'privacy'
+            });
+        }, 1000);
+        
+        console.log('✅ Analytics: Consenso accettato');
+    }
+
+    declineConsent() {
+        localStorage.setItem('analytics_consent', 'declined');
+        this.hasConsent = false;
+        this.consentChecked = true;
+        this.hideConsentBanner();
+        
+        // Update Google Analytics consent
+        if (typeof window.updateAnalyticsConsent === 'function') {
+            window.updateAnalyticsConsent(false);
+        }
+        
+        console.log('❌ Analytics: Consenso rifiutato');
+    }
+
+    initializeAnalytics() {
+        if (!this.hasConsent) return;
+
         this.waitForGtag(() => {
             this.isGtagLoaded = true;
             this.processEventQueue();
@@ -35,6 +138,11 @@ class AdvancedAnalytics {
     }
 
     sendEvent(eventName, parameters = {}) {
+        if (!this.hasConsent) {
+            console.log('📊 Analytics: Evento non inviato - consenso non dato');
+            return;
+        }
+
         if (!this.isGtagLoaded) {
             this.eventQueue.push({ name: eventName, parameters });
             return;
@@ -67,6 +175,8 @@ class AdvancedAnalytics {
 
     // Template Interaction Tracking
     trackTemplateView(templateId, templateName, category) {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('template_view', {
             template_id: templateId,
             template_name: templateName,
@@ -76,6 +186,8 @@ class AdvancedAnalytics {
     }
 
     trackTemplateDemo(templateId, templateName, demoUrl) {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('template_demo_click', {
             template_id: templateId,
             template_name: templateName,
@@ -85,6 +197,8 @@ class AdvancedAnalytics {
     }
 
     trackTemplateFilter(filterType, filterValue) {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('template_filter_used', {
             filter_type: filterType,
             filter_value: filterValue,
@@ -94,6 +208,8 @@ class AdvancedAnalytics {
 
     // Project Interaction Tracking
     trackProjectView(projectId, projectName, category) {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('project_view', {
             project_id: projectId,
             project_name: projectName,
@@ -103,6 +219,8 @@ class AdvancedAnalytics {
     }
 
     trackProjectGithub(projectId, projectName, githubUrl) {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('project_github_click', {
             project_id: projectId,
             project_name: projectName,
@@ -113,6 +231,8 @@ class AdvancedAnalytics {
 
     // Contact & Engagement Tracking
     trackContactMethod(method, destination) {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('contact_method_used', {
             contact_method: method,
             destination: destination,
@@ -121,6 +241,8 @@ class AdvancedAnalytics {
     }
 
     trackSocialClick(platform, url) {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('social_media_click', {
             social_platform: platform,
             social_url: url,
@@ -130,6 +252,8 @@ class AdvancedAnalytics {
 
     // Navigation Tracking
     trackNavigation(section, method = 'click') {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('navigation_used', {
             section: section,
             navigation_method: method,
@@ -139,6 +263,8 @@ class AdvancedAnalytics {
 
     // Scroll Depth Tracking
     trackScrollDepth(depth) {
+        if (!this.hasConsent) return;
+        
         this.sendEvent('scroll_depth', {
             scroll_depth_percent: depth,
             event_category: 'engagement'

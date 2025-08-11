@@ -709,6 +709,29 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Analytics Cookie Notice -->
+    <div id="analytics-notice" class="analytics-notice">
+        <div class="analytics-notice-content">
+            <div class="analytics-notice-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="analytics-notice-text">
+                <h4>Utilizzo di Analytics</h4>
+                <p>Questo sito utilizza Google Analytics per raccogliere dati anonimi al fine di migliorare l'esperienza utente. Nessuna informazione personale viene raccolta.</p>
+            </div>
+            <div class="analytics-notice-actions">
+                <button id="accept-analytics" class="btn btn-primary btn-sm">
+                    <i class="fas fa-check"></i>
+                    Accetto
+                </button>
+                <button id="decline-analytics" class="btn btn-outline btn-sm">
+                    <i class="fas fa-times"></i>
+                    Rifiuto
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Template Info Modal -->
     <div id="template-modal" class="modal-overlay">
         <div class="modal-content">
@@ -739,14 +762,35 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // Enhanced configuration
+      // Default consent state
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied'
+      });
+
+      // Enhanced configuration - will be activated only with consent
       gtag('config', 'G-P2HZHLLH99', {
         page_title: 'Tasuhiro Davide Kato - Portfolio & Template Showcase',
         page_location: window.location.href,
-        send_page_view: true,
+        send_page_view: false, // Controlled by consent
         cookie_flags: 'SameSite=None;Secure',
         anonymize_ip: true
       });
+
+      // Function to update consent (called from analytics.js)
+      window.updateAnalyticsConsent = function(granted) {
+        gtag('consent', 'update', {
+          'analytics_storage': granted ? 'granted' : 'denied'
+        });
+        
+        if (granted) {
+          // Send initial page view when consent is granted
+          gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href
+          });
+        }
+      };
 
       // Enhanced ecommerce for template tracking
       gtag('config', 'G-P2HZHLLH99', {
