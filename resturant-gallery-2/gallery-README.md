@@ -31,9 +31,11 @@
 
 ```
 foodgallery-template/
-├── gallery-index.html      # HTML5 strutturato e semantico
+├── index.html              # HTML5 strutturato e semantico
 ├── gallery-styles.css      # CSS3 con animazioni avanzate
 ├── gallery-app.js          # JavaScript ES6 modulare
+├── MAPS-SETUP.md          # Guida setup Google Maps (Iframe)
+├── maps-test.html         # Test page per mappe iframe
 └── README.md               # Documentazione completa
 ```
 
@@ -111,7 +113,17 @@ const galleryFeatures = {
 - Image optimization
 ```
 
-### 9. **Contact & Reservation**
+### 9. **Location & Maps (Iframe)**
+```javascript
+- Google Maps iframe integrazione (no API key)
+- Street View immersivo embed
+- Overlay informativa personalizzabile
+- Indicazioni stradali automatiche
+- Design responsive ottimizzato
+- Zero configurazione richiesta
+```
+
+### 10. **Contact & Reservation**
 ```javascript
 - Split layout con info + form
 - Background overlay effects

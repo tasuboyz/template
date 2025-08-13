@@ -24,6 +24,7 @@ class FoodGalleryApp {
         this.initFilters();
         this.initForm();
         this.initScrollEffects();
+        this.initMapInteractions();
         this.hideLoadingScreen();
     }
 
@@ -571,6 +572,46 @@ class FoodGalleryApp {
         window.addEventListener('scroll', onScroll, { passive: true });
     }
 
+    // Map Interactions (Iframe-based)
+    initMapInteractions() {
+        // Add loading animation to map iframe
+        const mapIframe = document.getElementById('google-map-iframe');
+        if (mapIframe) {
+            mapIframe.addEventListener('load', () => {
+                console.log('🗺️ Google Maps iframe loaded successfully');
+                mapIframe.style.opacity = '1';
+            });
+            
+            // Set initial opacity for smooth loading
+            mapIframe.style.opacity = '0';
+            mapIframe.style.transition = 'opacity 0.5s ease';
+        }
+
+        // Add hover effects to map container
+        const mapContainer = document.querySelector('.map-container');
+        if (mapContainer) {
+            mapContainer.addEventListener('mouseenter', () => {
+                mapContainer.style.transform = 'scale(1.02)';
+            });
+            
+            mapContainer.addEventListener('mouseleave', () => {
+                mapContainer.style.transform = 'scale(1)';
+            });
+        }
+
+        // Initialize Street View iframe interactions
+        const streetViewIframe = document.querySelector('.street-view-iframe');
+        if (streetViewIframe) {
+            streetViewIframe.addEventListener('load', () => {
+                console.log('🏘️ Street View iframe loaded successfully');
+                streetViewIframe.style.opacity = '1';
+            });
+            
+            streetViewIframe.style.opacity = '0';
+            streetViewIframe.style.transition = 'opacity 0.5s ease';
+        }
+    }
+
     // Utility Functions
     showNotification(message, type = 'info') {
         const notification = document.createElement('div');
@@ -783,6 +824,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('✅ FoodGallery App Initialized Successfully!');
 });
+
+// Global functions for Maps (iframe-based)
+window.openInGoogleMaps = function() {
+    // Coordinates for Milano, Via Gourmet 123 (example)
+    const lat = 45.4654;
+    const lng = 9.1859;
+    const url = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+    window.open(url, '_blank');
+};
+
+window.getDirections = function() {
+    // Open directions to restaurant
+    const lat = 45.4654;
+    const lng = 9.1859;
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`;
+    window.open(url, '_blank');
+};
+
+window.viewLargerMap = function() {
+    // Open full-size map
+    const lat = 45.4654;
+    const lng = 9.1859;
+    const url = `https://www.google.com/maps/@${lat},${lng},17z`;
+    window.open(url, '_blank');
+};
 
 // Classes are available globally for potential use in other scripts
 window.FoodGalleryApp = FoodGalleryApp;

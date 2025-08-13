@@ -35,6 +35,7 @@
                 <a href="#gallery" class="nav-link">Gallery</a>
                 <a href="#menu" class="nav-link">Menu</a>
                 <a href="#chef" class="nav-link">Chef</a>
+                <a href="#location" class="nav-link">Location</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
 
@@ -291,6 +292,148 @@
                     <i class="fab fa-instagram"></i>
                     Seguici su Instagram
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map -->
+    <section class="location-section" id="location">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Vieni a Trovarci</h2>
+                <p class="section-subtitle">Nel cuore di Milano, dove tradizione e innovazione si incontrano</p>
+            </div>
+
+            <div class="location-wrapper">
+                <div class="location-info">
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="location-details">
+                            <h3>Indirizzo</h3>
+                            <p>Via Gourmet 123<br>20121 Milano, Italia</p>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="location-details">
+                            <h3>Orari di Apertura</h3>
+                            <div class="schedule">
+                                <div class="schedule-item">
+                                    <span class="day">Martedì - Giovedì</span>
+                                    <span class="hours">19:00 - 24:00</span>
+                                </div>
+                                <div class="schedule-item">
+                                    <span class="day">Venerdì - Sabato</span>
+                                    <span class="hours">19:00 - 01:00</span>
+                                </div>
+                                <div class="schedule-item">
+                                    <span class="day">Domenica</span>
+                                    <span class="hours">12:00 - 15:00 | 19:00 - 24:00</span>
+                                </div>
+                                <div class="schedule-item closed">
+                                    <span class="day">Lunedì</span>
+                                    <span class="hours">Chiuso</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="location-details">
+                            <h3>Come Raggiungerci</h3>
+                            <div class="transport-options">
+                                <div class="transport-item">
+                                    <i class="fas fa-subway"></i>
+                                    <span>Metro M1/M3 - Duomo (5 min a piedi)</span>
+                                </div>
+                                <div class="transport-item">
+                                    <i class="fas fa-car"></i>
+                                    <span>Parcheggio convenzionato nearby</span>
+                                </div>
+                                <div class="transport-item">
+                                    <i class="fas fa-bus"></i>
+                                    <span>Fermata bus: Via Torino (2 min)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-actions">
+                        <a href="#" class="btn-location" onclick="getDirections()">
+                            <i class="fas fa-directions"></i>
+                            Ottieni Indicazioni
+                        </a>
+                        <a href="tel:+390212345678" class="btn-location secondary">
+                            <i class="fas fa-phone"></i>
+                            Chiamaci
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <!-- Google Maps Embed con Marker Garantito -->
+                    <iframe 
+                        id="google-map-iframe"
+                        class="google-map-iframe"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=it&amp;q=45.4654,9.1859+(FoodGallery%20Restaurant)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
+                    <!-- Map Overlay Info -->
+                    <div class="map-overlay">
+                        <div class="map-marker-info">
+                            <h4>🍽️ FoodGallery</h4>
+                            <p>Esperienza Culinaria Immersiva</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.9 (247 recensioni)</span>
+                            </div>
+                            <div class="map-actions">
+                                <button onclick="openInGoogleMaps()" class="btn-map-action">
+                                    <i class="fas fa-directions"></i>
+                                    Indicazioni
+                                </button>
+                                <button onclick="viewLargerMap()" class="btn-map-action secondary">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                    Ingrandisci
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Street View Mini -->
+            <div class="street-view-section">
+                <h3>Anteprima della Location</h3>
+                <div class="street-view-container">
+                    <!-- Google Street View Embed -->
+                    <iframe
+                        class="street-view-iframe"
+                        src="https://www.google.com/maps/embed?pb=!4v1692000000000!6m8!1m7!1sKKqhNGqKpNx8GKb1b8q8KQ!2m2!1d45.465422!2d9.183401!3f45!4f0!5f0.7820865974627469"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
+                    <!-- Street View Overlay -->
+                    <div class="street-view-overlay">
+                        <div class="street-view-info">
+                            <i class="fas fa-street-view"></i>
+                            <span>Vista dalla strada</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
