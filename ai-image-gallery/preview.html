@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Gallery - Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .test-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .test-item {
+            background: white;
+            color: #333;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .test-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .launch-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 2rem 0;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .launch-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 AI Image Gallery</h1>
+            <p>Showcase site to display AI-generated images</p>
+            <a href="index.html" class="launch-btn">🚀 Launch Full Gallery</a>
+        </div>
+        
+        <h2>Category Preview:</h2>
+        <div class="test-gallery">
+            <div class="test-item">
+                <img src="https://picsum.photos/300/200?random=1" alt="Fashion">
+                <h3>👗 Fashion</h3>
+                <p>Fashion and style images generated with AI</p>
+            </div>
+            <div class="test-item">
+                <img src="https://picsum.photos/300/200?random=2" alt="Grim Reaper">
+                <h3>💀 Grim Reaper</h3>
+                <p>Dark art and gothic atmospheres</p>
+            </div>
+            <div class="test-item">
+                <img src="https://picsum.photos/300/200?random=3" alt="Characters">
+                <h3>👥 Characters</h3>
+                <p>Portraits and unique characters</p>
+            </div>
+            <div class="test-item">
+                <img src="https://picsum.photos/300/200?random=4" alt="Storyline">
+                <h3>📚 Storyline</h3>
+                <p>Narrative images and landscapes</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+        <h2>✨ Site Features</h2>
+            <ul style="list-style: none; padding: 0;">
+            <li>🖼️ <strong>Responsive Gallery</strong> - Adapts to all devices</li>
+            <li>🔍 <strong>Smart Search</strong> - Find images by name or category</li>
+            <li>📱 <strong>Mobile Friendly</strong> - Optimized for smartphones</li>
+            <li>⬇️ <strong>Direct Download</strong> - Download your favorite assets</li>
+            <li>🎯 <strong>Category Filters</strong> - Organize assets by type</li>
+            <li>🚀 <strong>Performance</strong> - Fast loading with lazy loading</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center; opacity: 0.8;">
+            <p>📁 Add your AI assets into folders: fashion/, grim-reaper/, characters/, storyline/, logos/, videos/</p>
+        </div>
+    </div>
+</body>
+</html>
